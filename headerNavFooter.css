@@ -55,25 +55,6 @@ header {
     padding-bottom: 2%;
 }
 
-@media screen and (min-width:430px) {
-    .photoMoi {
-        display: true;
-    }
-    .photoMoiResponsive {
-        display: none;
-    }
-}
-
-@media screen and (max-width:429px) {
-    .photoMoi {
-        display: none;
-    }
-    .photoMoiResponsive {
-        display: true;
-    }
-}
-
-
 .boutonsMenu {
     display: flex;
     flex-direction: row;

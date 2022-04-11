@@ -260,7 +260,7 @@ form textarea:focus {
 }
 
 
-@media screen and (max-width: 1000px)  {
+@media screen and (max-width: 1000px){
     /*
     pour la partie formulaire
     */
@@ -289,7 +289,7 @@ form textarea:focus {
 
     #contenue, #contenueFormualire {
         width: 80%;
-        height: auto;
+        height: 110%;
         margin-bottom: 3%;
     }
 
@@ -385,4 +385,21 @@ form textarea:focus {
 
 }
 
+@media screen and (max-device-width:700px) {
 
+    #contenue, #contenueFormualire {
+        width: 80%;
+        height: 1000px;
+        margin-bottom: 3%;
+    }
+    
+    input[type], .message > textarea{
+        font-size: 3vw;
+    }
+
+    #groupeDeBoutons > a {
+        padding: 6%;
+        padding-left: 7;
+        padding-right: 7;
+    }
+}

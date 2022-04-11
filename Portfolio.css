@@ -53,6 +53,9 @@ main {
     text-align: center;
 }
 
+.photoMoiResponsive {
+    width: 50vw;
+}
 
 .image {
     grid-area: image;
@@ -113,18 +116,6 @@ main {
     width: 2.4%;
 }
 
-@media screen and (max-height:609px) {
-    .leCliqueGpo {
-        min-height: 6vh;
-    }
-}
-
-@media screen and (max-width:1040px) {
-    .leCliqueGpo {
-        height: 0.1vh;
-    }
-}
-
 .leDessus > .leCliqueGpo > .contenu:first-child {
     margin-left: 5%;
 }
@@ -154,14 +145,8 @@ main {
         height: auto;
     }
 
-    .image {
-        height: 300px;
-    }
-
     .image img {
-        width: 12vw;
-        height: auto;
-        padding: 2.5%;
+        width: 45vw;
     }
 
     .quiSuis {
@@ -169,6 +154,16 @@ main {
         padding: 0;
         padding-top: 5%;
         padding-bottom: 5%;
+
+    }
+
+    .photoMoiResponsive {
+        display:flex !important;
+    }
+
+    .photoMoiResponsive > img {
+        width: 50%;
+        height: auto;
 
     }
 
@@ -298,13 +293,39 @@ main {
     .titreMesProjets h1 {
         font-size: 2.5vh;
     }
+
+}
+
+@media screen and (max-width:700px) {
+    .photoMoi {
+        display: none;
+        width: 40vw;
+    }
+}
+@media screen and (min-width:700px) {
+    .photoMoi {
+        display: block;
+    }
+    .photoMoiResponsive {
+        display: none;
+    }
+
+
 }
 
 
-@media screen and (max-width:700px) {
+@media screen and (max-device-width:700px) {
     .imgSAE > img {
-        height: 40vw;
-        width: auto;
+        height: auto;
+        width: 50vw !important;
+    }
+
+    .photoMoi {
+        display: none;
+    }
+
+    .photoMoiResponsive {
+        display: block !important;
     }
 
     .ligne, .ligne2 {
@@ -312,8 +333,19 @@ main {
         flex-direction: column;
     }
 
+    .quiSuis {
+        height: max-content;
+        padding: 0;
+        padding-top: 5%;
+        padding-bottom: 10%;
+    }
+
+    .quiSuis > h2 {
+        font-size: 6vh;
+    }
+
     .titreSAE > h2 {
-        font-size: 6vw;
+        font-size: 5vw;
         text-align: center;
         margin: auto;
         padding-left: 0;
@@ -322,6 +354,29 @@ main {
     .ligne > .coteDroit, .ligne2 > .coteDroit  {
         width: 90%;
     }
+    
+    main {
+        display: block;
+    }
+
+    .image img {
+        width: 45vw;
+    }
+
+    #horizontal {
+        display: none;
+    }
+
+    #vertical{
+        display: block !important;
+    }
+
+    .coteDroit {
+        font-size: 3.4vw;
+    }
+
+    
+
 
     
 }
