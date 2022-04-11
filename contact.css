@@ -1,0 +1,388 @@
+body {
+    margin:0;
+    font-family: sans-serif;
+}
+
+/*
+Partie Section Titre de la page
+*/
+
+section#Titre {
+    
+    background-color: rgb(255, 223, 185);
+    background:#444343;
+    padding: 4vh;
+    text-align: center;
+    
+}
+
+section#Titre h1 {
+    margin:auto;
+    font-size: 5vh;
+    background: #76c78f;
+    color: rgb(255, 255, 255);
+    border: #76c78f solid;
+    border-radius: 10px;
+    width: 70%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
+}
+
+section#Titre p {
+    font-size: 2.3vh;
+    margin:auto;
+    margin-top: 2%;
+    color: rgb(255, 255, 255);
+    border: #76c78f solid;
+    border-radius: 10px;
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+
+/*
+partie formulaire
+*/
+
+
+section#Contact {
+    height: 75vh;
+    background:linear-gradient(aqua, rgb(63, 250, 63));
+    background:#444343;
+    padding-top: 3%;
+    display: flex;
+    font-family: sans-serif;
+    margin: auto;
+    
+}
+
+#contenue, #contenueFormualire {
+    display: grid;
+    height: 90%;
+    width: 70%;
+    margin:auto;
+    border-radius: 5px;  
+    border: rgb(36, 221, 52) solid;
+    border: #76c78f solid;
+    background: #ffffff;
+}
+
+#explication > #contenue > h2 {
+    width: 95%;
+    margin:auto;
+    padding-top: 2%;
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+#explication > #contenue p {
+
+    margin:auto;
+    text-align: center;
+    font-size: 2vh;
+}
+
+@media screen and (max-width:1090px) {
+    #contenue {
+        word-wrap: break-word;
+    }
+
+    #explication > #contenue > h2 {
+        margin-left: 0;
+        height: auto;
+        font-size: 2.8vh;
+    }
+
+    #explication > #contenue p {
+        margin-left: 0;
+        margin-right: 0;
+        height: auto;
+        font-size: 1.6vh;
+    }
+    
+}
+
+#formulaire {
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+form {
+    display: grid;
+    overflow:auto;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(7, 14.2857143%);
+    grid-template-areas: 
+    "nom nom prenom prenom"
+    "adresse-mail adresse-mail adresse-mail adresse-mail"
+    "telephone telephone telephone telephone"
+    "message message message message"
+    "message message message message"
+    "message message message message"
+    "boutonEnvoyer boutonEnvoyer boutonEnvoyer boutonEnvoyer";
+}
+
+form p {
+    margin-bottom:0;
+    font-size: 2vh;
+}
+
+.radio input[type="radio"] {
+    margin-left: 5%;
+}
+
+.radio input[id="besoin"] {
+    margin-left: 0;
+}
+
+form div, form p {
+    text-align: center;
+
+}
+
+.radio {
+    font-size: 2vh;
+}
+
+.nom {
+    grid-area: nom;
+}
+
+.prenom {
+    grid-area: prenom;
+}
+
+.nom input, .prenom input {
+    height: 3vh;
+    width: 10vw;
+    background: url(img/SAE/pouceRouge.png) right no-repeat white;
+    
+}
+
+.nom input:valid {
+    background: url(img/SAE/pouceVert.png) right no-repeat white;
+}
+
+.prenom input:valid {
+    background: url(img/SAE/pouceVert.png) right no-repeat white;
+}
+
+.adresse-mail {
+    grid-area: adresse-mail;
+}
+
+.adresse-mail input {
+    height: 3vh;
+    width: 15vw;
+    background: url(img/SAE/pouceRouge.png) right no-repeat white;
+}
+
+.adresse-mail input:valid {
+    background: url(img/SAE/pouceVert.png) right no-repeat white;
+}
+
+.telephone {
+    grid-area: telephone;
+}
+
+.telephone input {
+    height: 3vh;
+    width: 15vw;
+}
+
+.message {
+    grid-area: message;
+}
+
+.message textarea {
+    resize: none;
+    height: 15vh;
+    width: 23vw;
+    margin-top: 1%;
+    background: url(pouceRouge.png) right no-repeat white;
+}
+
+.message textarea:valid {
+    background: url(pouceVert.png) right no-repeat white;
+}
+
+.boutonEnvoyer {
+    grid-area: boutonEnvoyer;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.boutonEnvoyer input {
+    height: 40%;
+    width: 65%;
+    cursor: pointer;
+    background-color: rgba(135, 224, 182, 0.589);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.boutonEnvoyer input:hover {
+    background-color: rgba(135, 224, 216, 0.589);
+    height: 40.6%;
+    width: 65.3%;
+    transition: all 0.3s ease;
+}
+
+
+form input {
+    border-radius: 2px;
+    border: none;
+    border-bottom: rgba(83, 83, 83, 0.541) solid 2px;
+    padding: 1%;
+}
+
+form input:focus {
+    outline: none;
+    border-bottom: rgb(60, 240, 120) solid 2px;
+    transition: all 0.3s ease;
+}
+
+form textarea {
+    outline: none;
+    border-bottom: rgba(83, 83, 83, 0.541) solid 2px;
+    padding: 1%;
+}
+
+form textarea:focus {
+    
+    border: rgb(60, 240, 120) solid 2px;
+    transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width: 1000px)  {
+    /*
+    pour la partie formulaire
+    */
+
+    section#Contact {
+        height: auto;
+        display: block;
+    }
+
+    #explication, #formulaire {
+        width:auto;
+        padding-bottom: 1%;
+    }
+
+    #explication > #contenue > h2 {
+        width: 95%;
+        margin: auto;
+        padding-bottom: 4%;
+    }
+    
+    #explication > #contenue p {
+        width: 95%;
+        margin: auto;
+        
+    }
+
+    #contenue, #contenueFormualire {
+        width: 80%;
+        height: auto;
+        margin-bottom: 3%;
+    }
+
+    #informationEntreprise {
+        padding-top: 10%;
+        padding-bottom: 5%;
+    }
+
+    .nom input, .prenom input {
+        width: 70%;        
+    }
+    
+    .adresse-mail input {
+        width: 70%;
+    }
+    
+    .telephone input {
+        width: 70%;
+    }
+
+    .message textarea {
+        width: 70%;
+        height: 50%;
+    } 
+
+
+    .message {
+        margin-top: 12%;
+        height: 70%;
+    }
+
+    .boutonEnvoyer input {
+        height: 40%;
+        margin-top: 5%;
+    }
+
+    .radio {
+        display: grid;
+        grid-area: radios;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(4, 25%);
+        grid-template-areas:
+        "label1 label2" 
+        "besoin probleme"
+        "label3 label4" 
+        "question autre";
+        padding-top: 2%; 
+        padding-bottom: 2%;
+    }
+
+    .sujet {
+        height: 150%;   
+    }
+
+    .radio input[id="besoin"] {
+        grid-area: besoin;
+    }
+
+    .radio label[for="besoin"] {
+        grid-area: label1;
+    }
+
+    .radio input[id="probleme"] {
+        grid-area: probleme;
+    }
+
+    .radio label[for="probleme"] {
+        grid-area: label2;
+    }
+
+    .radio input[id="question"]{
+        grid-area: question;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .radio label[for="question"] {
+        grid-area: label3;
+    }
+
+    .radio input[id="autre"]{
+        grid-area: autre;
+
+    }
+
+    .radio label[for="autre"] {
+        grid-area: label4;
+    }
+
+    form {
+        overflow:visible;
+    }
+
+}
+
+

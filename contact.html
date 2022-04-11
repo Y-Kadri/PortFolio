@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Mob-E-Car</title>
+    <link rel="stylesheet" href="headerNavFooter.css">
+</head>
+<body>
+
+    <header>
+        <div id="titre">
+            <div class="photoMoi">
+                <img src="img/SAE/10182.jpg" alt="Photo yanis Kadri">
+            </div>
+            <div class="titrePortFolio">
+                <h1>Portfolio</h1>
+                <h3>Par Yanis KADRI</h3>
+            </div>
+        </div>
+        
+        <div id="groupeDeBoutons">
+            <a href="Portfolio.html" class="boutonsMenu">Acceuil</a>
+        </div>
+    </header>
+
+    <section id="Titre">
+        <h1>Contact</h1>
+        <p>Bienvenue, contacter moi et j'essayerai de répondre le plus vite possible !</p>
+        
+    </section>
+
+    <section id="Contact">
+
+        <article id="formulaire">
+            <div id="contenueFormualire">
+                <form>
+                    <div class="nom">
+                        <p>Nom*</p>
+                        <input type="text" placeholder="Nom" maxlength="50" minlength="2" title="champs à remplir obligatoirement par un nom" required>
+                    </div>
+
+                    <div class="prenom">
+                        <p>Prénom*</p>
+                        <input type="text" placeholder="Prénom" maxlength="50" minlength="2" title="champs à remplir obligatoirement par un prénom" required>
+                    </div>
+
+                    <div class="adresse-mail">
+                        <p>Adresse mail*</p>
+                        <input type="email" placeholder="mobECar.serviceClient@gmail.com" title="champs à remplir obligatoirement par une adresse mail" required>
+                    </div>
+
+                    <div class="telephone">
+                        <p>Numéro de téléphone</p>
+                        <input type="tel" placeholder="+33 " maxlength="10" minlength="10" title="champs permettant de mettre le numéro de téléphone">
+                    </div>
+
+                    <div class="message">
+                        <p>Message à m'addresser !*</p>
+                        <textarea name="zoneMessage" id="zoneMessage" rows="3"  minlength="2" maxlength="180"
+                         autocomplete="off" title="champs à remplir obligatoirement par au moins un mot et champs permettant d'écrire le message à l'entrprise Mob-E-Car" placeholder="Entrez votre message (180 caractères)" spellcheck="true" required></textarea>
+                        <!--<input type="text" placeholder="180 caractères" maxlength="180" minlength="2" autocomplete="off" title="champs à remplir obligatoirement par au moins un mot et champs permettant d'écrire le message à l'entrprise Mob-E-Car" required>-->
+                    </div>
+
+                    <div class="boutonEnvoyer">
+                        <input type="submit" value="Envover" title="Bouton permettant d'envoyer à l'entreprise Mob-E-Car un message">
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </article>
+
+
+    </section>
+
+
+    <footer>
+        <div class="footerGauche">
+            <h3>Portfolio</h3>
+            <p>Par Kadri Yanis</p>
+        </div>
+        <div class="footerDroite">
+            <p>contacter moi !</p>
+            <a href="contact.html" class="boutonsMenu2">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>
