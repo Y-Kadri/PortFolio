@@ -303,6 +303,11 @@ main {
 
     #vertical {
         display: block;
+        height: 40vh;
+    }
+
+    #friseChrono {
+        width: 130%;
     }
 
     main {
@@ -370,7 +375,7 @@ main {
     #horizontal {
         display: none;
     }
-
+    
     #vertical{
         display: block !important;
     }
