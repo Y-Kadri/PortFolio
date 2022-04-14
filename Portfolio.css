@@ -303,7 +303,7 @@ main {
 
     #vertical {
         display: block;
-        height: 40vh;
+       
     }
 
     #friseChrono {
@@ -320,6 +320,7 @@ main {
     .ligne > .coteDroit, .ligne2 > .coteDroit  {
         width: 90%;
     }
+    
 }
 
 
@@ -385,7 +386,7 @@ main {
     } 
 
     #friseChrono > img {
-        height: 30vh;
+
         width: 230%;
     }
 }
