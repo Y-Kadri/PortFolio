@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Header } from "@/components/layout/header"
 import { getMessages, type Locale } from "@/lib/i18n"
+import { Footer } from "@/components/layout/footer"
 
 interface HomePageProps {
   params: { locale: Locale }
@@ -27,6 +28,7 @@ export default function HomePage({ params }: HomePageProps) {
   return (
     <div className="min-h-screen bg-background">
       <Header messages={messages} locale={locale} />
+      <Footer messages={messages} locale={locale} />
     </div>
   )
 }

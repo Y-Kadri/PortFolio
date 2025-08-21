@@ -1,23 +1,33 @@
 {
-    "nav": {
-        "home": "Home",
-        "about": "About",
-        "projects": "Projects",
-        "contact": "Contact"
-    },
-    "hero": {
-        "name": "Yanis Kadri",
-        "role": "Full Stack Applications Engineer",
-        "tagline": "I transform ideas into high-performance applications.",
-        "cta": "View my projects"
-    },
-    "about": {
-        "title": "About me"
-    },
-    "projects": {
-        "title": "My Projects"
-    },
-    "contact": {
-        "title": "Contact"
-    }
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Yanis Kadri",
+    "role": "Full Stack Applications Engineer",
+    "tagline": "I transform ideas into high-performance applications.",
+    "cta": "View my projects"
+  },
+  "about": {
+    "title": "About me"
+  },
+  "projects": {
+    "title": "My Projects"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "footer": {
+    "thanks": "Thanks for visiting",
+    "navigation": "Quick Links",
+    "contact": "Contact",
+    "copyright": "All rights reserved.",
+    "madeWith": "Made with",
+    "version": "Version",
+    "lastUpdate": "Last update",
+    "tagline": "loremfdez fezf ez"
+  }
 }

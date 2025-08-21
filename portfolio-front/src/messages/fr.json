@@ -1,23 +1,33 @@
 {
-    "nav": {
-        "home": "Accueil",
-        "about": "À propos",
-        "projects": "Projets",
-        "contact": "Contact"
-    },
-    "hero": {
-        "name": "Yanis Kadri",
-        "role": "Ingénieur Concepteur Développeur d'applications Full Stack",
-        "tagline": "Je transforme des idées en applications performantes.",
-        "cta": "Voir mes projets"
-    },
-    "about": {
-        "title": "À propos"
-    },
-    "projects": {
-        "title": "Mes Projets"
-    },
-    "contact": {
-        "title": "Contact"
-    }
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Yanis Kadri",
+    "role": "Ingénieur Concepteur Développeur d'applications Full Stack",
+    "tagline": "Je transforme des idées en applications performantes.",
+    "cta": "Voir mes projets"
+  },
+  "about": {
+    "title": "À propos"
+  },
+  "projects": {
+    "title": "Mes Projets"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "footer": {
+    "thanks": "Merci d'avoir visité",
+    "navigation": "Navigation rapide",
+    "contact": "Contact",
+    "copyright": "Tous droits réservés.",
+    "madeWith": "Fait avec",
+    "version": "Version",
+    "lastUpdate": "Dernière mise à jour",
+    "tagline": "loremfdez fezf ez"
+  }
 }
