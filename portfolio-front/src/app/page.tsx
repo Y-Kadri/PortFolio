@@ -4,6 +4,8 @@ import * as React from "react"
 import { Header } from "@/components/layout/header"
 import { getMessages, type Locale } from "@/lib/i18n"
 import { Footer } from "@/components/layout/footer"
+import { HeroSection } from "@/components/sections/hero"
+import { ScrollToTop } from "@/components/ui/scroll-to-top"
 
 interface HomePageProps {
   params: { locale: Locale }
@@ -28,7 +30,11 @@ export default function HomePage({ params }: HomePageProps) {
   return (
     <div className="min-h-screen bg-background">
       <Header messages={messages} locale={locale} />
+      <main>
+        <HeroSection messages={messages} />
+      </main>
       <Footer messages={messages} locale={locale} />
+      <ScrollToTop messages={messages}/>
     </div>
   )
 }

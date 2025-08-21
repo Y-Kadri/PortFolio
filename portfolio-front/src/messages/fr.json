@@ -7,8 +7,8 @@
   },
   "hero": {
     "name": "Yanis Kadri",
-    "role": "Ingénieur Concepteur Développeur d'applications Full Stack",
-    "tagline": "Je transforme des idées en applications performantes.",
+    "role": "Ingénieur d’applications Full Stack",
+    "tagline": "Lorem",
     "cta": "Voir mes projets"
   },
   "about": {
@@ -29,5 +29,12 @@
     "version": "Version",
     "lastUpdate": "Dernière mise à jour",
     "tagline": "loremfdez fezf ez"
+  },
+  "scrollTop": "Retour en haut",
+  "cvDownload": {
+    "french": "CV Français",
+    "frenchDesc": "Version française complète",
+    "international": "CV International",
+    "internationalDesc": "Version anglaise pour l'international"
   }
 }

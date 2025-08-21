@@ -8,7 +8,7 @@
   "hero": {
     "name": "Yanis Kadri",
     "role": "Full Stack Applications Engineer",
-    "tagline": "I transform ideas into high-performance applications.",
+    "tagline": "Lorem",
     "cta": "View my projects"
   },
   "about": {
@@ -29,5 +29,12 @@
     "version": "Version",
     "lastUpdate": "Last update",
     "tagline": "loremfdez fezf ez"
+  },
+  "scrollTop": "Back to top",
+  "cvDownload": {
+    "french": "French CV",
+    "frenchDesc": "Complete French version",
+    "international": "International CV",
+    "internationalDesc": "English version for international opportunities"
   }
 }
