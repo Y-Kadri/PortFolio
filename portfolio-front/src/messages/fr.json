@@ -12,8 +12,37 @@
     "cta": "Voir mes projets"
   },
   "about": {
-    "title": "À propos",
-    "downloadCV": "Télécharger mon CV"
+    "title": "À propos de moi",
+    "downloadCV": "Télécharger mon CV",
+    "subtitle": "Qui suis-je ?",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "skills": {
+      "development": {
+        "title": "Développement",
+        "description": "Technologies et frameworks pour créer des applications web modernes et performantes",
+        "technologies": ["Java", "Spring Boot", "Angular", "React", "Next.js", "TypeScript", "Node.js", "JavaScript", "HTML", "CSS", "Tailwind CSS", "..."]
+      },
+      "quality": {
+        "title": "Qualité & Maintenabilité",
+        "description": "Outils et pratiques pour garantir la qualité du code et faciliter la maintenance",
+        "technologies": ["ESLint", "Prettier", "SonarQube", "Jest", "CI/CD", "GitHub Actions", "..."]
+      },
+      "database": {
+        "title": "Bases de données",
+        "description": "Conception et optimisation de bases de données relationnelles et NoSQL",
+        "technologies": ["MySQL", "PostgreSQL", "Oracle", "MongoDB", "Neo4j", "..."]
+      },
+      "devops": {
+        "title": "DevOps / Infrastructure",
+        "description": "Déploiement, monitoring et gestion d'infrastructure cloud",
+        "technologies": ["Docker", "Git", "Monitoring", "Logs", "Pare-feu", "Réseaux", "AD", "..."]
+      },
+      "security": {
+        "title": "Sécurité & Standards",
+        "description": "Sécurisation des applications et respect des bonnes pratiques",
+        "technologies": ["HTTPS", "CORS", "JWT", "OAuth", "Authentification", "Conformité", "..."]
+      }
+    }
   },
   "projects": {
     "title": "Mes Projets"

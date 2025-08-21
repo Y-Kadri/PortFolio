@@ -6,6 +6,7 @@ import { getMessages, type Locale } from "@/lib/i18n"
 import { Footer } from "@/components/layout/footer"
 import { HeroSection } from "@/components/sections/hero"
 import { ScrollToTop } from "@/components/ui/scroll-to-top"
+import { AboutSection } from "@/components/sections/about"
 
 interface HomePageProps {
   params: { locale: Locale }
@@ -32,6 +33,7 @@ export default function HomePage({ params }: HomePageProps) {
       <Header messages={messages} locale={locale} />
       <main>
         <HeroSection messages={messages} />
+        <AboutSection messages={messages} locale={locale} />
       </main>
       <Footer messages={messages} locale={locale} />
       <ScrollToTop messages={messages}/>

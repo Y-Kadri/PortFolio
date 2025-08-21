@@ -13,7 +13,36 @@
   },
   "about": {
     "title": "About me",
-    "downloadCV": "Download my CV"
+    "downloadCV": "Download my CV",
+    "subtitle": "Who am I?",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "skills": {
+      "development": {
+        "title": "Development",
+        "description": "Technologies and frameworks to create modern and performant web applications",
+        "technologies": ["Java", "Spring Boot", "Angular", "React", "Next.js", "TypeScript", "Node.js", "JavaScript", "HTML", "CSS", "Tailwind CSS", "..."]
+      },
+      "quality": {
+        "title": "Quality & Maintainability",
+        "description": "Tools and practices to ensure code quality and facilitate maintenance",
+        "technologies": ["ESLint", "Prettier", "SonarQube", "Jest", "Vitest", "CI/CD", "GitHub Actions", "..."]
+      },
+      "database": {
+        "title": "Databases",
+        "description": "Design and optimization of relational and NoSQL databases",
+        "technologies": ["MySQL", "PostgreSQL", "Oracle", "MongoDB", "Neo4j", "Firebase", "Redis", "Prisma", "..."]
+      },
+      "devops": {
+        "title": "DevOps / Infrastructure",
+        "description": "Deployment, monitoring and cloud infrastructure management",
+        "technologies": ["Docker", "Kubernetes", "Vercel", "AWS", "Git", "Monitoring", "Logs"]
+      },
+      "security": {
+        "title": "Security & Standards",
+        "description": "Application security and compliance with best practices",
+        "technologies": ["OWASP", "HTTPS", "CORS", "JWT", "OAuth", "Authentication", "Compliance"]
+      }
+    }
   },
   "projects": {
     "title": "My Projects"
