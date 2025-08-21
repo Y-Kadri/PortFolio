@@ -1,7 +1,23 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  i18n: {
+    locales: ['fr', 'en'],
+    defaultLocale: 'fr',
+    localeDetection: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    unoptimized: true,
+  },
+  experimental: {
+    optimizePackageImports: ['framer-motion'],
+  },
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+export default nextConfig

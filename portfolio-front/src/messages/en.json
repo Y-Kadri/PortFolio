@@ -1,0 +1,23 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "name": "Yanis Kadri",
+        "role": "Full Stack Applications Engineer",
+        "tagline": "I transform ideas into high-performance applications.",
+        "cta": "View my projects"
+    },
+    "about": {
+        "title": "About me"
+    },
+    "projects": {
+        "title": "My Projects"
+    },
+    "contact": {
+        "title": "Contact"
+    }
+}
