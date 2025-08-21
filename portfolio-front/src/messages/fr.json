@@ -12,7 +12,8 @@
     "cta": "Voir mes projets"
   },
   "about": {
-    "title": "À propos"
+    "title": "À propos",
+    "downloadCV": "Télécharger mon CV"
   },
   "projects": {
     "title": "Mes Projets"

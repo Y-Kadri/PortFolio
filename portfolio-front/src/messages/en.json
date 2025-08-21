@@ -12,7 +12,8 @@
     "cta": "View my projects"
   },
   "about": {
-    "title": "About me"
+    "title": "About me",
+    "downloadCV": "Download my CV"
   },
   "projects": {
     "title": "My Projects"
