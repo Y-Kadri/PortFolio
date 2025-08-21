@@ -139,7 +139,7 @@ export function AboutSection({ messages, locale }: AboutProps) {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="grid gap-6">
+            <div className="grid gap-6 sm:grid-cols-2">
               {skills.map((skill, index) => (
                 <motion.div
                   key={skill.title}
