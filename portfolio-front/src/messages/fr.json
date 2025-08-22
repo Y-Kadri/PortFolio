@@ -7,7 +7,7 @@
   },
   "hero": {
     "name": "Yanis Kadri",
-    "role": "Ingénieur d’applications Full Stack",
+    "role": "Ingénieur d'applications Full Stack",
     "tagline": "Lorem",
     "cta": "Voir mes projets"
   },
@@ -20,27 +20,27 @@
       "development": {
         "title": "Développement",
         "description": "Technologies et frameworks pour créer des applications web modernes et performantes",
-        "technologies": ["Java", "Spring Boot", "Angular", "React", "Next.js", "TypeScript", "Node.js", "JavaScript", "HTML", "CSS", "Tailwind CSS", "..."]
+        "technologies": ["Java","Spring Boot","Angular","React","Next.js","TypeScript","Node.js","JavaScript","HTML","CSS","Tailwind CSS","..."]
       },
       "quality": {
         "title": "Qualité & Maintenabilité",
         "description": "Outils et pratiques pour garantir la qualité du code et faciliter la maintenance",
-        "technologies": ["ESLint", "Prettier", "SonarQube", "Jest", "CI/CD", "GitHub Actions", "..."]
+        "technologies": ["Prettier","SonarQube","Jest","CI/CD","GitHub Actions","..."]
       },
       "database": {
         "title": "Bases de données",
         "description": "Conception et optimisation de bases de données relationnelles et NoSQL",
-        "technologies": ["MySQL", "PostgreSQL", "Oracle", "MongoDB", "Neo4j", "..."]
+        "technologies": ["MySQL","PostgreSQL","Oracle","MongoDB","Neo4j","..."]
       },
       "devops": {
         "title": "DevOps / Infrastructure",
         "description": "Déploiement, monitoring et gestion d'infrastructure cloud",
-        "technologies": ["Docker", "Git", "Monitoring", "Logs", "Pare-feu", "Réseaux", "AD", "..."]
+        "technologies": ["Docker","Git","Monitoring","Logs","Pare-feu","Réseaux","Active Directory","..."]
       },
       "security": {
         "title": "Sécurité & Standards",
         "description": "Sécurisation des applications et respect des bonnes pratiques",
-        "technologies": ["HTTPS", "CORS", "JWT", "OAuth", "Authentification", "Conformité", "..."]
+        "technologies": ["HTTPS","CORS","JWT","OAuth","Authentification","Conformité","..."]
       }
     }
   },
@@ -71,6 +71,14 @@
     "searchPlaceholder": "Rechercher un projet...",
     "viewLive": "Voir en ligne",
     "viewCode": "Code source",
-    "learnMore": "En savoir plus"
+    "learnMore": "En savoir plus",
+    "notFound": "Projet non trouvé",
+    "backToProjects": "Retour aux projets",
+    "technologiesTitle": "Technologies utilisées",
+    "featuresTitle": "Fonctionnalités clés",
+    "roleTitle": "Mon rôle",
+    "learningsTitle": "Ce que j'ai appris",
+    "interestedTitle": "Intéressé par ce projet ?",
+    "backToPortfolio": "Retour au portfolio"
   }
 }

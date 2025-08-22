@@ -20,27 +20,27 @@
       "development": {
         "title": "Development",
         "description": "Technologies and frameworks to create modern and performant web applications",
-        "technologies": ["Java", "Spring Boot", "Angular", "React", "Next.js", "TypeScript", "Node.js", "JavaScript", "HTML", "CSS", "Tailwind CSS", "..."]
+        "technologies": ["Java","Spring Boot","Angular","React","Next.js","TypeScript","Node.js","JavaScript","HTML","CSS","Tailwind CSS","..."]
       },
       "quality": {
         "title": "Quality & Maintainability",
         "description": "Tools and practices to ensure code quality and facilitate maintenance",
-        "technologies": ["ESLint", "Prettier", "SonarQube", "Jest", "Vitest", "CI/CD", "GitHub Actions", "..."]
+        "technologies": ["Prettier","SonarQube","Jest","CI/CD","GitHub Actions","..."]
       },
       "database": {
         "title": "Databases",
         "description": "Design and optimization of relational and NoSQL databases",
-        "technologies": ["MySQL", "PostgreSQL", "Oracle", "MongoDB", "Neo4j", "Firebase", "Redis", "Prisma", "..."]
+        "technologies": ["MySQL","PostgreSQL","Oracle","MongoDB","Neo4j","..."]
       },
       "devops": {
         "title": "DevOps / Infrastructure",
         "description": "Deployment, monitoring and cloud infrastructure management",
-        "technologies": ["Docker", "Kubernetes", "Vercel", "AWS", "Git", "Monitoring", "Logs"]
+        "technologies": ["Docker","Git","Monitoring","Logs","Pare-feu","Réseaux","Active Directory","..."]
       },
       "security": {
         "title": "Security & Standards",
         "description": "Application security and compliance with best practices",
-        "technologies": ["OWASP", "HTTPS", "CORS", "JWT", "OAuth", "Authentication", "Compliance"]
+        "technologies": ["HTTPS","CORS","JWT","OAuth","Authentification","Conformité","..."]
       }
     }
   },
@@ -71,6 +71,14 @@
     "searchPlaceholder": "Search a project...",
     "viewLive": "View Live",
     "viewCode": "Source Code",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "notFound": "Project not found",
+    "backToProjects": "Back to projects",
+    "technologiesTitle": "Technologies used",
+    "featuresTitle": "Key Features",
+    "roleTitle": "My Role",
+    "learningsTitle": "What I learned",
+    "interestedTitle": "Interested in this project?",
+    "backToPortfolio": "Back to portfolio"
   }
 }

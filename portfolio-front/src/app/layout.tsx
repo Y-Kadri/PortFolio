@@ -21,8 +21,7 @@ export const metadata: Metadata = {
     default: "Yanis Kadri - Développeur Full Stack",
     template: "%s | Yanis Kadri - Développeur Full Stack",
   },
-  description:
-    "Portfolio de Yanis Kadri, développeur full stack.",
+  description: "Portfolio de Yanis Kadri, développeur full stack.",
   keywords: [
     "développeur",
     "full stack",
@@ -65,8 +64,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://yanis-kadri-portfolio.vercel.app",
     title: "Yanis Kadri - Ingénieur Concepteur Développeur d'applications Full Stack",
-    description:
-      "Portfolio de Yanis Kadri, développeur full stack.",
+    description: "Portfolio de Yanis Kadri, développeur full stack.",
     siteName: "Yanis Kadri Portfolio",
     images: [
       {
@@ -107,7 +105,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-        <head>
+      <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.png" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
