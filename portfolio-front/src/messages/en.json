@@ -44,9 +44,6 @@
       }
     }
   },
-  "projects": {
-    "title": "My Projects"
-  },
   "contact": {
     "title": "Contact"
   },
@@ -66,5 +63,14 @@
     "frenchDesc": "Complete French version",
     "international": "International CV",
     "internationalDesc": "English version for international opportunities"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Discover my work",
+    "filterAll": "All",
+    "searchPlaceholder": "Search a project...",
+    "viewLive": "View Live",
+    "viewCode": "Source Code",
+    "learnMore": "Learn More"
   }
 }

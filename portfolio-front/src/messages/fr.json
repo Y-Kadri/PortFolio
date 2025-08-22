@@ -44,9 +44,6 @@
       }
     }
   },
-  "projects": {
-    "title": "Mes Projets"
-  },
   "contact": {
     "title": "Contact"
   },
@@ -66,5 +63,14 @@
     "frenchDesc": "Version française complète",
     "international": "CV International",
     "internationalDesc": "Version anglaise pour l'international"
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Découvrez mes réalisations",
+    "filterAll": "Tous",
+    "searchPlaceholder": "Rechercher un projet...",
+    "viewLive": "Voir en ligne",
+    "viewCode": "Code source",
+    "learnMore": "En savoir plus"
   }
 }
