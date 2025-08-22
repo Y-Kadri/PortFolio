@@ -25,7 +25,7 @@
       "quality": {
         "title": "Qualité & Maintenabilité",
         "description": "Outils et pratiques pour garantir la qualité du code et faciliter la maintenance",
-        "technologies": ["Prettier","SonarQube","Jest","CI/CD","GitHub Actions","..."]
+        "technologies": ["Eslint", "Prettier","SonarQube","Jest","CI/CD","GitHub Actions","..."]
       },
       "database": {
         "title": "Bases de données",
