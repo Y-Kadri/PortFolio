@@ -83,6 +83,166 @@ export const projects: Project[] = [
       en: "I deepened my knowledge in payment integration, performance optimization and scalable architecture.",
     },
   },
+
+  {
+    id: "library-app",
+    title: {
+      fr: "Application de gestion de bibliothèque",
+      en: "Library Management Application"
+    },
+    description: {
+      fr: "Application web full-stack permettant de gérer des livres et des utilisateurs, avec mode connecté/déconnecté et système de recommandation, déployée sur un VPS avec CI/CD.",
+      en: "Full-stack web application for managing books and users, with connected/disconnected modes and a recommendation system, deployed on a VPS with CI/CD."
+    },
+    longDescription: {
+      fr: "Ce projet consistait à développer une application web full-stack avec Symfony pour le back-end et React pour le front-end. L'application permet aux utilisateurs de se créer un compte, se connecter, gérer leur bibliothèque, rechercher des livres, consulter les dernières acquisitions, s'abonner à d'autres utilisateurs et obtenir des recommandations personnalisées. La base de données a été créée avec MySQL et l'intégration continue a été mise en place avec GitLab, incluant CI/CD et runner. Le projet inclut également une documentation Swagger pour les APIs et un jeu de données de démonstration (fixtures). Une démo client a été réalisée pour présenter l'application et montrer la mise en œuvre des fonctionnalités.",
+      en: "This project involved developing a full-stack web application with Symfony for the back-end and React for the front-end. Users can register, log in, manage their library, search for books, view latest acquisitions, follow other users, and receive personalized recommendations. The database was created with MySQL, and continuous integration and deployment were set up using GitLab, including CI/CD and runner. The project also includes Swagger API documentation and a demo dataset (fixtures). A client demo was conducted to showcase the application and demonstrate the implemented features."
+    },
+    image: "/projects/library-main.png",
+    images: [
+      "/projects/library-main.png",
+      "/projects/library-search.png",
+      "/projects/library-dashboard.png"
+    ],
+    technologies: ["Symfony", "React", "MySQL", "Visual Studio Code", "GitLab", "Swagger", "Full-Stack Development", "API Integration", "VPS Deployment", "CI/CD"],
+    githubUrl: "https://github.com/yaniskadri/library-app",
+    featured: true,
+    features: {
+      fr: [
+        "Gestion multi-utilisateurs : création, connexion et déconnexion",
+        "Mode déconnecté : recherche de livres par nom d'auteur avec autocomplétion, consultation des informations des livres et des dernières acquisitions",
+        "Mode connecté : abonnement/désabonnement à d'autres utilisateurs, consultation de la liste d'abonnements et des livres empruntés des utilisateurs",
+        "Système de recommandation pour utilisateurs et livres",
+        "Consultation des livres depuis différents modules (liste d'abonnements, recherche, recommandations)",
+        "Jeu de données (fixtures) pour créer un jeu de données de démonstration",
+        "Documentation Swagger pour les APIs",
+        "Intégration continue et déploiement continu (CI/CD) avec GitLab et runner",
+        "Déploiement sur VPS"
+      ],
+      en: [
+        "Multi-user management: registration, login, and logout",
+        "Disconnected mode: book search by author with autocomplete, view book details and latest acquisitions",
+        "Connected mode: follow/unfollow users, view subscription list and borrowed books of users",
+        "Recommendation system for users and books",
+        "View books from different modules (subscriptions list, search, recommendations)",
+        "Demo dataset (fixtures) to set up sample data",
+        "Swagger API documentation",
+        "Continuous integration and deployment (CI/CD) with GitLab and runner",
+        "Deployment on VPS"
+      ]
+    },
+    role: {
+      fr: "Développement full-stack, intégration des APIs, gestion de la base de données, mise en place des fonctionnalités connectées et déconnectées, et préparation/présentation de la démo client.",
+      en: "Full-stack development, API integration, database management, implementation of connected and disconnected features, and preparation/presentation of the client demo."
+    },
+
+    learnings: {
+      fr: "Renforcement des compétences en Symfony, React et MySQL, maîtrise de la création et utilisation d'APIs, déploiement sur serveur et mise en place de CI/CD avec GitLab, amélioration de la communication et du travail en équipe en mode agile, et capacité à préparer et présenter une démo client.",
+      en: "Improved skills in Symfony, React, and MySQL, mastery of API creation and consumption, deployment on a server and CI/CD setup with GitLab, enhanced communication and agile teamwork, and ability to prepare and present a client demo."
+    }
+  },
+  {
+    id: "rope-ds",
+    title: {
+      fr: "Implémentation d'une structure de données Rope",
+      en: "Rope Data Structure Implementation"
+    },
+    description: {
+      fr: "Application C implémentant la structure de données Rope pour optimiser les opérations sur des chaînes de caractères et comparer ses performances avec un tableau classique.",
+      en: "C application implementing the Rope data structure to optimize string operations and compare its performance with a traditional character array."
+    },
+    longDescription: {
+      fr: "Le projet consistait à implémenter une structure de données Rope en C afin d'améliorer la gestion et la manipulation des chaînes de caractères. Les fonctionnalités incluent l'insertion et la suppression de chaînes, la mesure des temps d'exécution pour la construction et la modification des structures, et la comparaison de performance avec un tableau classique de caractères. Un banc d'essai a été réalisé pour calculer les performances et un rapport a été produit pour analyser et expliquer les résultats, en prenant soin de gérer les fuites de mémoire.",
+      en: "The project involved implementing a Rope data structure in C to improve string handling and manipulation. Features include insertion and deletion of strings, measuring execution time for construction and modification, and performance comparison with a traditional character array. A test bench was created to measure performance, and a report was produced to analyze and explain results, with careful memory management to avoid leaks."
+    },
+    image: "/projects/rope-main.png",
+    images: [
+      "/projects/rope-main.png",
+      "/projects/rope-benchmark.png"
+    ],
+    technologies: ["C", "Visual Studio Code", "GitLab", "Data Structures", "Memory Management", "Performance Benchmarking"],
+    githubUrl: "https://github.com/yaniskadri/rope-ds",
+    featured: true,
+    features: {
+      fr: [
+        "Implémentation de la structure Rope pour la gestion de chaînes de caractères",
+        "Insertion et suppression de chaînes",
+        "Mesure des temps d'exécution et comparaison avec un tableau de caractères classique",
+        "Création de bancs d'essai pour benchmark",
+        "Analyse et rédaction d'un rapport explicatif",
+        "Gestion de la mémoire pour éviter les fuites"
+      ],
+      en: [
+        "Implementation of Rope data structure for string management",
+        "Insertion and deletion of strings",
+        "Execution time measurement and comparison with a traditional character array",
+        "Creation of test benches for benchmarking",
+        "Analysis and writing of explanatory report",
+        "Memory management to prevent leaks"
+      ]
+    },
+    role: {
+      fr: "Développement complet de la structure Rope, création de bancs d'essai et analyse des performances.",
+      en: "Full development of the Rope structure, creation of test benches, and performance analysis."
+    },
+    learnings: {
+      fr: "Renforcement des compétences en langage C, optimisation de la mémoire, analyse de performances et rédaction de rapports techniques clairs.",
+      en: "Enhanced skills in C programming, memory optimization, performance analysis, and clear technical report writing."
+    }
+  },
+  {
+    id: "concordia-game",
+    title: {
+      fr: "Implémentation du jeu Concordia",
+      en: "Concordia Game Implementation"
+    },
+    description: {
+      fr: "Application permettant de jouer au jeu de plateau Concordia avec interface graphique, IA et gestion multi-joueurs.",
+      en: "Application to play the board game Concordia with graphical interface, AI, and multi-player management."
+    },
+    longDescription: {
+      fr: "Ce projet consistait à développer une application pour le jeu de plateau Concordia en Python. L'application inclut une interface graphique avec Tkinter, la gestion de plusieurs joueurs, la possibilité d'utiliser une IA, et l'initialisation du jeu via une base de données. Des diagrammes UML ont été produits pour les classes, les cas d'utilisation, la communication et la séquence. L'intégration continue et les tests unitaires ont été mis en place pour valider l'initialisation du jeu et l'effet des cartes.",
+      en: "This project involved developing an application for the board game Concordia in Python. The app includes a graphical interface using Tkinter, multi-player support, AI integration, and game initialization via a database. UML diagrams were created for classes, use cases, communication, and sequence. Continuous integration and unit tests were implemented to validate game initialization and card effects."
+    },
+    image: "/projects/concordia-main.png",
+    images: [
+      "/projects/concordia-main.png",
+      "/projects/concordia-board.png",
+      "/projects/concordia-ai.png"
+    ],
+    technologies: ["Python", "Tkinter", "Visual Studio Code", "GitLab", "Full-Stack Development", "Database Integration", "Unit Testing", "AI Implementation"],
+    githubUrl: "https://github.com/yaniskadri/concordia-game",
+    featured: true,
+    features: {
+      fr: [
+        "Interface graphique pour jouer au jeu Concordia",
+        "Gestion multi-joueurs et choix du nombre de joueurs",
+        "Intégration d'une IA pour jouer contre l'ordinateur",
+        "Initialisation du jeu via base de données",
+        "Production de diagrammes UML : classes, cas d'utilisation, communication et séquence",
+        "Tests unitaires pour vérifier l'initialisation du jeu et l'effet des cartes",
+        "Intégration continue via GitLab"
+      ],
+      en: [
+        "Graphical interface to play Concordia",
+        "Multi-player support and player count selection",
+        "AI integration to play against the computer",
+        "Game initialization using a database",
+        "UML diagrams produced: classes, use cases, communication, and sequence",
+        "Unit tests to validate game initialization and card effects",
+        "Continuous integration via GitLab"
+      ]
+    },
+    role: {
+      fr: "Développement du jeu, implémentation de l'IA, intégration de la base de données et création de l'interface graphique.",
+      en: "Game development, AI implementation, database integration, and graphical interface creation."
+    },
+    learnings: {
+      fr: "Renforcement des compétences en Python, Tkinter, gestion de base de données avec types complexes, implémentation d'une IA et tests unitaires.",
+      en: "Improved skills in Python, Tkinter, database handling with complex types, AI implementation, and unit testing."
+    }
+  },
+
   {
     id: "pwa-series-app",
     title: {
