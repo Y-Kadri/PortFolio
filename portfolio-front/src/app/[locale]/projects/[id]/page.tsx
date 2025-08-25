@@ -25,9 +25,15 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   const project = projects.find((p) => p.id === params.id)
 
   const mediaItems = React.useMemo(() => {
-    const items: { type: "image" | "video"; src: string }[] = []
-    if (project?.video) items.push({ type: "video", src: project.video })
-    if (project?.images) project.images.forEach((image) => items.push({ type: "image", src: image }))
+    const items = []
+    if (project?.video) {
+      items.push({ type: "video", src: project.video })
+    }
+    if (project?.images) {
+      project.images.forEach((image) => {
+        items.push({ type: "image", src: image })
+      })
+    }
     return items
   }, [project])
 
@@ -49,11 +55,11 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
         <Header messages={messages} locale={locale} />
         <main className="container mx-auto max-w-4xl px-4 py-20">
           <div className="text-center">
-            <h1 className="text-2xl font-bold mb-4">{messages.projects.notFound}</h1>
+            <h1 className="text-2xl font-bold mb-4">{messages.projects?.notFound || "Projet non trouvé"}</h1>
             <Link href={`/${locale}#projects`}>
               <Button>
                 <ArrowLeft className="h-4 w-4 mr-2" />
-                {messages.projects.backToProjects}
+                {messages.projects?.backToProjects || "Retour aux projets"}
               </Button>
             </Link>
           </div>
@@ -63,8 +69,17 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     )
   }
 
-  const nextMedia = () => setCurrentMediaIndex((prev) => (prev + 1) % mediaItems.length)
-  const prevMedia = () => setCurrentMediaIndex((prev) => (prev - 1 + mediaItems.length) % mediaItems.length)
+  const nextMedia = () => {
+    if (currentMediaIndex < mediaItems.length - 1) {
+      setCurrentMediaIndex((prev) => prev + 1)
+    }
+  }
+
+  const prevMedia = () => {
+    if (currentMediaIndex > 0) {
+      setCurrentMediaIndex((prev) => prev - 1)
+    }
+  }
 
   const getTechColor = (tech: string) => {
     const colors: Record<string, string> = {
@@ -99,7 +114,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 className="inline-flex items-center text-muted-foreground hover:text-foreground mb-8 transition-colors"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
-                {messages.projects.backToProjects}
+                {messages.projects?.backToProjects || "Retour aux projets"}
               </Link>
 
               <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -117,7 +132,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                       <Button size="lg" className="group" asChild>
                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4 mr-2 transition-transform group-hover:translate-x-1" />
-                          {messages.projects.viewLive}
+                          {messages.projects?.viewLive || "Live Demo"}
                         </a>
                       </Button>
                     )}
@@ -125,7 +140,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                       <Button variant="outline" size="lg" className="group bg-transparent" asChild>
                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                           <Github className="h-4 w-4 mr-2 transition-transform group-hover:scale-110" />
-                          {messages.projects.viewCode}
+                          {messages.projects?.viewCode || "GitHub"}
                         </a>
                       </Button>
                     )}
@@ -153,7 +168,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
         {/* Media Carousel */}
         {mediaItems.length > 0 && (
           <section className="py-20">
-            <div className="container mx-auto max-w-3xl px-4">
+            <div className="container mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -161,53 +176,136 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-muted/20">
-                  {currentMedia?.type === "video" ? (
-                    <div className="relative aspect-video">
-                      <video
-                        src={currentMedia.src}
-                        controls
-                        className="w-full h-full object-cover"
-                        onPlay={() => setIsVideoPlaying(true)}
-                        onPause={() => setIsVideoPlaying(false)}
-                      />
-                    </div>
-                  ) : (
-                    <div className="relative aspect-video">
-                      <img
-                        src={currentMedia?.src || "/placeholder.svg?height=400&width=600"}
-                        alt={`${project.title[locale]} - Image ${currentMediaIndex + 1}`}
-                        className="w-full h-full object-cover"
+                <div className="relative flex items-center justify-center gap-4 overflow-hidden">
+                  {/* Previous preview */}
+                  {mediaItems.length > 1 && currentMediaIndex > 0 && (
+                    <div className="hidden md:block relative w-32 h-20 opacity-60 hover:opacity-80 transition-opacity cursor-pointer">
+                      <div className="absolute inset-0 rounded-xl overflow-hidden border-2 border-white/20 shadow-lg">
+                        {mediaItems[currentMediaIndex - 1]?.type === "video" ? (
+                          <video
+                            src={mediaItems[currentMediaIndex - 1]?.src}
+                            className="w-full h-full object-cover"
+                            muted
+                          />
+                        ) : (
+                          <img
+                            src={
+                              mediaItems[currentMediaIndex - 1]?.src ||
+                              "/placeholder.svg?height=80&width=128" ||
+                              "/placeholder.svg"
+                            }
+                            alt="Previous"
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                      </div>
+                      <button
+                        onClick={prevMedia}
+                        className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-colors rounded-xl"
                       />
                     </div>
                   )}
 
-                  {mediaItems.length > 1 && (
-                    <>
-                      <button
-                        onClick={prevMedia}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background transition-all duration-200 shadow-lg"
-                      >
-                        <ArrowLeft className="h-5 w-5" />
-                      </button>
+                  {/* Main media with enhanced animation */}
+                  <motion.div
+                    key={currentMediaIndex}
+                    initial={{ opacity: 0, scale: 0.95, x: 20 }}
+                    animate={{ opacity: 1, scale: 1, x: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, x: -20 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="relative w-full max-w-2xl"
+                  >
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-muted/20 border-4 border-white/10">
+                      {currentMedia?.type === "video" ? (
+                        <div className="relative aspect-video">
+                          <video
+                            src={currentMedia.src}
+                            controls
+                            className="w-full h-full object-cover"
+                            onPlay={() => setIsVideoPlaying(true)}
+                            onPause={() => setIsVideoPlaying(false)}
+                          />
+                        </div>
+                      ) : (
+                        <div className="relative aspect-video">
+                          <img
+                            src={currentMedia?.src || "/placeholder.svg?height=400&width=600"}
+                            alt={`${project.title[locale]} - Image ${currentMediaIndex + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      )}
+
+                      {mediaItems.length > 1 && (
+                        <>
+                          <button
+                            onClick={prevMedia}
+                            disabled={currentMediaIndex === 0}
+                            className={`absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full backdrop-blur-sm transition-all duration-200 shadow-lg ${
+                              currentMediaIndex === 0
+                                ? "bg-background/40 text-muted-foreground/50 cursor-not-allowed"
+                                : "bg-background/80 hover:bg-background hover:scale-110"
+                            }`}
+                          >
+                            <ArrowLeft className="h-5 w-5" />
+                          </button>
+                          <button
+                            onClick={nextMedia}
+                            disabled={currentMediaIndex === mediaItems.length - 1}
+                            className={`absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full backdrop-blur-sm transition-all duration-200 shadow-lg ${
+                              currentMediaIndex === mediaItems.length - 1
+                                ? "bg-background/40 text-muted-foreground/50 cursor-not-allowed"
+                                : "bg-background/80 hover:bg-background hover:scale-110"
+                            }`}
+                          >
+                            <ArrowLeft className="h-5 w-5 rotate-180" />
+                          </button>
+                        </>
+                      )}
+                    </div>
+                  </motion.div>
+
+                  {/* Next preview */}
+                  {mediaItems.length > 1 && currentMediaIndex < mediaItems.length - 1 && (
+                    <div className="hidden md:block relative w-32 h-20 opacity-60 hover:opacity-80 transition-opacity cursor-pointer">
+                      <div className="absolute inset-0 rounded-xl overflow-hidden border-2 border-white/20 shadow-lg">
+                        {mediaItems[currentMediaIndex + 1]?.type === "video" ? (
+                          <video
+                            src={mediaItems[currentMediaIndex + 1]?.src}
+                            className="w-full h-full object-cover"
+                            muted
+                          />
+                        ) : (
+                          <img
+                            src={
+                              mediaItems[currentMediaIndex + 1]?.src ||
+                              "/placeholder.svg?height=80&width=128" ||
+                              "/placeholder.svg"
+                            }
+                            alt="Next"
+                            className="w-full h-full object-cover"
+                          />
+                        )}
+                      </div>
                       <button
                         onClick={nextMedia}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 backdrop-blur-sm hover:bg-background transition-all duration-200 shadow-lg"
-                      >
-                        <ArrowLeft className="h-5 w-5 rotate-180" />
-                      </button>
-                    </>
+                        className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-colors rounded-xl"
+                      />
+                    </div>
                   )}
                 </div>
 
+                {/* Indicators */}
                 {mediaItems.length > 1 && (
                   <div className="flex justify-center mt-6 gap-2">
                     {mediaItems.map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setCurrentMediaIndex(index)}
-                        className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                          index === currentMediaIndex ? "bg-primary scale-110" : "bg-muted-foreground/30"
+                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                          index === currentMediaIndex
+                            ? "bg-primary scale-110"
+                            : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                         }`}
                       />
                     ))}
@@ -222,16 +320,14 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto max-w-6xl px-4">
             <div className="grid lg:grid-cols-2 gap-12">
-              {/* Technologies */}
+              {/* Technologies utilisées - Left Column */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">
-                  {messages.projects.technologiesTitle}
-                </h2>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">Technologies utilisées</h2>
                 <div className="flex flex-wrap gap-3">
                   {project.technologies.map((tech) => (
                     <Badge key={tech} className={`text-sm px-4 py-2 ${getTechColor(tech)}`}>
@@ -241,16 +337,14 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 </div>
               </motion.div>
 
-              {/* Features */}
+              {/* Fonctionnalités clés - Right Column */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">
-                  {messages.projects.featuresTitle}
-                </h2>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">Fonctionnalités clés</h2>
                 <div className="space-y-4">
                   {project.features[locale].map((feature, index) => (
                     <motion.div
@@ -261,7 +355,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                       viewport={{ once: true }}
                     >
                       <Card className="hover:shadow-lg transition-shadow duration-300">
-                        <CardContent className="p-1">
+                        <CardContent className="p-3">
                           <div className="flex items-center gap-3">
                             <div className="p-1 rounded-lg bg-primary/10 text-primary flex-shrink-0">
                               <div className="w-3 h-3 rounded-full bg-primary"></div>
@@ -288,21 +382,19 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12">
-                {messages.projects.roleTitle} & {messages.projects.learningsTitle}
-              </h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12">Mon rôle & apprentissages</h2>
 
               <div className="grid md:grid-cols-2 gap-8">
                 <Card className="text-left">
                   <CardContent className="p-8">
-                    <h3 className="font-heading text-xl font-semibold mb-4">{messages.projects.roleTitle}</h3>
+                    <h3 className="font-heading text-xl font-semibold mb-4">Mon rôle</h3>
                     <p className="text-muted-foreground leading-relaxed">{project.role[locale]}</p>
                   </CardContent>
                 </Card>
 
                 <Card className="text-left">
                   <CardContent className="p-8">
-                    <h3 className="font-heading text-xl font-semibold mb-4">{messages.projects.learningsTitle}</h3>
+                    <h3 className="font-heading text-xl font-semibold mb-4">Ce que j'ai appris</h3>
                     <p className="text-muted-foreground leading-relaxed">{project.learnings[locale]}</p>
                   </CardContent>
                 </Card>
@@ -321,14 +413,14 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8">{messages.projects.interestedTitle}</h2>
+              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8">Intéressé par ce projet ?</h2>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 {project.liveUrl && (
                   <Button size="lg" className="group" asChild>
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4 mr-2 transition-transform group-hover:translate-x-1" />
-                      {messages.projects.viewLive}
+                      {messages.projects?.viewLive || "Live Demo"}
                     </a>
                   </Button>
                 )}
@@ -336,14 +428,14 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   <Button variant="outline" size="lg" className="group bg-transparent" asChild>
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4 mr-2 transition-transform group-hover:scale-110" />
-                      {messages.projects.viewCode}
+                      {messages.projects?.viewCode || "GitHub"}
                     </a>
                   </Button>
                 )}
                 <Button variant="ghost" size="lg" asChild>
                   <Link href={`/${locale}#projects`}>
                     <ArrowLeft className="h-4 w-4 mr-2" />
-                    {messages.projects.backToPortfolio}
+                    Retour au portfolio
                   </Link>
                 </Button>
               </div>

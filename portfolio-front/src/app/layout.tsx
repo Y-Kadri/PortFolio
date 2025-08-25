@@ -98,13 +98,14 @@ export const metadata: Metadata = {
   category: "technology",
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface LocaleLayoutProps {
   children: React.ReactNode
-}>) {
+  params: { locale: string }
+}
+
+export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang={params.locale} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.png" type="image/svg+xml" />

@@ -83,7 +83,73 @@ export const projects: Project[] = [
       en: "I deepened my knowledge in payment integration, performance optimization and scalable architecture.",
     },
   },
-
+  {
+    id: "django-quiz",
+    title: {
+      fr: "Évolution d’une plateforme et création d’un quiz sous Django",
+      en: "Platform Enhancement and Django Quiz Development"
+    },
+    description: {
+      fr: "Évolution d’une plateforme Django (BakeryDemo) et développement d’une application de quiz sous Django.",
+      en: "Enhancement of a Django platform (BakeryDemo) and development of a Django quiz application."
+    },
+    longDescription: {
+      fr: "Projet en deux étapes. La première a porté sur l’évolution de la démo Bakery de Django, avec mise en place de tests sur les données, API REST et hooks/signaux. La seconde phase a consisté à concevoir et développer notre propre site de quiz sous Django, avec des questions organisées par catégories et niveaux de difficulté, et un suivi des scores des utilisateurs.",
+      en: "Two-stage project. The first stage focused on enhancing Django's Bakery demo, including data tests, REST API, and hooks/signals. The second stage involved designing and developing our own quiz site in Django, with questions organized by categories and difficulty levels, and tracking users' scores."
+    },
+    image: "/projects/django-quiz/home2.png",
+    images: [
+      "/projects/django-quiz/home1.png",
+      "/projects/django-quiz/signup.png",
+      "/projects/django-quiz/signin.png",
+      "/projects/django-quiz/home2.png",
+      "/projects/django-quiz/quiz.png",
+      "/projects/django-quiz/score.png",
+    ],
+    technologies: [
+      "Python",
+      "Django",
+      "SQLite",
+      "GitLab",
+      "Unit Testing",
+      "REST API",
+      "Management Commands",
+      "Signals & Hooks",
+      "Matplotlib"
+    ],
+    githubUrl: "https://github.com/yaniskadri/wagtail-quiz",
+    featured: true,
+    features: {
+      fr: [
+        "Alimentation massive de la base de données depuis une API externe via commande python manage.py fetch_quizz_data",
+        "Création de compte, connexion, consultation du profil et déconnexion",
+        "Commande pour calculer la moyenne globale des scores : python manage.py moyenne_score",
+        "Paramétrage du quiz : choix de la catégorie et du niveau de difficulté (easy, medium, hard, all)",
+        "Visualisation des scores par graphique",
+        "Tests unitaires sur les modèles, vues et endpoints",
+        "Hooks et signaux sur les modèles (Question, CustomUser, Score) et sur l’API",
+        "Documentation d’installation et guide d’utilisation (README/Markdown)"
+      ],
+      en: [
+        "Massive database population from an external API using command python manage.py fetch_quizz_data",
+        "Account creation, login, profile viewing, and logout",
+        "Command to compute global average score: python manage.py moyenne_score",
+        "Quiz settings: select category and difficulty (easy, medium, hard, all)",
+        "Score visualization via chart",
+        "Unit tests on models, views, and endpoints",
+        "Hooks and signals on models (Question, CustomUser, Score) and API",
+        "Installation and user guide documentation (README/Markdown)"
+      ]
+    },
+    role: {
+      fr: "Participation active au développement back-end Django (API REST, commandes Python personnalisées, hooks/signaux), création et gestion de la base de données MySQL, écriture de tests, et travail en équipe avec partage des tâches et points réguliers sur l’avancement.",
+      en: "Active participation in Django back-end development (REST API, custom Python management commands, hooks/signals), MySQL database creation and management, writing tests, and teamwork with task sharing and regular progress check-ins."
+    },
+    learnings: {
+      fr: "Amélioration des compétences sur Django, création et utilisation de commandes Python personnalisées pour gérer et remplir la base de données, conception d’APIs REST, suivi des scores, et renforcement du travail en équipe et de la coordination.",
+      en: "Improved skills in Django, building and using custom Python management commands to manage and populate the database, designing REST APIs, score tracking, and strengthened teamwork and coordination."
+    },
+  },
   {
     id: "library-app",
     title: {
