@@ -257,7 +257,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               viewport={{ once: true }}
               className="text-center mt-16"
             >
-              <h3 className="font-heading text-2xl font-semibold mb-6">Technologies utilisées</h3>
+              <h3 className="font-heading text-2xl font-semibold mb-6">Technologies utilisées et concepts</h3>
               <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
                 {project.technologies.map((tech) => (
                   <Badge key={tech} className={`text-sm px-4 py-2 ${getTechColor(tech)}`}>
@@ -289,7 +289,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h3 className="font-heading text-xl font-semibold mb-4">Technologies utilisées</h3>
+                <h3 className="font-heading text-xl font-semibold mb-4">Technologies utilisées et concepts</h3>
                 <div className="flex flex-wrap gap-3">
                   {project.technologies.map((tech) => (
                     <Badge key={tech} className={`text-sm px-3 py-1 ${getTechColor(tech)}`}>

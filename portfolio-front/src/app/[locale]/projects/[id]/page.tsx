@@ -327,7 +327,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">Technologies utilisées</h2>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">Technologies utilisées et concepts</h2>
                 <div className="flex flex-wrap gap-3">
                   {project.technologies.map((tech) => (
                     <Badge key={tech} className={`text-sm px-4 py-2 ${getTechColor(tech)}`}>

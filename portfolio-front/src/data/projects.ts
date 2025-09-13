@@ -35,53 +35,180 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "ecommerce-platform",
+    id: "multimodal-mobility-optimization",
     title: {
-      fr: "TEST - JDD- Plateforme E-commerce",
-      en: "TEST - JDD-E-commerce Platform",
+      fr: "Recherche de cycle optimal sur graphe dynamique",
+      en: "Optimal Cycle Search on Dynamic Graphs"
     },
     description: {
-      fr: "Une plateforme e-commerce moderne avec paiement intégré et gestion d'inventaire.",
-      en: "A modern e-commerce platform with integrated payment and inventory management.",
+      fr: "Projet d’étude et d’implémentation d’algorithmes pour trouver un cycle optimal (temps total minimal) dans un graphe représentant des tournées de livraison avec contraintes dynamiques.",
+      en: "Study and implementation of algorithms to find an optimal cycle (minimal total time) in a graph representing delivery tours with dynamic constraints."
     },
     longDescription: {
-      fr: "Cette plateforme e-commerce complète offre une expérience utilisateur exceptionnelle avec un design moderne et des fonctionnalités avancées. Elle intègre un système de paiement sécurisé, une gestion d'inventaire en temps réel, et un tableau de bord administrateur complet.",
-      en: "This comprehensive e-commerce platform offers an exceptional user experience with modern design and advanced features. It integrates secure payment processing, real-time inventory management, and a complete admin dashboard.",
+      fr: "Projet centré sur la recherche d’un cycle optimal dans un graphe pondéré représentant des villes (sommets) et des routes (arêtes), où les poids représentent le temps de parcours et peuvent changer dynamiquement à chaque déplacement du camion. L’objectif était de minimiser le temps total de parcours tout en prenant en compte des contraintes réalistes : routes interdites, arêtes coûteuses et perturbations dynamiques. Le travail a combiné une modélisation mathématique et une analyse de complexité avec une phase expérimentale approfondie : génération de graphes aléatoires, implémentation et comparaison de différents algorithmes (brute force, glouton, heuristiques, métaheuristiques, algorithmes dynamiques), et réalisation de graphiques et statistiques détaillés pour chaque scénario. Le rendu final inclut nos analyses, expérimentations et conclusions, présentés dans un rapport et une soutenance orale.",
+      en: "Project focused on searching for an optimal cycle in a weighted graph representing cities (nodes) and roads (edges), where weights represent travel time and can change dynamically at each truck movement. The goal was to minimize total travel time while considering realistic constraints: forbidden roads, costly edges, and dynamic perturbations. The work combined mathematical modeling and complexity analysis with a detailed experimental phase: random graph generation, implementation and comparison of various algorithms (brute force, greedy, heuristics, metaheuristics, dynamic algorithms), and detailed charts and statistics for each scenario. The final output included our analyses, experiments, and conclusions, presented in a report and oral defense."
     },
-    image: "/projects/ecommerce-main.png",
+    image: "/projects/multiModalMobilityOptimization/opt2.gif",
     images: [
-      "/projects/ecommerce-main.png",
-      "/projects/ecommerce-product.png",
-      "/projects/ecommerce-cart.png",
-      "/projects/ecommerce-admin.png",
+      "/projects/multiModalMobilityOptimization/bruteForce.gif",
+      "/projects/multiModalMobilityOptimization/dStar.gif",
+      "/projects/multiModalMobilityOptimization/opt2.gif",
+      "/projects/multiModalMobilityOptimization/nearestNeighbor.gif",
+      "/projects/multiModalMobilityOptimization/antColony.gif",
+      "/projects/multiModalMobilityOptimization/AlgoCompare.png",
+      "/projects/multiModalMobilityOptimization/execTime.png",
+      "/projects/multiModalMobilityOptimization/medianTime.png",
+      "/projects/multiModalMobilityOptimization/ecartTypeTime.png",
+      "/projects/multiModalMobilityOptimization/ecartAboluMedianTime.png",
     ],
-    video: "/projects/ecommerce-demo.mp4",
-    technologies: ["React", "Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
-    liveUrl: "https://ecommerce-demo.vercel.app",
-    githubUrl: "https://github.com/yaniskadri/ecommerce-platform",
+    technologies: [
+      "Python",
+      "Jupyter / Notebook",
+      "Théorie des graphes (Graph theory)",
+      "Modélisation mathématique",
+      "NetworkX",
+      "Matplotlib",
+      "Pandas",
+      "Brute Force",
+      "Greedy (Glouton)",
+      "Nearest Neighbor",
+      "2-opt",
+      "Recuit simulé",
+      "Algorithmes génétiques",
+      "Ant Colony Optimization (ACO)",
+      "D*",
+      "Programmation linéaire",
+      "Heuristiques",
+      "Métaheuristiques",
+      "Complexité polynomiale et réductions polynomiales",
+    ],
+    githubUrl: "",
     featured: true,
     features: {
       fr: [
-        "Paiement sécurisé avec Stripe",
-        "Gestion d'inventaire en temps réel",
-        "Interface administrateur complète",
-        "Recherche et filtres avancés",
+        "Analyse théorique : distinction problème de décision vs problème d’optimisation, étude de complexité (NP-complet, réductions polynomiales), modélisation mathématique avec ensembles, variables binaires et fonction objectif",
+        "Générateur d’instances aléatoires : création de graphes pondérés où les sommets représentent les villes, les arêtes les routes et les poids le temps de parcours",
+        "Ajout de contraintes réalistes : routes interdites, arêtes coûteuses et perturbations dynamiques des temps de trajet",
+        "Implémentation et comparaison de plusieurs algorithmes : brute force, algorithmes gloutons (greedy), heuristiques (Nearest Neighbor, 2-opt), métaheuristiques (recuit simulé, génétique, colonies de fourmis) et algorithmes dynamiques (D*)",
+        "Étude expérimentale (benchmark) : génération de graphiques et statistiques détaillés pour chaque graphe : nombre de cycles, temps d’exécution moyen, médiane des temps, écart-type, écart absolu médian (MAD), comparaison des temps de cycles optimaux, le tout en fonction du nombre de villes et du nombre d’arêtes",
+        "Présentation orale de nos analyses théoriques, expérimentations et conclusions"
       ],
       en: [
-        "Secure payment with Stripe",
-        "Real-time inventory management",
-        "Complete admin interface",
-        "Advanced search and filters",
-      ],
+        "Theoretical analysis: distinction between decision vs optimization problems, complexity study (NP-complete, polynomial reductions), mathematical modeling with sets, binary variables, and objective function",
+        "Random instance generator: construction of weighted graphs where nodes represent cities, edges represent roads, and weights represent travel times",
+        "Integration of realistic constraints: forbidden roads, costly edges, and dynamic perturbations of travel times",
+        "Implementation and comparison of various algorithms: brute force, greedy algorithms, heuristics (Nearest Neighbor, 2-opt), metaheuristics (simulated annealing, genetic algorithms, ant colony optimization), and dynamic algorithms (D*)",
+        "Experimental study (benchmark): generation of detailed charts and statistics for each graph: number of cycles, mean execution time, median execution time, standard deviation, median absolute deviation (MAD), comparison of optimal cycle times, all depending on number of cities and edges",
+        "Oral presentation of our theoretical analyses, experiments, and conclusions"
+      ]
     },
     role: {
-      fr: "Développement full-stack de A à Z, de la conception de l'architecture à la mise en production.",
-      en: "Full-stack development from A to Z, from architecture design to production deployment.",
+      fr: "Compréhension du problème de base pour identifier les contraintes et objectifs, participation à la modélisation mathématique, à l’analyse de complexité et à l’implémentation Python des algorithmes (brute force, glouton, heuristiques, métaheuristiques, D*). Génération d’instances, réalisation des expérimentations et production des graphiques et statistiques. Contribution active au travail d’équipe : échanges d’idées, répartition des tâches, points d’avancement et soutenance orale.",
+      en: "Understanding the base problem to identify constraints and objectives, contributed to mathematical modeling, complexity analysis, and Python implementation of algorithms (brute force, greedy, heuristics, metaheuristics, D*). Generated instances, ran experiments, and produced charts and statistics. Actively participated in teamwork: idea sharing, task distribution, progress meetings, and oral defense."
     },
     learnings: {
-      fr: "J'ai approfondi mes connaissances en intégration de paiements, optimisation des performances et architecture scalable.",
-      en: "I deepened my knowledge in payment integration, performance optimization and scalable architecture.",
+      fr: "Approfondissement en modélisation sur graphe, optimisation combinatoire et analyse de complexité. Analyse et modélisation de problèmes NP-complets et difficiles, implémentation et comparaison d’algorithmes, pratique des algorithmes gloutons, heuristiques, métaheuristiques (2-opt, recuit simulé, génétiques, ACO) et dynamiques (D*). Développement Python avec NetworkX et Matplotlib, réalisation d’analyses statistiques et visualisations avancées, amélioration de la collaboration, de la communication et de la présentation des résultats.",
+      en: "Deepened knowledge in graph modeling, combinatorial optimization, and complexity analysis. Analysis and modeling of NP-complete and hard problems, implementation and comparison of algorithms, practice with greedy algorithms, heuristics, metaheuristics (2-opt, simulated annealing, genetic, ACO), and dynamic algorithms (D*). Python development with NetworkX and Matplotlib, advanced statistical analysis and visualizations, improved collaboration, communication, and presentation skills."
+    }
+  },
+  {
+    id: "assurancesplus-security",
+    title: {
+      fr: "Conception d’un réseau complexe et sécurisé pour ASSURANCESPLUS",
+      en: "Design of a Complex and Secure Network for ASSURANCESPLUS"
     },
+    description: {
+      fr: "Conception et déploiement d’une infrastructure réseau et système sécurisée pour ASSURANCESPLUS (Active Directory, VPN pour le télétravail, DMZ, pare-feu, plan de sauvegarde RPO/RTO, supervision, etc.).",
+      en: "Design and deployment of a secure network and system infrastructure for ASSURANCESPLUS (Active Directory, VPN for remote work, DMZ, firewall, RPO/RTO backup plan, monitoring, etc.)."
+    },
+    longDescription: {
+      fr: "Projet mené suite à une attaque par rançongiciel ayant paralysé une agence. Objectif : sécuriser et uniformiser l’infrastructure des agences actuelles et futures. Mise en place d’un Active Directory structuré (forêt, domaines, OU, GPO, comptes, certificats SSL), d’une architecture réseau avec DMZ, VPN pour le télétravail, filtrage par pare-feu, et mise en place d’une supervision/monitoring. Conception d’une cartographie SI (administration, logique, physique) et d’un plan de sauvegarde aligné sur les objectifs RTO/RPO pour garantir la continuité d’activité. Développement de scripts d’automatisation pour faciliter le déploiement dans les futures agences, élaboration d’un questionnaire de sécurité. Démo complète et maquette vidéo réalisées pour illustrer les solutions déployées.",
+      en: "Project carried out after a ransomware attack that paralyzed one agency. Goal: secure and standardize the infrastructure of current and future agencies. Deployed a structured Active Directory (forest, domains, OUs, GPOs, accounts, SSL certificates), a network architecture with DMZ, VPN for remote work, firewall filtering, and implemented monitoring. Designed an IT system map (administrative, logical, physical) and a backup plan aligned with RTO/RPO objectives to ensure business continuity. Developed automation scripts to ease future deployments, created a security questionnaire. Complete demo and video prototype were produced to showcase the deployed solutions."
+    },
+    video: "/projects/assurancesplus/mockup.mp4",
+    image: "/projects/assurancesplus/logiqueSiege.png",
+    images: [
+      "/projects/assurancesplus/logiqueSiege.png",
+      "/projects/assurancesplus/logiqueAgenceStandard.png",
+      "/projects/assurancesplus/logiqueAgenceToBackup.png",
+      "/projects/assurancesplus/physique-siege.png",
+      "/projects/assurancesplus/AD.png",
+      "/projects/assurancesplus/organisationDroitUtilisateurs.png",
+      "/projects/assurancesplus/OU.png",
+      "/projects/assurancesplus/GPO.png",
+      "/projects/assurancesplus/firewall.png",
+      "/projects/assurancesplus/passwordPolicy.png",
+      "/projects/assurancesplus/supervision.png",
+      "/projects/assurancesplus/policyFilter.png",
+      "/projects/assurancesplus/firewall-siege-schemas.png",
+      "/projects/assurancesplus/Architecture-Structure-stockage.png",
+      "/projects/assurancesplus/sumary.png",
+      "/projects/assurancesplus/sumary2.png"
+    ],
+    technologies: [
+      "Active Directory",
+      "LDAP",
+      "Organizational Units",
+      "Domain Controllers",
+      "VPN",
+      "Firewall",
+      "pfSense",
+      "Supervision / Monitoring",
+      "Zabbix",
+      "Réseau",
+      "DMZ",
+      "RAID",
+      "Backup & Restore",
+      "RPO/RTO",
+      "Group Policy Objects",
+      "User & Group Management",
+      "Security Policies (ANSSI)",
+      "SSL Certificates",
+      "PowerShell / Bash Scripts",
+      "PostgreSQL"
+    ],
+    features: {
+      fr: [
+        "Déploiement d’un Active Directory structuré (forêt, domaines, unités d’organisation, GPO, gestion des comptes et des droits)",
+        "Mise en place d’un VPN sécurisé pour l’accès à distance (itinérants et télétravail)",
+        "Architecture réseau sécurisée incluant DMZ, pare-feu et politique de filtrage",
+        "Cartographie complète du SI (administration, infrastructure logique et physique)",
+        "Plan de sauvegarde aligné sur les objectifs RPO/RTO, adapté à la criticité des données",
+        "Application des politiques de sécurité (ANSSI) : mots de passe, authentification, traçabilité",
+        "Mise en place de certificats SSL et gestion des clés privées",
+        "Scripts d’automatisation pour déploiement AD, création d’OU, utilisateurs et certificats",
+        "Questionnaire de sécurité pour identifier les vulnérabilités et proposer des axes de remédiation",
+        "Mise en place d’une supervision / monitoring des systèmes et services",
+        "Documentation technique détaillée et justification des choix d’architecture",
+        "Démo complète des solutions déployées et scénarios de sécurité",
+        "Maquette fonctionnelle réalisée sous forme de vidéo de présentation (voir ci-dessus)"
+      ],
+      en: [
+        "Deployment of a structured Active Directory (forest, domains, OUs, GPOs, user and rights management)",
+        "Implementation of a secure VPN for remote access (mobile staff and telework)",
+        "Secure network architecture including DMZ, firewall, and filtering policies",
+        "Comprehensive IT system mapping (administration, logical and physical infrastructure)",
+        "Backup plan aligned with RPO/RTO objectives, adapted to data criticality",
+        "Application of security policies (ANSSI): passwords, authentication, traceability",
+        "SSL certificates setup and private key management",
+        "Automation scripts for AD deployment, OU/user creation, and certificate management",
+        "Security questionnaire to identify vulnerabilities and propose remediation",
+        "Implementation of system and service monitoring",
+        "Detailed technical documentation and justification of architectural choices",
+        "Complete demo of deployed solutions and security scenarios",
+        "Functional prototype presented as a video demo (see above)"
+      ]
+    },
+    role: {
+      fr: "Participation active à la conception de l’architecture réseau et sécurité, avec échanges réguliers au sein du groupe : propositions de solutions, retours sur les choix techniques, participation aux réunions de suivi et résolution de problèmes. Mise en place de l’Active Directory, des règles de pare-feu, des schémas réseau, des scripts d’automatisation (utilisateurs, certificats, OU), ainsi que contribution à la rédaction du questionnaire de sécurité, du plan de sauvegarde, de la documentation technique et à la démo/maquette présentée.",
+      en: "Actively contributed to the design of the network and security architecture, collaborating closely with the team by proposing solutions, providing feedback on technical choices, and participating in progress meetings and problem-solving. Implemented Active Directory, firewall rules, network diagrams, and automation scripts (users, certificates, OUs), as well as contributing to the security questionnaire, backup plan, technical documentation, and the demo/prototype presentation."
+    },
+    learnings: {
+      fr: "Approfondissement global des compétences en administration système et sécurité : installation et gestion d’Active Directory et LDAP, création d’unités d’organisation (OU) et de stratégies de groupe (GPO), configuration de règles de pare-feu, conception de schémas réseau, élaboration de plans de sauvegarde alignés avec les objectifs RPO/RTO, mise en place de certificats et politiques de sécurité, automatisation via scripts. Expérience complète en gestion de projet en équipe (réunions, suivi, coordination), avec réalisation et présentation d’une démo professionnelle.",
+      en: "Comprehensive reinforcement of system and security administration skills: installation and management of Active Directory and LDAP, creation of organizational units (OUs) and group policies (GPOs), configuration of firewall rules, design of network diagrams, development of backup plans aligned with RPO/RTO objectives, implementation of certificates and security policies, automation through scripting. Gained full project experience in teamwork (meetings, follow-up, coordination), along with delivering a professional demo presentation."
+    },
+    githubUrl: "",
+    featured: true
   },
   {
     id: "django-quiz",
@@ -785,7 +912,7 @@ export const projects: Project[] = [
       "/projects/graph-a-star.png",
       "/projects/graph-bfs.png"
     ],
-    technologies: ["Java", "JBotSim", "Maven", "NetBeans 13"],
+    technologies: ["Java", "Théorie des graphes (Graph theory)", "JBotSim", "Maven", "NetBeans 13"],
     githubUrl: "https://github.com/yaniskadri/graph-pathfinding",
     featured: false,
     features: {
@@ -1189,7 +1316,7 @@ export const technologies = [
   "AWS",
   "CI/CD",
   "GitHub Actions",
-  "Monitoring",
+  "Supervision / Monitoring",
   "Logs",
   "Network",
   "Active Directory",
