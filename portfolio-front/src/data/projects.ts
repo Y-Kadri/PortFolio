@@ -35,6 +35,90 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "easysave-backup-system",
+    title: {
+      fr: "EasySave – Logiciel de sauvegarde évolutif par versions",
+      en: "EasySave – Backup Software Evolving Through Versions"
+    },
+    description: {
+      fr: "Développement incrémental d’un logiciel de sauvegarde de fichiers et répertoires avec gestion de versions successives (1.0 → 3.0). Chaque version apporte de nouvelles fonctionnalités : logs détaillés, gestion multi-travaux, cryptage, interface graphique, exécution parallèle, contrôle en temps réel, et console distante.",
+      en: "Incremental development of a backup software for files and directories, managed through successive versions (1.0 → 3.0). Each version brings new features: detailed logs, multi-job management, encryption, graphical interface, parallel execution, real-time control, and remote console."
+    },
+    longDescription: {
+      fr: "Application de sauvegarde permettant de créer et gérer des travaux, chaque travail étant défini par un dossier source, une destination et un type de sauvegarde (complète ou différentielle). L’utilisateur peut ensuite lancer un ou plusieurs travaux pour exécuter les sauvegardes. D’abord utilisable en ligne de commande, l’application a ensuite évolué vers une interface graphique et s’est enrichie au fil des versions : logs détaillés (JSON/XML), suivi temps réel, cryptage, gestion concurrente, communication par sockets, etc. Le développement en C# avec .NET a intégré un versionnage Git pour suivre l’ajout progressif de fonctionnalités, ainsi que l’usage de patrons de conception (Singleton, Command, Factory, Adapter, Stratégie).",
+      en: "Backup application that allows users to create and manage jobs, each defined by a source folder, a destination, and a backup type (full or differential). Users can then launch one or several jobs to perform backups. Initially available through the command line, the application later evolved to a graphical interface and was progressively enhanced with features such as detailed logs (JSON/XML), real-time monitoring, encryption, concurrency management, socket communication, and more. Developed in C# with .NET, it leveraged Git versioning to track the incremental addition of features and applied design patterns (Singleton, Command, Factory, Adapter, Strategy)."
+    },
+    image: "/projects/easysave/overview.png",
+    images: [
+      "/projects/easysave/overview.png",
+      "/projects/easysave/backup.png",
+      "/projects/easysave/gui.png"
+    ],
+    technologies: [
+      "C#",
+      ".NET Core",
+      "WPF / Avalonia",
+      "Sockets (client-serveur)",
+      "UML",
+      "Logs JSON & XML",
+      "Dynamic Link Library (DLL)",
+      "Processus & Threads",
+      "Locks",
+      "Sémaphores",
+      "Backup complet et différentiel",
+      "Design Patterns",
+      "Git & Gestion de versions"
+    ],
+    githubUrl: "",
+    featured: true,
+    features: {
+      fr: [
+        "Conception et modélisation – utilisation d’UML et de patrons de conception (Singleton, Command, Factory, Adapter, Strategy). L’architecture et les fonctionnalités évoluent à chaque version pour garantir extensibilité, maintenabilité et évolutivité",
+        "Version 1.0 : Application console (.NET Core) – gestion jusqu’à 5 travaux de sauvegarde (complète ou différentielle), exécution séquentielle ou ciblée (ligne de commande), sauvegarde de tous les fichiers/sous-répertoires (disques locaux, externes, réseaux), multi-langues (Français/Anglais)",
+        "Version 1.0 : Fichier log journalier (JSON) – enregistrement temps réel (horodatage, nom, chemins source/destination, taille, temps de transfert, erreurs). Développé dans une DLL pour compatibilité future",
+        "Version 1.0 : Fichier état en temps réel (JSON) – suivi de la progression (nombre fichiers, taille totale/restante, progression, fichier en cours)",
+        "Version 1.1 : Choix du format des logs – ajout du support XML en plus du JSON",
+        "Version 2.0 : Passage en interface graphique (WPF/Avalonia) – gestion de travaux de sauvegarde illimités",
+        "Version 2.0 : Ajout du cryptage (via logiciel externe) – fichiers sélectionnés selon extensions définies par l’utilisateur",
+        "Version 2.0 : Log enrichi – ajout du temps de cryptage (0 = pas de cryptage, >0 = temps, <0 = code erreur)",
+        "Version 2.0 : Détection d’un logiciel métier – interdiction de lancer des sauvegardes si un logiciel sensible est actif (log de l’arrêt inclus)",
+        "Version 3.0 : Sauvegardes parallèles – abandon du séquentiel, avec gestion concurrente (processus, locks, sémaphores)",
+        "Version 3.0 : Gestion de fichiers prioritaires – aucun fichier non prioritaire transféré tant qu’un prioritaire est en attente",
+        "Version 3.0 : Limite sur transferts simultanés de gros fichiers – paramétrage d’une taille max pour éviter saturation bande passante",
+        "Version 3.0 : Contrôle en temps réel – Play, Pause, Stop pour chaque tâche ou ensemble de tâches",
+        "Version 3.0 : Pause temporaire automatique si logiciel métier détecté – reprise dès sa fermeture",
+        "Version 3.0 : Console distante – suivi et contrôle en temps réel via sockets (IHM graphique sur poste distant)",
+        "Version 3.0 : Gestion d’un logiciel de cryptage mono-instance – synchronisation et traitement des conflits"
+      ],
+      en: [
+        "Design and modeling – use of UML and design patterns (Singleton, Command, Factory, Adapter, Strategy). The architecture and features evolve with each version to ensure extensibility, maintainability, and scalability",
+        "Version 1.0: Console application (.NET Core) – up to 5 backup jobs (full or differential), sequential or targeted execution (via command line), backup of all files/subfolders (local, external, network drives), multi-language (English/French)",
+        "Version 1.0: Daily log file (JSON) – real-time recording (timestamp, name, source/destination paths, size, transfer time, errors). Developed in a DLL for future compatibility",
+        "Version 1.0: Real-time state file (JSON) – monitoring of progress (file count, total/remaining size, progress percentage, current file)",
+        "Version 1.1: Choice of log format – support for XML in addition to JSON",
+        "Version 2.0: Switch to graphical interface (WPF/Avalonia) – unlimited number of backup jobs",
+        "Version 2.0: Added encryption (via external software) – files selected according to extensions set by user",
+        "Version 2.0: Enriched log – added encryption time (0 = no encryption, >0 = time, <0 = error code)",
+        "Version 2.0: Business software detection – prevent backup jobs if a sensitive software is active (logged in the file)",
+        "Version 3.0: Parallel backups – abandon sequential mode, with concurrency management (processes, locks, semaphores)",
+        "Version 3.0: Priority file management – no non-priority file transferred while a priority file is pending",
+        "Version 3.0: Limit on simultaneous large file transfers – configurable max size to avoid bandwidth saturation",
+        "Version 3.0: Real-time control – Play, Pause, Stop for each job or all jobs",
+        "Version 3.0: Automatic pause if business software detected – resume once it is closed",
+        "Version 3.0: Remote console – monitor and control jobs in real time via sockets (graphical interface on remote machine)",
+        "Version 3.0: Encryption software set to mono-instance – synchronization and conflict management"
+      ]
+    },
+    role: {
+      fr: "Participation à la compréhension des besoins clients et à la gestion du versionning Git. Contribution à l’architecture (patrons de conception : Singleton, Command, Factory, Adapter, Stratégie), à la modélisation UML, et au développement C#. Implémentation des sauvegardes (complètes et différentielles), gestion des logs et états, intégration des fonctionnalités avancées (cryptage, sockets, parallélisation, gestion de processus et sémaphores). Collaboration active dans le travail en équipe et présentations des livrables.",
+      en: "Contributed to understanding client requirements and Git versioning management. Participated in architecture (design patterns: Singleton, Command, Factory, Adapter, Strategy), UML modeling, and C# development. Implemented backups (full and differential), logs and state management, integration of advanced features (encryption, sockets, parallelization, process and semaphore management). Actively collaborated in teamwork and presented deliverables."
+    },
+    learnings: {
+      fr: "Maîtrise du développement incrémental avec Git et gestion de versions. Pratique de la modélisation UML et de patrons de conception (Singleton, Command, Factory, Adapter, Stratégie). Expérience approfondie en C#/.NET : gestion de processus et threads, synchronisation (locks, sémaphores), programmation réseau (sockets), gestion de sauvegardes (complète et différentielle), logs JSON/XML. Approfondissement de la robustesse logicielle, de la compatibilité ascendante via DLL, et amélioration de l’analyse du besoin ainsi que des échanges de points de vue avec les membres de l’équipe.",
+      en: "Mastery of incremental development with Git and version management. Practice in UML modeling and design patterns (Singleton, Command, Factory, Adapter, Strategy). In-depth experience in C#/.NET: process and thread management, synchronization (locks, semaphores), network programming (sockets), backup management (full and differential), JSON/XML logging. Strengthened skills in software robustness, upward compatibility through DLLs, and improved requirement analysis as well as exchange of viewpoints with team members."
+    },
+  },
+  {
     id: "multimodal-mobility-optimization",
     title: {
       fr: "Recherche de cycle optimal sur graphe dynamique",
