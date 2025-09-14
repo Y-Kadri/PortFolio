@@ -35,6 +35,103 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "breezy-social-network",
+    title: {
+      fr: "Breezy – Réseau social léger et réactif",
+      en: "Breezy – Lightweight Responsive Social Network"
+    },
+    description: {
+      fr: "Réseau social léger inspiré de Twitter/X, permettant de publier des postes publics, d’interagir avec les publications des autres utilisateurs, de suivre des utilisateurs, d’envoyer des messages privés et de gérer plusieurs types d’utilisateurs pour des fonctionnalités distinctes.",
+      en: "Lightweight social network inspired by Twitter/X, allowing users to post public posts, interact with other users’ posts, follow users, send private messages, and manage multiple user types for different functionalities."
+    },
+    longDescription: {
+      fr: "Breezy est une application réseau social permettant de publier des postes accessibles à tous, d’y répondre, de les liker, de suivre d’autres utilisateurs et de consulter un fil d’actualités trié par publications des abonnés. L’application permet également d’envoyer des messages privés entre utilisateurs pour communiquer de manière confidentielle. Quatre types d’utilisateurs existent : visiteur, utilisateur, modérateur et administrateur, chacun disposant de fonctionnalités spécifiques. Accessible via navigateur, Breezy est utilisable sur mobile grâce à son interface responsive. L’architecture est monolithique, avec un back-end Node.js/Express et un front-end React/Next.js. L’application inclut une authentification sécurisée via JWT et la gestion des sessions.",
+      en: "Breezy is a social network application allowing users to post public posts, reply to, like posts, follow other users, and view a news feed sorted by posts from followed accounts. It also enables private messaging between users for confidential communication. There are four types of users: visitor, user, moderator, and administrator, each with specific functionalities. Accessible via web browser, Breezy is usable on mobile devices thanks to its responsive interface. The architecture is monolithic, with a Node.js/Express backend and React/Next.js frontend. The app includes secure authentication with JWT and session management."
+    },
+    image: "/projects/easysave/overview.png",
+    images: [
+      "/projects/easysave/overview.png",
+      "/projects/easysave/backup.png",
+      "/projects/easysave/gui.png"
+    ],
+    technologies: [
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Docker",
+      "Docker Compose",
+      "Load Balancer",
+      "Tailwind CSS",
+      "Axios",
+      "React Router",
+      "Nginx",
+      "JWT",
+      "API Gateway",
+      "Responsive Design",
+      "Mobile-first Approach",
+      "Monolithic Architecture",
+      "API Rest",
+      "Public/Private API",
+      "React Hooks",
+      "React Context"
+    ],
+    githubUrl: "",
+    featured: true,
+    features: {
+      fr: [
+        "Création de maquettes pour les futures pages (accueil, profil, connexion, déconnexion, messages privés, page administrateur)",
+        "Mise en place d'une application monolithique",
+        "Création de comptes utilisateurs en mode déconnecté pour les visiteurs",
+        "Connexion et déconnexion des utilisateurs",
+        "Authentification sécurisée via JWT (cryptage des échanges front/back)",
+        "Page accueil : Publication de postes courts (≤280 caractères), répondre à un poste (commentaire), liker un poste et/ou commentaire, répondre à un commentaire",
+        "Suivre ou être suivi par d'autres utilisateurs",
+        "Profil utilisateur perso : édition, modification de ses postes et commentaires, statistiques (likes, postes, abonnés, abonnements)",
+        "Profil d’un autre utilisateur : voir ses stats, ses postes, commentaires et bouton suivre / ne plus suivre",
+        "Page message : Messages privés entre utilisateurs abonnés avec choix de l'utilisateur suivi",
+        "Ajout d’images aux postes, commentaires et messages privés",
+        "Page administrateur et modérateur : Suspension ou bannissement d’utilisateurs (rôles administrateur et modérateur)",
+        "Page administrateur et modérateur : Création d'un utilisateur (rôle administrateur)",
+        "Mise en place de Docker et Docker Compose pour le service et préparation au déploiement",
+        "Mise en place du load balancer, API Gateway, APIs publiques et privées",
+        "Interface responsive pour une utilisation mobile",
+        "Livrable final : rapport détaillant objectifs, architecture, hiérarchisation des tâches, méthodologie, maquettes, fonctionnalités et axes d'amélioration",
+        "Soutenance : démonstration avec scénario d'utilisation"
+      ],
+      en: [
+        "Creation of wireframes for future pages (home, profile, login, logout, private messages, administrator page)",
+        "Implementation of a monolithic application",
+        "User account creation in offline mode for visitors",
+        "User login and logout",
+        "Secure authentication via JWT (encrypted exchanges between front/back)",
+        "Home page: Posting short posts (≤280 characters), reply to a post (comment), like a post and/or comment, reply to a comment",
+        "Follow or be followed by other users",
+        "Personal user profile: edit and modify own posts and comments, statistics (likes, posts, followers, following)",
+        "Other user's profile: view stats, posts, comments, and follow/unfollow button",
+        "Message page: private messaging between followed users with selection of followed user",
+        "Adding images to posts, comments, and private messages",
+        "Administrator and moderator page: user suspension or banning (administrator and moderator roles)",
+        "Administrator and moderator page: user creation (administrator role)",
+        "Setup of Docker and Docker Compose for service and deployment preparation",
+        "Setup of load balancer, API Gateway, public and private APIs",
+        "Responsive interface for mobile usage",
+        "Final deliverable: report detailing objectives, architecture, task hierarchy, methodology, wireframes, implemented features, and improvement opportunities",
+        "Presentation: demonstration with scenario of use"
+      ]
+    },
+    role:{
+      fr:"Participation à la conception de la maquette et à la structure de l'application. Participation au développement back-end et front-end, mise en place de l'authentification sécurisée, gestion des postes, commentaires et interactions. Mise en place de Docker et Docker Compose pour les services et préparation au déploiement, ainsi que configuration du load balancer et de l’API Gateway. Priorisation et implémentation des fonctionnalités, réunions régulières pour suivre l'avancement.",
+      en:"Participated in the design of the wireframes and application structure. Contributed to backend and frontend development, implemented secure authentication, managed postes, comments, and interactions. Set up Docker and Docker Compose for services and deployment preparation, as well as configuration of load balancer and API Gateway. Prioritized and implemented features, held regular meetings to track progress."
+    },
+    learnings: {
+      fr: "Maîtrise du développement fullstack avec Node.js, Express et React/Next.js. Pratique de l’authentification sécurisée avec JWT, gestion des sessions, API RESTful et manipulation de bases MongoDB via Mongoose. Approfondissement des compétences en développement d'applications monolithiques, responsive design et mobile-first, mise en place de Docker et Docker Compose, load balancing et API Gateway avec Nginx. Meilleure analyse des besoins et échanges constructifs avec les membres de l’équipe.",
+      en: "Mastery of fullstack development with Node.js, Express, and React/Next.js. Practice in secure authentication with JWT, session management, RESTful APIs, and MongoDB manipulation with Mongoose. Strengthened skills in monolithic application development, responsive and mobile-first design, implementation of Docker and Docker Compose, load balancing and API Gateway with Nginx. Improved requirements analysis and constructive collaboration with team members."
+    },
+  },
+  {
     id: "easysave-backup-system",
     title: {
       fr: "EasySave – Logiciel de sauvegarde évolutif par versions",
