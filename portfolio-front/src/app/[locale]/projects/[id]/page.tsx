@@ -117,7 +117,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 {messages.projects?.backToProjects || "Retour aux projets"}
               </Link>
 
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="grid lg:grid-cols-1 gap-12 items-center">
                 <div>
                   <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                     {project.title[locale]}
@@ -147,19 +147,6 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   </div>
                 </div>
 
-                <div className="relative">
-                  <motion.div
-                    className="relative rounded-2xl overflow-hidden shadow-2xl"
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <img
-                      src={project.image || "/placeholder.svg?height=400&width=600"}
-                      alt={project.title[locale]}
-                      className="w-full h-auto"
-                    />
-                  </motion.div>
-                </div>
               </div>
             </motion.div>
           </div>
