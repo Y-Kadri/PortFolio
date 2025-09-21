@@ -48,11 +48,27 @@ export const projects: Project[] = [
       fr: "Breezy est une application réseau social permettant de publier des postes accessibles à tous, d’y répondre, de les liker, de suivre d’autres utilisateurs et de consulter un fil d’actualités trié par publications des abonnés. L’application permet également d’envoyer des messages privés entre utilisateurs pour communiquer de manière confidentielle. Quatre types d’utilisateurs existent : visiteur, utilisateur, modérateur et administrateur, chacun disposant de fonctionnalités spécifiques. Accessible via navigateur, Breezy est utilisable sur mobile grâce à son interface responsive. L’architecture est monolithique, avec un back-end Node.js/Express et un front-end React/Next.js. L’application inclut une authentification sécurisée via JWT et la gestion des sessions.",
       en: "Breezy is a social network application allowing users to post public posts, reply to, like posts, follow other users, and view a news feed sorted by posts from followed accounts. It also enables private messaging between users for confidential communication. There are four types of users: visitor, user, moderator, and administrator, each with specific functionalities. Accessible via web browser, Breezy is usable on mobile devices thanks to its responsive interface. The architecture is monolithic, with a Node.js/Express backend and React/Next.js frontend. The app includes secure authentication with JWT and session management."
     },
-    image: "/projects/easysave/overview.png",
+    image: "/projects/breezy/home.png",
     images: [
-      "/projects/easysave/overview.png",
-      "/projects/easysave/backup.png",
-      "/projects/easysave/gui.png"
+      "/projects/breezy/signUp.png",
+      "/projects/breezy/signIn.png",
+      "/projects/breezy/home.png",
+      "/projects/breezy/home2.png",
+      "/projects/breezy/home3.png",
+      "/projects/breezy/publish.png",
+      "/projects/breezy/postFollower.png",
+      "/projects/breezy/profile.png",
+      "/projects/breezy/updateUserProfile.png",
+      "/projects/breezy/updatePost.png",
+      "/projects/breezy/updatePost2.png",
+      "/projects/breezy/profileOtherUser.png",
+      "/projects/breezy/message.png",
+      "/projects/breezy/setting.png",
+      "/projects/breezy/admin.png",
+      "/projects/breezy/adminChangeRole.png",
+      "/projects/breezy/adminBan.png",
+      "/projects/breezy/adminAddUser.png",
+      "/projects/breezy/responsive.png",
     ],
     technologies: [
       "Next.js",
@@ -145,7 +161,7 @@ export const projects: Project[] = [
       fr: "Application de sauvegarde permettant de créer et gérer des travaux, chaque travail étant défini par un dossier source, une destination et un type de sauvegarde (complète ou différentielle). L’utilisateur peut ensuite lancer un ou plusieurs travaux pour exécuter les sauvegardes. D’abord utilisable en ligne de commande, l’application a ensuite évolué vers une interface graphique et s’est enrichie au fil des versions : logs détaillés (JSON/XML), suivi temps réel, cryptage, gestion concurrente, communication par sockets, etc. Le développement en C# avec .NET a intégré un versionnage Git pour suivre l’ajout progressif de fonctionnalités, ainsi que l’usage de patrons de conception (Singleton, Command, Factory, Adapter, Stratégie).",
       en: "Backup application that allows users to create and manage jobs, each defined by a source folder, a destination, and a backup type (full or differential). Users can then launch one or several jobs to perform backups. Initially available through the command line, the application later evolved to a graphical interface and was progressively enhanced with features such as detailed logs (JSON/XML), real-time monitoring, encryption, concurrency management, socket communication, and more. Developed in C# with .NET, it leveraged Git versioning to track the incremental addition of features and applied design patterns (Singleton, Command, Factory, Adapter, Strategy)."
     },
-    image: "/projects/easysave/home.png",
+    image: "/projects/easysave/jobs.png",
     images: [
       "/projects/easysave/home.png",
       "/projects/easysave/jobs.png",
