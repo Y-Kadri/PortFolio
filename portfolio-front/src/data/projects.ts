@@ -509,11 +509,10 @@ export const projects: Project[] = [
       fr: "Développement d'une Progressive Web App full-stack avec Symfony et React, permettant de découvrir des séries et suivre leur progression. L'application inclut la gestion multi-utilisateurs avec connexion sécurisée, un mode administrateur pour gérer les utilisateurs et leurs abonnements, un système de recommandation, ainsi que la recherche et la pagination des séries. Les tâches ont été organisées via un Board et la méthodologie agile SCRUM a été appliquée avec planification des sprints, daily meetings, review et rétrospectives.",
       en: "Development of a full-stack Progressive Web App with Symfony and React to discover TV series and track progress. The application includes multi-user management with secure login, an admin mode for managing users and subscriptions, a recommendation system, and series search with pagination. Task organization was done via a Board, and agile SCRUM methodology was applied with sprint planning, daily meetings, reviews, and retrospectives."
     },
-    image: "/projects/pwa-main.png",
+    image: "/projects/libraryApp/home.png",
     images: [
-      "/projects/pwa-main.png",
-      "/projects/pwa-board.png",
-      "/projects/pwa-database.png"
+      "/projects/libraryApp/home.png",
+      "/projects/libraryApp/following.png",
     ],
     technologies: ["Symfony", "React", "MySql", "Visual Studio Code", "CSS", "Agile Scrum", "Progressive Web App"],
     githubUrl: "https://github.com/yaniskadri/pwa-series-app",
@@ -612,11 +611,10 @@ export const projects: Project[] = [
       fr: "Le jeu de plateau Concordia a été implémenté en Python avec une interface graphique Tkinter. L'application gère plusieurs joueurs, inclut une IA pour jouer contre l'ordinateur, et initialise le jeu via une base de données. Seules certaines cartes et règles ont été implémentées. Des diagrammes UML ont été produits pour les classes, cas d'utilisation, communication et séquence. L'intégration continue et les tests unitaires ont été mis en place pour valider l'initialisation du jeu et le fonctionnement des cartes implémentées.",
       en: "The board game Concordia was implemented in Python with a Tkinter graphical interface. The application supports multiple players, includes an AI to play against the computer, and initializes the game via a database. Only a subset of cards and rules were implemented. UML diagrams were created for classes, use cases, communication, and sequence. Continuous integration and unit tests were set up to validate game initialization and the implemented card functionality."
     },
-    image: "/projects/concordia-main.png",
+    image: "/projects/concordia/game.png",
     images: [
-      "/projects/concordia-main.png",
-      "/projects/concordia-board.png",
-      "/projects/concordia-ai.png"
+      "/projects/concordia/game.png",
+      "/projects/concordia/deck.png"
     ],
     technologies: ["Python", "Tkinter", "Visual Studio Code", "GitLab", "CI/CD", "Neo4j", "Database Integration", "Unit Testing", "AI Implementation", "UML"],
     githubUrl: "https://github.com/yaniskadri/concordia-game",
@@ -664,11 +662,10 @@ export const projects: Project[] = [
       fr: "Développement d'une Progressive Web App full-stack avec Symfony. L'application permet de découvrir des séries, suivre leur progression, gérer plusieurs utilisateurs avec différents rôles (admin et utilisateur normal), et appliquer la méthodologie agile SCRUM avec organisation des tâches via un Board, planification des sprints, daily meetings, review et rétrospectives.",
       en: "Development of a full-stack Progressive Web App with Symfony. The application allows discovering series, tracking progress, managing multiple users with different roles (admin and normal user), and applying agile SCRUM methodology with task organization via a Board, sprint planning, daily meetings, reviews, and retrospectives."
     },
-    image: "/projects/pwa-main.png",
+    image: "/projects/seriesApp/home.png",
     images: [
-      "/projects/pwa-main.png",
-      "/projects/pwa-board.png",
-      "/projects/pwa-database.png"
+      "/projects/seriesApp/home.png",
+      "/projects/seriesApp/admin.png",
     ],
     technologies: ["Symfony", "MySQL", "Visual Studio Code", "CSS", "Agile Scrum", "Progressive Web App"],
     githubUrl: "https://github.com/yaniskadri/pwa-series-app",
@@ -720,11 +717,12 @@ export const projects: Project[] = [
       fr: "Développement d'un filtre de Bloom en Java utilisant trois structures de données : tableau, ArrayList et LinkedList. Réalisation de benchmarks pour comparer performances et taux d'erreur, et rédaction d'un rapport détaillant les résultats. Le projet a nécessité de rechercher le fonctionnement des filtres de Bloom et de concevoir des fonctions de hachage efficaces.",
       en: "Development of a Bloom filter in Java using three data structures: array, ArrayList, and LinkedList. Benchmarks were conducted to compare performance and error rates, and a detailed report was written. The project required research on Bloom filter functionality and the implementation of effective hash functions."
     },
-    image: "/projects/bloom-main.png",
+    image: "/projects/bloomFilter/benchmark.png",
     images: [
-      "/projects/bloom-main.png",
-      "/projects/bloom-benchmark.png",
-      "/projects/bloom-structures.png"
+      "/projects/bloomFilter/benchmark.png",
+      "/projects/bloomFilter/exec.png",
+      "/projects/bloomFilter/resumeArrayList1.png",
+      "/projects/bloomFilter/resumeArrayList2.png",
     ],
     technologies: ["Java", "NetBeans", "GitLab", "Word", "Data Structures", "Benchmarking"],
     githubUrl: "https://github.com/yaniskadri/bloom-filter",
@@ -766,11 +764,9 @@ export const projects: Project[] = [
       fr: "Le projet consistait à développer une application Python implémentant le chiffrement et déchiffrement de messages avec RSA, la signature et vérification de messages, ainsi que la gestion de certificats utilisateurs via une interface textuelle.",
       en: "The project involved developing a Python application implementing RSA message encryption and decryption, message signing and verification, and user certificate management through a text-based interface."
     },
-    image: "/projects/rsa-main.png",
+    image: "/projects/rsa/rsaProcess.png",
     images: [
-      "/projects/rsa-main.png",
-      "/projects/rsa-keys.png",
-      "/projects/rsa-encryption.png"
+      "/projects/rsa/rsaProcess.png",
     ],
     technologies: ["Python", "Visual Studio Code", "Cryptography", "Mathematical Computations (GCD, Euler, Modular Inverse)"],
     githubUrl: "https://github.com/yaniskadri/rsa-encryption",
@@ -818,11 +814,9 @@ export const projects: Project[] = [
       fr: "Développement d'un shell miniature en C permettant l'exécution de commandes internes (cd, pwd, mkdir, ...) et externes, y compris en arrière-plan. Gestion des redirections, des signaux et des processus via les bibliothèques système, et structuration du code pour la clarté et la lisibilité.",
       en: "Development of a miniature shell in C capable of executing internal (cd, pwd, mkdir, ...) and external commands, including background execution. Handling redirections, signals, and processes using system libraries, with well-structured and readable code."
     },
-    image: "/projects/minishell-main.png",
+    image: "/projects/minishell/commands.png",
     images: [
-      "/projects/minishell-main.png",
-      "/projects/minishell-commands.png",
-      "/projects/minishell-process.png"
+      "/projects/minishell/commands.png",
     ],
     technologies: ["C", "Visual Studio Code", "Unix System Libraries (signal, wait, exec, read, write)"],
     githubUrl: "https://github.com/yaniskadri/mini-shell",
@@ -855,7 +849,7 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "dns-server-setup",
+    id: "dnsServerSetup",
     title: {
       fr: "Réseau et DNS : Mise en place d'un serveur DNS",
       en: "Network & DNS: Setting up a DNS Server"
@@ -868,11 +862,11 @@ export const projects: Project[] = [
       fr: "Le projet consistait à installer et configurer un réseau DNS virtuel en utilisant des machines virtuelles. Il incluait la configuration des clients DNS, des serveurs primaires et secondaires, des domaines principaux et zones inverses, ainsi que des sous-domaines et alias. La configuration a été testée avec des commandes ping et host et un tutoriel a été rédigé en Markdown.",
       en: "The project involved installing and configuring a virtual DNS network using virtual machines. This included configuring DNS clients, primary and secondary servers, main and reverse zones, as well as subdomains and aliases. Configuration was tested with ping and host commands, and a setup tutorial was written in Markdown."
     },
-    image: "/projects/dns-main.png",
+    image: "/projects/dnsServerSetup/config1.png",
     images: [
-      "/projects/dns-main.png",
-      "/projects/dns-config.png",
-      "/projects/dns-tutorial.png"
+      "/projects/dnsServerSetup/config1.png",
+      "/projects/dnsServerSetup/config2.png",
+      "/projects/dnsServerSetup/config3.png",
     ],
     technologies: ["Bash", "Visual Studio Code", "Markdown", "Virtual Machines (NEmu)"],
     githubUrl: "https://github.com/yaniskadri/dns-server-setup",
@@ -922,11 +916,11 @@ export const projects: Project[] = [
       fr: "Le projet consistait à compléter et améliorer une application de labyrinthe existante en ajoutant des fonctionnalités précises. Cela incluait l'affichage du labyrinthe, le déplacement manuel du personnage, le déplacement automatique des monstres, ainsi que la mise en place de tests unitaires et la validation des fichiers nécessaires.",
       en: "The project involved completing and enhancing an existing maze application by adding specific features. This included maze display, manual character movement, automatic monster movement, as well as implementing unit tests and validating necessary files."
     },
-    image: "/projects/maze-main.png",
+    image: "/projects/labyrintheJava/game1.png",
     images: [
-      "/projects/maze-main.png",
-      "/projects/maze-movement.png",
-      "/projects/maze-uml.png"
+      "/projects/labyrintheJava/game1.png",
+      "/projects/labyrintheJava/game2.png",
+      "/projects/labyrintheJava/uml.png",
     ],
     technologies: ["Java", "NetBeans 13", "UML", "Markdown"],
     githubUrl: "https://github.com/yaniskadri/maze-app",
@@ -974,11 +968,10 @@ export const projects: Project[] = [
       fr: "Ce projet m'a permis de découvrir le fonctionnement d'Unity, y compris les composants, les scènes, les objets 3D et l'écriture de scripts pour manipuler ces objets. J'ai également exploré l'utilisation de fonctions intégrées comme Vector et Raycast pour gérer les interactions dans le jeu.",
       en: "This project allowed me to explore Unity, including components, scenes, 3D objects, and scripting to manipulate them. I also learned to use built-in functions such as Vector and Raycast to handle in-game interactions."
     },
-    image: "/projects/unity-main.png",
+    image: "/projects/unityGameBasics/game.png",
     images: [
-      "/projects/unity-main.png",
-      "/projects/unity-inventory.png",
-      "/projects/unity-terrain.png"
+      "/projects/unityGameBasics/game.png",
+      "/projects/unityGameBasics/inventory.png"
     ],
     technologies: ["Unity 2021", "C#", "Visual Studio 2022"],
     githubUrl: "https://github.com/yaniskadri/unity-game-basics",
@@ -1028,11 +1021,10 @@ export const projects: Project[] = [
       fr: "Le projet consistait à développer un outil de visualisation graphique pour des données climatiques, en suivant le cahier des charges et en respectant le planning. L'application permettait de créer automatiquement une base de données et des graphiques clairs pour sensibiliser les salariés du client aux enjeux climatiques.",
       en: "The project involved developing a visualization tool for climate data, following the requirements and project schedule. The application created a database and clear graphs to inform client employees about climate issues."
     },
-    image: "/projects/climate-main.png",
+    image: "/projects/climateVirtualization/energiesGraph.png",
     images: [
-      "/projects/climate-main.png",
-      "/projects/climate-graphs.png",
-      "/projects/climate-database.png"
+      "/projects/climateVirtualization/energiesGraph.png",
+      "/projects/climateVirtualization/specificationDocument.png",
     ],
     technologies: ["Python", "Pandas", "GeoPandas", "NumPy", "Matplotlib", "SQLite", "Word"],
     githubUrl: "https://github.com/yaniskadri/climate-visualization-tool",
@@ -1076,11 +1068,12 @@ export const projects: Project[] = [
       fr: "Le projet consistait à développer une application permettant la gestion d'enchères pour des locations touristiques. L'application supporte plusieurs types d'utilisateurs (administrateurs, propriétaires, locataires) avec des fonctionnalités spécifiques et une interface adaptée à chaque rôle.",
       en: "The project involved developing an application for managing auctions for tourist rentals. The app supports multiple user types (administrators, owners, tenants) with specific features and a role-adapted interface."
     },
-    image: "/projects/auction-main.png",
+    image: "/projects/auction/login.png",
     images: [
-      "/projects/auction-main.png",
-      "/projects/auction-users.png",
-      "/projects/auction-diagram.png"
+      "/projects/auction/umlClass.png",
+      "/projects/auction/login.png",
+      "/projects/auction/choice.png",
+      "/projects/auction/disconnect.png",
     ],
     technologies: ["Java", "UML", "NetBeans"],
     githubUrl: "https://github.com/yaniskadri/auction-management-app",
@@ -1124,11 +1117,10 @@ export const projects: Project[] = [
       fr: "Le projet consistait à créer un graphe interactif et à réaliser des algorithmes de parcours de graphe, tout en définissant des sommets de départ, d'arrivée et des obstacles, avec une interface graphique pour visualiser le fonctionnement.",
       en: "The project involved creating an interactive graph and implementing graph traversal algorithms, defining start and end vertices as well as obstacles, with a graphical interface to visualize the process."
     },
-    image: "/projects/graph-main.png",
+    image: "/projects/graphAlgo/aStar1.png",
     images: [
-      "/projects/graph-main.png",
-      "/projects/graph-a-star.png",
-      "/projects/graph-bfs.png"
+      "/projects/graphAlgo/aStar1.png",
+      "/projects/graphAlgo/aStar2.png",
     ],
     technologies: ["Java", "Théorie des graphes (Graph theory)", "JBotSim", "Maven", "NetBeans 13"],
     githubUrl: "https://github.com/yaniskadri/graph-pathfinding",
@@ -1172,11 +1164,10 @@ export const projects: Project[] = [
       fr: "Le projet consistait à imaginer un concept de jeu pour les lycéens et à développer deux versions : une version finale et une version d'exercices à compléter. L'objectif était de créer des activités ludiques et pédagogiques pour la journée portes ouvertes.",
       en: "The project involved designing a game concept for high school students and developing two versions: a completed version and an exercise version to be filled in. The goal was to create fun and educational activities for the Open Day."
     },
-    image: "/projects/open-day-main.png",
+    image: "/projects/babyfoot/game.png",
     images: [
-      "/projects/open-day-main.png",
-      "/projects/open-day-exercises.png",
-      "/projects/open-day-coding.png"
+      "/projects/babyfoot/game.png",
+      "/projects/babyfoot/exercises.png",
     ],
     technologies: ["Processing", "Java", "Word"],
     githubUrl: "https://github.com/yaniskadri/team-activities-open-day",
@@ -1216,11 +1207,10 @@ export const projects: Project[] = [
       fr: "Ce projet consistait à analyser un cahier des charges fourni par une entreprise spécialisée dans le vin, modéliser un MCD adapté, générer les scripts SQL et réaliser des requêtes pour vérifier et manipuler les données. L'objectif était de créer une base fonctionnelle et optimisée répondant aux besoins réels de l'entreprise.",
       en: "This project involved analyzing a specification provided by a wine-focused company, modeling an appropriate ERD, generating SQL scripts, and running queries to verify and manipulate data. The goal was to create a functional and optimized database meeting the company's actual needs."
     },
-    image: "/projects/database-main.png",
+    image: "/projects/databasecreation/mcd.png",
     images: [
-      "/projects/database-main.png",
-      "/projects/database-tables.png",
-      "/projects/database-queries.png"
+      "/projects/databasecreation/mcd.png",
+      "/projects/databasecreation/template.png",
     ],
     technologies: ["Microsoft SQL Server", "WinDesign", "SQL", "Data Modeling"],
     githubUrl: "https://github.com/yaniskadri/database-creation",
@@ -1264,11 +1254,11 @@ export const projects: Project[] = [
       fr: "Projet visant à créer un site web simple et complet pour une entreprise fictive, construit uniquement avec HTML et CSS, en suivant les informations collectées lors de la phase de conception. Le site inclut toutes les pages principales, est responsive, et respecte une bonne structuration du code.",
       en: "Project aiming to create a simple yet complete website for a fictional company, built solely with HTML and CSS, following information gathered in the design phase. The site includes all main pages, is responsive, and follows proper code structuring."
     },
-    image: "/projects/client-website-main.png",
+    image: "/projects/clientwebsite/home.png",
     images: [
-      "/projects/client-website-main.png",
-      "/projects/client-website-home.png",
-      "/projects/client-website-contact.png"
+      "/projects/clientwebsite/home.png",
+      "/projects/clientwebsite/form.png",
+
     ],
     technologies: ["Visual Studio Code", "HTML", "CSS"],
     githubUrl: "https://github.com/yaniskadri/client-website",
@@ -1310,11 +1300,11 @@ export const projects: Project[] = [
       fr: "Ce projet consistait à créer une intelligence artificielle pour le jeu de plateau Lowatem, capable de prendre des décisions stratégiques pour gagner contre d'autres IA via des simulations et analyses des parties.",
       en: "This project involved creating an artificial intelligence for the Lowatem board game, capable of making strategic decisions to win against other AIs through simulations and match analysis."
     },
-    image: "/projects/lowatem-ia-main.png",
+    image: "/projects/lowatemPhase2/replay.png",
     images: [
-      "/projects/lowatem-ia-main.png",
-      "/projects/lowatem-ia-simulation.png",
-      "/projects/lowatem-ia-replay.png"
+      "/projects/lowatemPhase2/replay.png",
+      "/projects/lowatemPhase2/resultOneGame.png",
+      "/projects/lowatemPhase2/ranking.png"
     ],
     technologies: ["Java", "NetBeans", "AI Simulation", "Strategy Algorithms"],
     githubUrl: "https://github.com/yaniskadri/lowatem-phase2",
@@ -1354,11 +1344,10 @@ export const projects: Project[] = [
       fr: "Ce projet consistait à implémenter un jeu de plateau numérique en Java, en respectant les règles du cahier des charges. Chaque fonctionnalité demandée était validée par des tests unitaires existants, garantissant la robustesse du code.",
       en: "This project involved implementing a digital board game in Java, following the requirements of the specification. Each requested feature was validated by existing unit tests, ensuring the reliability of the code."
     },
-    image: "/projects/lowatem-main.png",
+    image: "/projects/lowatemPhase1/game.png",
     images: [
-      "/projects/lowatem-main.png",
-      "/projects/lowatem-board.png",
-      "/projects/lowatem-units.png"
+      "/projects/lowatemPhase1/game.png",
+      "/projects/lowatemPhase1/step6.png",
     ],
     technologies: ["Java", "NetBeans", "JUnit", "2D Arrays", "Enums", "OOP"],
     githubUrl: "https://github.com/yaniskadri/lowatem-phase1",
@@ -1406,11 +1395,10 @@ export const projects: Project[] = [
       fr: "Ce projet consistait à configurer une machine virtuelle complète avec un système d'exploitation Linux, des utilisateurs avec droits spécifiques et des outils de développement pour répondre aux besoins d'une entreprise.",
       en: "This project involved setting up a complete virtual machine with a Linux operating system, users with specific permissions, and development tools to meet a company's requirements.",
     },
-    image: "/projects/vm-main.png",
+    image: "/projects/installationOs/vm.png",
     images: [
-      "/projects/vm-main.png",
-      "/projects/vm-terminal.png",
-      "/projects/vm-git.png"
+      "/projects/installationOs/vm.png",
+      "/projects/installationOs/vscode.png",
     ],
     technologies: ["Linux", "Bash", "VMWare", "XFCE", "Visual Studio Code", "Rust Nightly"],
     githubUrl: "https://github.com/yaniskadri/vm-setup",
@@ -1454,15 +1442,14 @@ export const projects: Project[] = [
       fr: "Ce projet Pong consiste à créer un jeu complet à deux joueurs avec des obstacles aléatoires, plusieurs modes de jeu et un menu interactif. Il utilise la programmation orientée objet pour gérer les balles et les raquettes.",
       en: "This Pong project is a complete 2-player game with random obstacles, multiple game modes, and an interactive menu. It uses object-oriented programming to manage balls and paddles.",
     },
-    image: "/projects/pong-main.png",
+    image: "/projects/pong/game.png",
     images: [
-      "/projects/pong-main.png",
-      "/projects/pong-gameplay1.png",
-      "/projects/pong-gameplay2.png",
+      "/projects/pong/game.png",
+      "/projects/pong/home.png",
     ],
-    video: "/projects/pong-demo.mp4",
+    video: "",
     technologies: ["Processing", "Java"],
-    githubUrl: "https://github.com/yaniskadri/pong-game",
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
