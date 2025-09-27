@@ -73,14 +73,14 @@ export function ProjectCard({ project, messages, locale }: ProjectCardProps) {
 
           {/* Technologies */}
           <div className="flex flex-wrap gap-2 mb-6">
-            {project.technologies.slice(0, 4).map((tech) => (
+            {project.technologies.slice(0, 9).map((tech) => (
               <Badge key={tech} variant="secondary" className={`text-xs ${getTechColor(tech)}`}>
                 {tech}
               </Badge>
             ))}
-            {project.technologies.length > 4 && (
+            {project.technologies.length > 9 && (
               <Badge variant="secondary" className="text-xs">
-                +{project.technologies.length - 4}
+                +{project.technologies.length - 9}
               </Badge>
             )}
           </div>

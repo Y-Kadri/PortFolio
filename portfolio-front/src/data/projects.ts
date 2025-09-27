@@ -93,6 +93,7 @@ export const projects: Project[] = [
       "Public/Private API",
       "React Hooks",
       "React Context",
+      "Git",
     ],
     githubUrl: "",
     featured: true,
@@ -189,7 +190,8 @@ export const projects: Project[] = [
       "Backup complet et différentiel",
       "Logs",
       "Design Patterns (Singleton, Command, Factory, Adapter, Strategy)",
-      "Git & Gestion de versions",
+      "Git",
+      "Gestion de versions",
       "CI/CD",
       "UML",
       "Diagrammes de classes",
@@ -460,9 +462,10 @@ export const projects: Project[] = [
       "REST API",
       "Management Commands",
       "Signals & Hooks",
-      "Matplotlib"
+      "Matplotlib",
+      "Git",
     ],
-    githubUrl: "https://github.com/yaniskadri/wagtail-quiz",
+    githubUrl: "",
     featured: true,
     features: {
       fr: [
@@ -514,8 +517,8 @@ export const projects: Project[] = [
       "/projects/libraryApp/home.png",
       "/projects/libraryApp/following.png",
     ],
-    technologies: ["Symfony", "React", "MySql", "Visual Studio Code", "CSS", "Agile Scrum", "Progressive Web App"],
-    githubUrl: "https://github.com/yaniskadri/pwa-series-app",
+    technologies: ["Symfony", "React", "MySql", "Visual Studio Code", "CSS", "Agile Scrum", "Progressive Web App", "Git", "Doctrine", "API", "Swagger", "User Authentication"],
+    githubUrl: "",
     featured: true,
     features: {
       fr: [
@@ -562,13 +565,15 @@ export const projects: Project[] = [
       fr: "Le projet consistait à implémenter la structure Rope en C pour optimiser la gestion des chaînes de caractères, comparer ses performances avec un tableau classique et produire des rapports de benchmark avec gestion de la mémoire.",
       en: "The project involved implementing the Rope structure in C to optimize string handling, compare its performance with a traditional array, and produce benchmark reports with careful memory management."
     },
-    image: "/projects/rope-main.png",
+    image: "/projects/rope/ropeDataStructure.png",
     images: [
-      "/projects/rope-main.png",
-      "/projects/rope-benchmark.png"
+      "/projects/rope/ropeDataStructure.png",
+      "/projects/rope/result4c10i10000.png",
+      "/projects/rope/result4c250i.png",
+      "/projects/rope/resumeResult.png",
     ],
-    technologies: ["C", "Visual Studio Code", "GitLab", "Data Structures", "Memory Management", "Performance Benchmarking", "UML"],
-    githubUrl: "https://github.com/yaniskadri/rope-ds",
+    technologies: ["C", "Visual Studio Code", "GitLab", "Data Structures", "Memory Management", "Performance Benchmarking", "UML", "Git",],
+    githubUrl: "",
     featured: true,
     features: {
       fr: [
@@ -616,8 +621,8 @@ export const projects: Project[] = [
       "/projects/concordia/game.png",
       "/projects/concordia/deck.png"
     ],
-    technologies: ["Python", "Tkinter", "Visual Studio Code", "GitLab", "CI/CD", "Neo4j", "Database Integration", "Unit Testing", "AI Implementation", "UML"],
-    githubUrl: "https://github.com/yaniskadri/concordia-game",
+    technologies: ["Python", "Tkinter", "Visual Studio Code", "Git", "CI/CD", "Neo4j", "Database Integration", "Unit Testing", "AI Implementation", "UML"],
+    githubUrl: "",
     featured: true,
     features: {
       fr: [
@@ -667,8 +672,8 @@ export const projects: Project[] = [
       "/projects/seriesApp/home.png",
       "/projects/seriesApp/admin.png",
     ],
-    technologies: ["Symfony", "MySQL", "Visual Studio Code", "CSS", "Agile Scrum", "Progressive Web App"],
-    githubUrl: "https://github.com/yaniskadri/pwa-series-app",
+    technologies: ["Symfony", "MySQL", "Visual Studio Code", "CSS", "Agile Scrum", "Progressive Web App", "Git",],
+    githubUrl: "",
     featured: true,
     features: {
       fr: [
@@ -725,7 +730,7 @@ export const projects: Project[] = [
       "/projects/bloomFilter/resumeArrayList2.png",
     ],
     technologies: ["Java", "NetBeans", "GitLab", "Word", "Data Structures", "Benchmarking"],
-    githubUrl: "https://github.com/yaniskadri/bloom-filter",
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -768,8 +773,8 @@ export const projects: Project[] = [
     images: [
       "/projects/rsa/rsaProcess.png",
     ],
-    technologies: ["Python", "Visual Studio Code", "Cryptography", "Mathematical Computations (GCD, Euler, Modular Inverse)"],
-    githubUrl: "https://github.com/yaniskadri/rsa-encryption",
+    technologies: ["Python", "Visual Studio Code", "Cryptography", "Mathematical Computations (GCD, Euler, Modular Inverse)", "Git",],
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -818,8 +823,8 @@ export const projects: Project[] = [
     images: [
       "/projects/minishell/commands.png",
     ],
-    technologies: ["C", "Visual Studio Code", "Unix System Libraries (signal, wait, exec, read, write)"],
-    githubUrl: "https://github.com/yaniskadri/mini-shell",
+    technologies: ["C", "Visual Studio Code", "Unix System Libraries (signal, wait, exec, read, write)", "Git"],
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -869,7 +874,7 @@ export const projects: Project[] = [
       "/projects/dnsServerSetup/config3.png",
     ],
     technologies: ["Bash", "Visual Studio Code", "Markdown", "Virtual Machines (NEmu)"],
-    githubUrl: "https://github.com/yaniskadri/dns-server-setup",
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -922,8 +927,8 @@ export const projects: Project[] = [
       "/projects/labyrintheJava/game2.png",
       "/projects/labyrintheJava/uml.png",
     ],
-    technologies: ["Java", "NetBeans 13", "UML", "Markdown"],
-    githubUrl: "https://github.com/yaniskadri/maze-app",
+    technologies: ["Java", "NetBeans 13", "UML", "Markdown", "Git"],
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -974,7 +979,7 @@ export const projects: Project[] = [
       "/projects/unityGameBasics/inventory.png"
     ],
     technologies: ["Unity 2021", "C#", "Visual Studio 2022"],
-    githubUrl: "https://github.com/yaniskadri/unity-game-basics",
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -1027,18 +1032,18 @@ export const projects: Project[] = [
       "/projects/climateVirtualization/specificationDocument.png",
     ],
     technologies: ["Python", "Pandas", "GeoPandas", "NumPy", "Matplotlib", "SQLite", "Word"],
-    githubUrl: "https://github.com/yaniskadri/climate-visualization-tool",
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
-        "Visualisation sur une carte interactive avec affichage graphique des données climatiques par pays (energies, TODO...)",
+        "Visualisation sur une carte interactive avec affichage graphique des données climatiques par pays (energies)",
         "Création d'une base de données et intégration des données",
         "Analyse du cahier des charges et spécifications",
         "Planification et suivi du projet : document de spécifications, plan de projet, bilan de réalisation, comités de pilotage",
         "Utilisation de Pandas, GeoPandas, NumPy et Matplotlib pour les graphiques"
       ],
       en: [
-        "Interactive map visualization with graphical display of climate data by country (energies, TODO...)",
+        "Interactive map visualization with graphical display of climate data by country (energies)",
         "Database creation and data integration",
         "Requirement analysis and specifications",
         "Project planning and monitoring: specifications document, project plan, project report, steering committees",
@@ -1075,8 +1080,8 @@ export const projects: Project[] = [
       "/projects/auction/choice.png",
       "/projects/auction/disconnect.png",
     ],
-    technologies: ["Java", "UML", "NetBeans"],
-    githubUrl: "https://github.com/yaniskadri/auction-management-app",
+    technologies: ["Java", "UML", "NetBeans", "Git"],
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -1123,7 +1128,7 @@ export const projects: Project[] = [
       "/projects/graphAlgo/aStar2.png",
     ],
     technologies: ["Java", "Théorie des graphes (Graph theory)", "JBotSim", "Maven", "NetBeans 13"],
-    githubUrl: "https://github.com/yaniskadri/graph-pathfinding",
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -1169,8 +1174,8 @@ export const projects: Project[] = [
       "/projects/babyfoot/game.png",
       "/projects/babyfoot/exercises.png",
     ],
-    technologies: ["Processing", "Java", "Word"],
-    githubUrl: "https://github.com/yaniskadri/team-activities-open-day",
+    technologies: ["Processing", "Java", "Word", "Git"],
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -1213,7 +1218,7 @@ export const projects: Project[] = [
       "/projects/databasecreation/template.png",
     ],
     technologies: ["Microsoft SQL Server", "WinDesign", "SQL", "Data Modeling"],
-    githubUrl: "https://github.com/yaniskadri/database-creation",
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -1260,8 +1265,8 @@ export const projects: Project[] = [
       "/projects/clientwebsite/form.png",
 
     ],
-    technologies: ["Visual Studio Code", "HTML", "CSS"],
-    githubUrl: "https://github.com/yaniskadri/client-website",
+    technologies: ["Visual Studio Code", "HTML", "CSS", "Git"],
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -1307,7 +1312,7 @@ export const projects: Project[] = [
       "/projects/lowatemPhase2/ranking.png"
     ],
     technologies: ["Java", "NetBeans", "AI Simulation", "Strategy Algorithms"],
-    githubUrl: "https://github.com/yaniskadri/lowatem-phase2",
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -1350,7 +1355,7 @@ export const projects: Project[] = [
       "/projects/lowatemPhase1/step6.png",
     ],
     technologies: ["Java", "NetBeans", "JUnit", "2D Arrays", "Enums", "OOP"],
-    githubUrl: "https://github.com/yaniskadri/lowatem-phase1",
+    githubUrl: "",
     featured: false,
     features: {
       fr: [
@@ -1401,7 +1406,7 @@ export const projects: Project[] = [
       "/projects/installationOs/vscode.png",
     ],
     technologies: ["Linux", "Bash", "VMWare", "XFCE", "Visual Studio Code", "Rust Nightly"],
-    githubUrl: "https://github.com/yaniskadri/vm-setup",
+    githubUrl: "",
     featured: false,
     features: {
       fr: [

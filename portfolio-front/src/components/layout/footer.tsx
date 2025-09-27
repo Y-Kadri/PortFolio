@@ -167,7 +167,7 @@ export function Footer({ messages, locale }: FooterProps) {
               </div>
             </div>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <span>{messages.footer.version} TODO </span>
+              <span>{messages.footer.version} 2.0.0 </span>
               <span>•</span>
               <span>
                 {messages.footer.lastUpdate} {new Date().toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US")}
