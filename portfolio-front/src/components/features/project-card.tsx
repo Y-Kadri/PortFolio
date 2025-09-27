@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import type { Project } from "@/data/projects"
+import { getTechColor } from "@/utils/colorsBubble"
 
 interface ProjectCardProps {
   project: Project
@@ -14,67 +15,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, messages, locale }: ProjectCardProps) {
-  // Fonctions pour retourner les couleurs
-  const getLanguageColor = () => "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
-  const getTechnologyColor = () => "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
-  const getConceptColor = () => "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
-
-  // Fonction principale pour obtenir la couleur d'une techno / concept / langage
-  const getTechColor = (tech: string) => {
-    // Langages les plus connus
-    const knownLanguages = [
-      "JavaScript",
-      "TypeScript",
-      "Python",
-      "Java",
-      "C#",
-      "C",
-      "SQL",
-      "MySQL",
-      "SQLite"
-    ]
-
-    // Technologies / outils / frameworks les plus connus
-    const knownTechnologies = [
-      "React",
-      "Symfony",
-      "Express.js",
-      ".NET Core",
-      "Docker",
-      "Docker Compose",
-      "Unity",
-      "Active Directory",
-      "LDAP",
-      "Bash",
-      "PowerShell",
-      "VPN",
-      "Firewall",
-      "Maven"
-    ]
-
-    // Concepts importants
-    const knownConcepts = [
-      "UML",
-      "CI/CD",
-      "Full-Stack",
-      "Back-end",
-      "Front-end",
-      "Unit Testing",
-      "TDD",
-      "REST API",
-      "JWT Authentication",
-      "Graph Theory",
-      "Design Patterns"
-    ]
-
-    if (knownLanguages.includes(tech)) return getLanguageColor()
-    if (knownTechnologies.includes(tech)) return getTechnologyColor()
-    if (knownConcepts.includes(tech)) return getConceptColor()
-
-    // Couleur par défaut pour tout le reste
-    return "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
-  }
-
+ 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
