@@ -67,6 +67,10 @@ export function HeroSection({ messages }: HeroProps) {
                 src="/avatar.png"
                 alt={messages.hero.name}
                 className="w-28 h-28 rounded-full object-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement
+                  target.src = `/placeholder.svg?height=256&width=256&query=${encodeURIComponent("Professional avatar portrait")}`
+                }}
               />
             </div>
           </motion.div>

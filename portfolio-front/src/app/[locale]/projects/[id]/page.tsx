@@ -1,8 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { motion } from "framer-motion"
-import { ArrowLeft, ExternalLink, Github } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { ArrowLeft, ExternalLink, Github, Gitlab, X, ZoomIn } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -21,6 +21,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   const [messages, setMessages] = React.useState<any>(null)
   const [currentMediaIndex, setCurrentMediaIndex] = React.useState(0)
   const [isVideoPlaying, setIsVideoPlaying] = React.useState(false)
+  const [lightboxOpen, setLightboxOpen] = React.useState(false)
+  const [lightboxImageSrc, setLightboxImageSrc] = React.useState("")
   const locale = params?.locale || "fr"
 
   const project = projects.find((p) => p.id === params.id)
@@ -42,33 +44,15 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     getMessages(locale).then(setMessages)
   }, [locale])
 
-  if (!messages) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
-      </div>
-    )
-  }
-
-  if (!project) {
-    return (
-      <div className="min-h-screen bg-background">
-        <Header messages={messages} locale={locale} />
-        <main className="container mx-auto max-w-4xl px-4 py-20">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold mb-4">{messages.projects?.notFound || "Projet non trouvé"}</h1>
-            <Link href={`/${locale}#projects`}>
-              <Button>
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                {messages.projects?.backToProjects || "Retour aux projets"}
-              </Button>
-            </Link>
-          </div>
-        </main>
-        <Footer messages={messages} locale={locale} />
-      </div>
-    )
-  }
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (lightboxOpen && e.key === "Escape") {
+        setLightboxOpen(false)
+      }
+    }
+    document.addEventListener("keydown", handleKeyDown)
+    return () => document.removeEventListener("keydown", handleKeyDown)
+  }, [lightboxOpen])
 
   const nextMedia = () => {
     if (currentMediaIndex < mediaItems.length - 1) {
@@ -82,11 +66,51 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     }
   }
 
+  const openLightbox = (imageSrc: string) => {
+    setLightboxImageSrc(imageSrc)
+    setLightboxOpen(true)
+  }
+
   const currentMedia = mediaItems[currentMediaIndex]
 
   return (
     <div className="min-h-screen bg-background">
       <Header messages={messages} locale={locale} />
+
+      <AnimatePresence>
+        {lightboxOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+            onClick={() => setLightboxOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative max-w-7xl max-h-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute -top-12 right-0 text-white hover:bg-white/20 z-10"
+                onClick={() => setLightboxOpen(false)}
+              >
+                <X className="h-6 w-6" />
+              </Button>
+              <img
+                src={lightboxImageSrc || "/placeholder.svg?height=1200&width=1800&query=High quality image"}
+                alt="Full size view"
+                className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <main>
         {/* Hero Section */}
@@ -128,9 +152,16 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         </a>
                       </Button>
                     )}
+                    {project.gitlabUrl && (
+                      <Button variant="outline" size="lg" className="group bg-transparent" asChild>
+                        <a href={project.gitlabUrl} target="_blank" rel="noopener noreferrer">
+                          <Gitlab className="h-4 w-4 mr-2 transition-transform group-hover:scale-110" />
+                          {messages.projects?.viewCode || "GitLab"}
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
-
               </div>
             </motion.div>
           </div>
@@ -162,7 +193,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                           <img
                             src={
                               mediaItems[currentMediaIndex - 1]?.src ||
-                              "/placeholder.svg?height=80&width=128" ||
+                              "/placeholder.svg?height=160&width=256&query=Preview image" ||
+                              "/placeholder.svg" ||
+                              "/placeholder.svg" ||
                               "/placeholder.svg"
                             }
                             alt="Previous"
@@ -186,7 +219,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     className="relative w-full max-w-2xl"
                   >
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-muted/20 border-4 border-white/10">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-muted/20 border-4 border-white/10 group">
                       {currentMedia?.type === "video" ? (
                         <div className="relative aspect-video">
                           <video
@@ -198,12 +231,18 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                           />
                         </div>
                       ) : (
-                        <div className="relative aspect-video">
+                        <div
+                          className="relative aspect-video cursor-pointer"
+                          onClick={() => openLightbox(currentMedia?.src || "/high-quality-image.jpg")}
+                        >
                           <img
-                            src={currentMedia?.src || "/placeholder.svg?height=400&width=600"}
+                            src={currentMedia?.src || "/placeholder.svg?height=800&width=1200&query=High quality image"}
                             alt={`${project.title[locale]} - Image ${currentMediaIndex + 1}`}
                             className="w-full h-full object-cover"
                           />
+                          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                            <ZoomIn className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          </div>
                         </div>
                       )}
 
@@ -212,20 +251,22 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                           <button
                             onClick={prevMedia}
                             disabled={currentMediaIndex === 0}
-                            className={`absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full backdrop-blur-sm transition-all duration-200 shadow-lg ${currentMediaIndex === 0
-                              ? "bg-background/40 text-muted-foreground/50 cursor-not-allowed"
-                              : "bg-background/80 hover:bg-background hover:scale-110"
-                              }`}
+                            className={`absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full backdrop-blur-sm transition-all duration-200 shadow-lg ${
+                              currentMediaIndex === 0
+                                ? "bg-background/40 text-muted-foreground/50 cursor-not-allowed"
+                                : "bg-background/80 hover:bg-background hover:scale-110"
+                            }`}
                           >
                             <ArrowLeft className="h-5 w-5" />
                           </button>
                           <button
                             onClick={nextMedia}
                             disabled={currentMediaIndex === mediaItems.length - 1}
-                            className={`absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full backdrop-blur-sm transition-all duration-200 shadow-lg ${currentMediaIndex === mediaItems.length - 1
-                              ? "bg-background/40 text-muted-foreground/50 cursor-not-allowed"
-                              : "bg-background/80 hover:bg-background hover:scale-110"
-                              }`}
+                            className={`absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full backdrop-blur-sm transition-all duration-200 shadow-lg ${
+                              currentMediaIndex === mediaItems.length - 1
+                                ? "bg-background/40 text-muted-foreground/50 cursor-not-allowed"
+                                : "bg-background/80 hover:bg-background hover:scale-110"
+                            }`}
                           >
                             <ArrowLeft className="h-5 w-5 rotate-180" />
                           </button>
@@ -248,7 +289,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                           <img
                             src={
                               mediaItems[currentMediaIndex + 1]?.src ||
-                              "/placeholder.svg?height=80&width=128" ||
+                              "/placeholder.svg?height=160&width=256&query=Preview image" ||
+                              "/placeholder.svg" ||
+                              "/placeholder.svg" ||
                               "/placeholder.svg"
                             }
                             alt="Next"
@@ -271,10 +314,11 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                       <button
                         key={index}
                         onClick={() => setCurrentMediaIndex(index)}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentMediaIndex
-                          ? "bg-primary scale-110"
-                          : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                          }`}
+                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                          index === currentMediaIndex
+                            ? "bg-primary scale-110"
+                            : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                        }`}
                       />
                     ))}
                   </div>
@@ -295,7 +339,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">Technologies utilisées et concepts</h2>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">
+                  {messages.projects.technologiesTitle}
+                </h2>
                 <div className="flex flex-wrap gap-3">
                   {project.technologies.map((tech) => (
                     <Badge key={tech} className={`text-sm px-4 py-2 ${getTechColor(tech)}`}>
@@ -312,7 +358,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">Fonctionnalités clés</h2>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-8">{messages.projects.featuresTitle}</h2>
                 <div className="space-y-4">
                   {project.features[locale].map((feature, index) => (
                     <motion.div
@@ -350,19 +396,21 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12">Mon rôle & apprentissages</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12">
+                {messages.projects.roleAndLearningsTitle}
+              </h2>
 
               <div className="grid md:grid-cols-2 gap-8">
                 <Card className="text-left">
                   <CardContent className="p-8">
-                    <h3 className="font-heading text-xl font-semibold mb-4">Mon rôle</h3>
+                    <h3 className="font-heading text-xl font-semibold mb-4">{messages.projects.roleTitle}</h3>
                     <p className="text-muted-foreground leading-relaxed">{project.role[locale]}</p>
                   </CardContent>
                 </Card>
 
                 <Card className="text-left">
                   <CardContent className="p-8">
-                    <h3 className="font-heading text-xl font-semibold mb-4">Ce que j'ai appris</h3>
+                    <h3 className="font-heading text-xl font-semibold mb-4">{messages.projects.learningsTitle}</h3>
                     <p className="text-muted-foreground leading-relaxed">{project.learnings[locale]}</p>
                   </CardContent>
                 </Card>
@@ -381,7 +429,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8">Intéressé par ce projet ?</h2>
+              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8">{messages.projects.interestedTitle}</h2>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 {project.liveUrl && (
@@ -400,10 +448,18 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     </a>
                   </Button>
                 )}
+                {project.gitlabUrl && (
+                  <Button variant="outline" size="lg" className="group bg-transparent" asChild>
+                    <a href={project.gitlabUrl} target="_blank" rel="noopener noreferrer">
+                      <Gitlab className="h-4 w-4 mr-2 transition-transform group-hover:scale-110" />
+                      {messages.projects?.viewCode || "GitLab"}
+                    </a>
+                  </Button>
+                )}
                 <Button variant="ghost" size="lg" asChild>
                   <Link href={`/${locale}#projects`}>
                     <ArrowLeft className="h-4 w-4 mr-2" />
-                    Retour au portfolio
+                    {messages.projects?.backToPortfolio || "Retour au portfolio"}
                   </Link>
                 </Button>
               </div>

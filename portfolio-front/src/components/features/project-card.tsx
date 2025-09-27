@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { ExternalLink, Github, Eye } from "lucide-react"
+import { ExternalLink, Github, Eye, Gitlab } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -15,7 +15,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, messages, locale }: ProjectCardProps) {
- 
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,10 @@ export function ProjectCard({ project, messages, locale }: ProjectCardProps) {
         <Link href={`/${locale}/projects/${project.id}`}>
           <div className="relative overflow-hidden aspect-video cursor-pointer">
             <img
-              src={project.image || "/placeholder.svg"}
+              src={
+                project.image ||
+                `/placeholder.svg?height=600&width=800&query=${encodeURIComponent(project.title[locale] + " project preview")}`
+              }
               alt={project.title[locale]}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
@@ -94,6 +97,14 @@ export function ProjectCard({ project, messages, locale }: ProjectCardProps) {
               <Button variant="outline" size="sm" className="group/btn bg-transparent" asChild>
                 <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                   <Github className="h-4 w-4 transition-transform group-hover/btn:scale-110" />
+                </a>
+              </Button>
+            )}
+            {project.gitlabUrl && (
+              <Button variant="outline" size="lg" className="group bg-transparent" asChild>
+                <a href={project.gitlabUrl} target="_blank" rel="noopener noreferrer">
+                  <Gitlab className="h-4 w-4 mr-2 transition-transform group-hover:scale-110" />
+                  {messages.projects?.viewCode || "GitLab"}
                 </a>
               </Button>
             )}

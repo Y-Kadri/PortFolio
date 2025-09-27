@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { motion } from "framer-motion"
-import { ArrowLeft, ExternalLink, Github, ChevronLeft, ChevronRight, Play } from "lucide-react"
+import { ArrowLeft, ExternalLink, Github, ChevronLeft, ChevronRight, Play, Gitlab } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -124,6 +124,14 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         </a>
                       </Button>
                     )}
+                    {project.gitlabUrl && (
+                      <Button variant="outline" size="lg" className="group bg-transparent" asChild>
+                        <a href={project.gitlabUrl} target="_blank" rel="noopener noreferrer">
+                          <Gitlab className="h-4 w-4 mr-2 transition-transform group-hover:scale-110" />
+                          {messages.projects?.viewCode || "GitLab"}
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
 
@@ -222,8 +230,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                       key={index}
                       onClick={() => setCurrentMediaIndex(index)}
                       className={`relative w-4 h-4 rounded-full transition-all duration-300 ${index === currentMediaIndex
-                          ? "bg-primary scale-125"
-                          : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                        ? "bg-primary scale-125"
+                        : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                         }`}
                     >
                       {media.type === "video" && index === 0 && (
@@ -329,7 +337,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8">Intéressé par ce projet ?</h2>
+              <h2 className="font-heading text-2xl md:text-3xl font-bold mb-8">{messages.projects.interestedTitle}</h2>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 {project.liveUrl && (
@@ -348,10 +356,18 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     </a>
                   </Button>
                 )}
+                {project.gitlabUrl && (
+                  <Button variant="outline" size="lg" className="group bg-transparent" asChild>
+                    <a href={project.gitlabUrl} target="_blank" rel="noopener noreferrer">
+                      <Gitlab className="h-4 w-4 mr-2 transition-transform group-hover:scale-110" />
+                      {messages.projects?.viewCode || "GitLab"}
+                    </a>
+                  </Button>
+                )}
                 <Button variant="ghost" size="lg" asChild>
                   <Link href="/#projects">
                     <ArrowLeft className="h-4 w-4 mr-2" />
-                    Retour au portfolio
+                    {messages.projects?.backToPortfolio || "Retour au portfolio"}
                   </Link>
                 </Button>
               </div>

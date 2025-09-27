@@ -17,7 +17,8 @@ export interface Project {
   video?: string
   technologies: string[]
   liveUrl?: string
-  githubUrl: string
+  githubUrl?: string
+  gitlabUrl?: string
   featured: boolean
   features: {
     fr: string[]
@@ -37,8 +38,8 @@ export const projects: Project[] = [
   {
     id: "breezy-social-network",
     title: {
-      fr: "Breezy – Réseau social léger et réactif",
-      en: "Breezy – Lightweight Responsive Social Network"
+      fr: "Breezy : Réseau social léger et réactif",
+      en: "Breezy: Lightweight Responsive Social Network"
     },
     description: {
       fr: "Réseau social léger inspiré de Twitter/X, permettant de publier des postes publics, d’interagir avec les publications des autres utilisateurs, de suivre des utilisateurs, d’envoyer des messages privés et de gérer plusieurs types d’utilisateurs pour des fonctionnalités distinctes.",
@@ -101,7 +102,8 @@ export const projects: Project[] = [
       "Back-end",
     ],
     githubUrl: "",
-    featured: true,
+    gitlabUrl: "https://gitlab.com/Y-Kadri/projet_breezy_fisa_a3",
+    featured: false,
     features: {
       fr: [
         "Création de maquettes pour les futures pages (accueil, profil, connexion, déconnexion, messages privés, page administrateur)",
@@ -204,8 +206,8 @@ export const projects: Project[] = [
       "Sequence Diagrams",
       "Use Case Diagrams"
     ],
-    githubUrl: "",
-    featured: true,
+    githubUrl: "https://github.com/Y-Kadri/EasySaveProject",
+    featured: false,
     features: {
       fr: [
         "Conception diagrammes UML : activité, séquence, classe et cas d’utilisation",
@@ -309,7 +311,7 @@ export const projects: Project[] = [
       "Polynomial Reductions"
     ],
     githubUrl: "",
-    featured: true,
+    featured: false,
     features: {
       fr: [
         "Analyse théorique : distinction problème de décision vs problème d’optimisation, étude de complexité (NP-complet, réductions polynomiales), modélisation mathématique avec ensembles, variables binaires et fonction objectif",
@@ -478,7 +480,7 @@ export const projects: Project[] = [
       "Scripting"
     ],
     githubUrl: "",
-    featured: true,
+    featured: false,
     features: {
       fr: [
         "Alimentation massive de la base de données depuis une API externe via commande python manage.py fetch_quizz_data",
@@ -513,8 +515,8 @@ export const projects: Project[] = [
   {
     id: "library-app",
     title: {
-      fr: "Application de gestion de bibliothèque",
-      en: "Library Management Application"
+      fr: "NetSeries : Application de gestion de bibliothèque",
+      en: "NetSeries: Library Management Application"
     },
     description: {
       fr: "Application web full-stack pour découvrir des séries, suivre leur progression et gérer plusieurs utilisateurs.",
@@ -548,7 +550,7 @@ export const projects: Project[] = [
       "Visual Studio Code",
     ],
     githubUrl: "",
-    featured: true,
+    featured: false,
     features: {
       fr: [
         "Création, connexion et déconnexion d’un utilisateur",
@@ -613,7 +615,7 @@ export const projects: Project[] = [
       "Matplotlib",
     ],
     githubUrl: "",
-    featured: true,
+    featured: false,
     features: {
       fr: [
         "Implémentation de la structure Rope pour la gestion de chaînes de caractères",
@@ -673,7 +675,7 @@ export const projects: Project[] = [
       "Scripting"
     ],
     githubUrl: "",
-    featured: true,
+    featured: false,
     features: {
       fr: [
         "Interface graphique pour jouer au jeu Concordia",
@@ -734,7 +736,7 @@ export const projects: Project[] = [
       "Doctrine",
     ],
     githubUrl: "",
-    featured: true,
+    featured: false,
     features: {
       fr: [
         "Développement d'une application full-stack",

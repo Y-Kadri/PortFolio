@@ -66,6 +66,7 @@ export function ProjectFilter({
               {selectedTechnologies.includes(tech) && <X className="h-3 w-3 ml-1" />}
             </Badge>
           ))}
+          <Badge variant={selectedTechnologies.includes("...") ? "default" : "secondary"} className="hover:scale-105 transition-transform mb-2">...</Badge>
         </div>
 
         {/* Clear Filters */}
