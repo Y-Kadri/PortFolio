@@ -7,15 +7,15 @@
   },
   "hero": {
     "name": "Yanis Kadri",
-    "role": "Ingénieur d'applications Full Stack",
-    "tagline": "Lorem",
+    "role": "Ingénieur Développeur Full Stack",
+    "tagline": "Une vision Full Stack pour des applications robustes et évolutives",
     "cta": "Voir mes projets"
   },
   "about": {
     "title": "À propos de moi",
     "downloadCV": "Télécharger mon CV",
     "subtitle": "Qui suis-je ?",
-    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "bio": "Salut, moi c'est Yanis KADRI, et benvenue dans mon portfolio !\n\nJe suis ingénieur concepteur développeur d'applications Full-Stack, diplômé d'un BUT Informatique et actuellement en école d'ingénieur au CESI.Depuis presque 3 ans, je suis en alternance chez SQLI Bordeaux, où je conçois et développe des applications web modernes.\n\nCe qui m'a fait aimer l'Informatique ? La curiosité. Je me suis toujours demandé comment fonctionnaient les applications, les sites et les jeux vidéo. J'y ai découvert que tout cela fonctionne essentiellement grâce à des lignes de code. Depuis, j'explore sans cesse de nouvelles technologies et je prends autant de plaisir à travailler sur des projets web, des applications ou des jeux vidéo. \n\nDans mes projets, je fais toujours en sorte de produire un code de qualité, d'offrir une expérience utilisateur fluide et intuitive, et de garantir la maintenabilité pour faciliter les évolutions futures. \n\nEn dehors de l'Informatique, j'aime pratiquer des sports collectifs mettant en avant la coopération et la tactique tels que le volley et le basket, mais aussi faire des sports individuels comme le badminton et le tennis de table.\n\n Aujourd'hui, je recherche un stage de 3 mois à l'étranger pour continuer à apprendre et à partager mes compétences.\n\nN'hésitez pas à parcourir mes projets ci-dessous, du plus récent au plus ancien, et à consulter mon CV (en français ou en version internationale) pour en savoir plus sur mon parcours et mes expérences.",
     "skills": {
       "development": {
         "title": "Développement",
@@ -40,7 +40,12 @@
       "security": {
         "title": "Sécurité & Standards",
         "description": "Sécurisation des applications et respect des bonnes pratiques",
-        "technologies": ["HTTPS","CORS","JWT","OAuth","Authentification","Conformité","..."]
+        "technologies": ["HTTPS","CORS","JWT","OAuth","Authentification","Conformité","Cryptage", "VPN", "API Gateway", "..."]
+      },
+      "projectManagement": {
+        "title": "Gestion de projet & Méthodologies",
+        "description": "Outils et pratiques pour organiser, planifier et suivre les projets efficacement",
+        "technologies": ["Scrum","Méthode en V","Agile","Jira","Trello","Diagrammes de Gantt","..."]
       }
     }
   },

@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, Shield, Database, Settings, TestTube } from "lucide-react"
+import { Github, Linkedin, Mail, Shield, Database, Settings, TestTube, Clipboard } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { CVDownloadDropdown } from "@/components/features/cv-download-dropdown"
 
@@ -40,6 +40,12 @@ export function AboutSection({ messages, locale }: AboutProps) {
       title: messages.about.skills.security.title,
       description: messages.about.skills.security.description,
       technologies: messages.about.skills.security.technologies,
+    },
+    {
+      icon: Clipboard,
+      title: messages.about.skills.projectManagement.title,
+      description: messages.about.skills.projectManagement.description,
+      technologies: messages.about.skills.projectManagement.technologies,
     },
   ]
 
@@ -127,9 +133,14 @@ export function AboutSection({ messages, locale }: AboutProps) {
               <CVDownloadDropdown messages={messages} />
             </motion.div>
 
-            <div className="prose prose-lg max-w-none">
-              <p className="text-muted-foreground leading-relaxed text-base md:text-lg">{messages.about.bio}</p>
-            </div>
+          <div className="prose prose-lg max-w-none text-justify">
+            {messages.about.bio.split("\n").map((line, index) => (
+              <p key={index}>
+                {line}
+                <br />
+              </p>
+            ))}
+          </div>
           </motion.div>
 
           <motion.div
@@ -139,7 +150,7 @@ export function AboutSection({ messages, locale }: AboutProps) {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-6 sm:grid-cols-1">
               {skills.map((skill, index) => (
                 <motion.div
                   key={skill.title}
