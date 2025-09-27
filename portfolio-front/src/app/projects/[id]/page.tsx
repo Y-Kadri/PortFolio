@@ -77,18 +77,65 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     setCurrentMediaIndex((prev) => (prev - 1 + mediaItems.length) % mediaItems.length)
   }
 
+  // Fonctions pour retourner les couleurs
+  const getLanguageColor = () => "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+  const getTechnologyColor = () => "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
+  const getConceptColor = () => "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
+
+  // Fonction principale pour obtenir la couleur d'une techno / concept / langage
   const getTechColor = (tech: string) => {
-    const colors: Record<string, string> = {
-      React: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-      "Next.js": "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200",
-      "Vue.js": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-      TypeScript: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-      "Node.js": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-      TailwindCSS: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200",
-      MongoDB: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-      PostgreSQL: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-    }
-    return colors[tech] || "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
+    // Langages les plus connus
+    const knownLanguages = [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "Java",
+      "C#",
+      "C",
+      "SQL",
+      "MySQL",
+      "SQLite"
+    ]
+
+    // Technologies / outils / frameworks les plus connus
+    const knownTechnologies = [
+      "React",
+      "Symfony",
+      "Express.js",
+      ".NET Core",
+      "Docker",
+      "Docker Compose",
+      "Unity",
+      "Active Directory",
+      "LDAP",
+      "Bash",
+      "PowerShell",
+      "VPN",
+      "Firewall",
+      "Maven"
+    ]
+
+    // Concepts importants
+    const knownConcepts = [
+      "UML",
+      "CI/CD",
+      "Full-Stack",
+      "Back-end",
+      "Front-end",
+      "Unit Testing",
+      "TDD",
+      "REST API",
+      "JWT Authentication",
+      "Graph Theory",
+      "Design Patterns"
+    ]
+
+    if (knownLanguages.includes(tech)) return getLanguageColor()
+    if (knownTechnologies.includes(tech)) return getTechnologyColor()
+    if (knownConcepts.includes(tech)) return getConceptColor()
+
+    // Couleur par défaut pour tout le reste
+    return "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
   }
 
   const currentMedia = mediaItems[currentMediaIndex]
@@ -234,11 +281,10 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     <button
                       key={index}
                       onClick={() => setCurrentMediaIndex(index)}
-                      className={`relative w-4 h-4 rounded-full transition-all duration-300 ${
-                        index === currentMediaIndex
+                      className={`relative w-4 h-4 rounded-full transition-all duration-300 ${index === currentMediaIndex
                           ? "bg-primary scale-125"
                           : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                      }`}
+                        }`}
                     >
                       {media.type === "video" && index === 0 && (
                         <Play className="absolute inset-0 w-2 h-2 m-auto text-white" />

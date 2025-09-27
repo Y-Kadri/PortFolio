@@ -84,16 +84,21 @@ export const projects: Project[] = [
       "Axios",
       "React Router",
       "Nginx",
-      "JWT",
+      "JWT Authentication",
       "API Gateway",
       "Responsive Design",
       "Mobile-first Approach",
       "Monolithic Architecture",
-      "API Rest",
+      "REST API",
       "Public/Private API",
       "React Hooks",
       "React Context",
       "Git",
+      "Git Version Control",
+      "TypeScript",
+      "Full-Stack",
+      "Front-end",
+      "Back-end",
     ],
     githubUrl: "",
     featured: true,
@@ -181,23 +186,23 @@ export const projects: Project[] = [
       "C#",
       ".NET Core",
       "WPF / Avalonia",
-      "Sockets (client-serveur)",
-      "Logs JSON & XML",
+      "Sockets (Client-Server)",
+      "JSON & XML Logging",
       "Dynamic Link Library (DLL)",
-      "Processus & Threads",
+      "Processes & Threads",
       "Locks",
-      "Sémaphores",
-      "Backup complet et différentiel",
-      "Logs",
+      "Semaphores",
+      "Full and Differential Backup",
+      "Logging",
       "Design Patterns (Singleton, Command, Factory, Adapter, Strategy)",
       "Git",
-      "Gestion de versions",
+      "Version Control",
       "CI/CD",
       "UML",
-      "Diagrammes de classes",
-      "Diagrammes d’activités",
-      "Diagrammes de séquence",
-      "Diagrammes de cas d’utilisation"
+      "Class Diagrams",
+      "Activity Diagrams",
+      "Sequence Diagrams",
+      "Use Case Diagrams"
     ],
     githubUrl: "",
     featured: true,
@@ -283,24 +288,25 @@ export const projects: Project[] = [
     ],
     technologies: [
       "Python",
-      "Jupyter / Notebook",
-      "Théorie des graphes (Graph theory)",
-      "Modélisation mathématique",
+      "Jupyter Notebook",
+      "Graph Theory",
+      "Mathematical Modeling",
       "NetworkX",
       "Matplotlib",
       "Pandas",
       "Brute Force",
-      "Greedy (Glouton)",
+      "Greedy Algorithm",
       "Nearest Neighbor",
       "2-opt",
-      "Recuit simulé",
-      "Algorithmes génétiques",
+      "Simulated Annealing",
+      "Genetic Algorithms",
       "Ant Colony Optimization (ACO)",
-      "D*",
-      "Programmation linéaire",
-      "Heuristiques",
-      "Métaheuristiques",
-      "Complexité polynomiale et réductions polynomiales",
+      "D* Algorithm",
+      "Linear Programming",
+      "Heuristics",
+      "Metaheuristics",
+      "Polynomial Complexity",
+      "Polynomial Reductions"
     ],
     githubUrl: "",
     featured: true,
@@ -368,24 +374,26 @@ export const projects: Project[] = [
     technologies: [
       "Active Directory",
       "LDAP",
-      "Organizational Units",
+      "Organizational Units (OUs)",
       "Domain Controllers",
       "VPN",
       "Firewall",
       "pfSense",
-      "Supervision / Monitoring",
+      "Monitoring",
       "Zabbix",
-      "Réseau",
+      "Networking",
       "DMZ",
       "RAID",
       "Backup & Restore",
       "RPO/RTO",
-      "Group Policy Objects",
+      "Group Policy Objects (GPOs)",
       "User & Group Management",
-      "Security Policies (ANSSI)",
+      "Security Policies (ANSSI Standards)",
       "SSL Certificates",
-      "PowerShell / Bash Scripts",
-      "PostgreSQL"
+      "Scripting (PowerShell, Bash)",
+      "PowerShell",
+      "Bash",
+      "Scripting",
     ],
     features: {
       fr: [
@@ -457,13 +465,17 @@ export const projects: Project[] = [
       "Python",
       "Django",
       "SQLite",
-      "GitLab",
-      "Unit Testing",
-      "REST API",
-      "Management Commands",
-      "Signals & Hooks",
-      "Matplotlib",
       "Git",
+      "Unit Testing",
+      "TDD",
+      "REST API",
+      "Custom Management Commands",
+      "Django Signals & Hooks",
+      "Matplotlib",
+      "Full-Stack",
+      "Back-end",
+      "Front-end",
+      "Scripting"
     ],
     githubUrl: "",
     featured: true,
@@ -517,7 +529,24 @@ export const projects: Project[] = [
       "/projects/libraryApp/home.png",
       "/projects/libraryApp/following.png",
     ],
-    technologies: ["Symfony", "React", "MySql", "Visual Studio Code", "CSS", "Agile Scrum", "Progressive Web App", "Git", "Doctrine", "API", "Swagger", "User Authentication"],
+    technologies: [
+      "Symfony",
+      "React",
+      "JavaScript",
+      "MySQL",
+      "Docker",
+      "CI/CD",
+      "CSS",
+      "MCD",
+      "Agile Scrum",
+      "Progressive Web App",
+      "Doctrine ORM",
+      "REST API",
+      "Swagger",
+      "User Authentication",
+      "Unit Testing",
+      "Visual Studio Code",
+    ],
     githubUrl: "",
     featured: true,
     features: {
@@ -529,6 +558,7 @@ export const projects: Project[] = [
         "Gestion de la base de données avec Doctrine et création de fixtures pour les données utilisateurs et séries",
         "Création et documentation des APIs avec Swagger",
         "Organisation des tâches via un Board et méthodologie SCRUM",
+        "Déployer l'application dans un VPS",
         "Préparation et réalisation de la démo de l’application"
       ],
       en: [
@@ -539,6 +569,7 @@ export const projects: Project[] = [
         "Database management with Doctrine and data fixtures for users and series",
         "API creation and documentation with Swagger",
         "Task organization via a Board and SCRUM methodology",
+        "Deployed the application on a VPS",
         "Preparing and conducting the application demo"
       ]
     },
@@ -572,7 +603,15 @@ export const projects: Project[] = [
       "/projects/rope/result4c250i.png",
       "/projects/rope/resumeResult.png",
     ],
-    technologies: ["C", "Visual Studio Code", "GitLab", "Data Structures", "Memory Management", "Performance Benchmarking", "UML", "Git",],
+    technologies: [
+      "C",
+      "Git",
+      "Data Structures",
+      "Memory Management",
+      "Performance Benchmarking",
+      "UML",
+      "Matplotlib",
+    ],
     githubUrl: "",
     featured: true,
     features: {
@@ -621,7 +660,18 @@ export const projects: Project[] = [
       "/projects/concordia/game.png",
       "/projects/concordia/deck.png"
     ],
-    technologies: ["Python", "Tkinter", "Visual Studio Code", "Git", "CI/CD", "Neo4j", "Database Integration", "Unit Testing", "AI Implementation", "UML"],
+    technologies: [
+      "Python",
+      "Tkinter",
+      "Git",
+      "CI/CD",
+      "Neo4j",
+      "Database Integration",
+      "Unit Testing",
+      "AI Implementation",
+      "UML",
+      "Scripting"
+    ],
     githubUrl: "",
     featured: true,
     features: {
@@ -672,7 +722,17 @@ export const projects: Project[] = [
       "/projects/seriesApp/home.png",
       "/projects/seriesApp/admin.png",
     ],
-    technologies: ["Symfony", "MySQL", "Visual Studio Code", "CSS", "Agile Scrum", "Progressive Web App", "Git",],
+    technologies: [
+      "Symfony",
+      "MySQL",
+      "CSS",
+      "Agile Scrum",
+      "Unit Testing",
+      "Progressive Web App",
+      "Git",
+      "Back-end",
+      "Doctrine",
+    ],
     githubUrl: "",
     featured: true,
     features: {
@@ -729,7 +789,13 @@ export const projects: Project[] = [
       "/projects/bloomFilter/resumeArrayList1.png",
       "/projects/bloomFilter/resumeArrayList2.png",
     ],
-    technologies: ["Java", "NetBeans", "GitLab", "Word", "Data Structures", "Benchmarking"],
+    technologies: [
+      "Java",
+      "Git",
+      "Microsoft Word",
+      "Data Structures",
+      "Performance Benchmarking"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -773,7 +839,12 @@ export const projects: Project[] = [
     images: [
       "/projects/rsa/rsaProcess.png",
     ],
-    technologies: ["Python", "Visual Studio Code", "Cryptography", "Mathematical Computations (GCD, Euler, Modular Inverse)", "Git",],
+    technologies: [
+      "Python",
+      "Cryptography",
+      "Mathematical Computations (GCD, Euler's Totient, Modular Inverse)",
+      "Git"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -823,7 +894,12 @@ export const projects: Project[] = [
     images: [
       "/projects/minishell/commands.png",
     ],
-    technologies: ["C", "Visual Studio Code", "Unix System Libraries (signal, wait, exec, read, write)", "Git"],
+    technologies: [
+      "C",
+      "Bash",
+      "Unix System Libraries (signal, wait, exec, read, write)",
+      "Git"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -873,7 +949,11 @@ export const projects: Project[] = [
       "/projects/dnsServerSetup/config2.png",
       "/projects/dnsServerSetup/config3.png",
     ],
-    technologies: ["Bash", "Visual Studio Code", "Markdown", "Virtual Machines (NEmu)"],
+    technologies: [
+      "Bash",
+      "Markdown",
+      "Virtual Machines (NEmu)"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -927,7 +1007,12 @@ export const projects: Project[] = [
       "/projects/labyrintheJava/game2.png",
       "/projects/labyrintheJava/uml.png",
     ],
-    technologies: ["Java", "NetBeans 13", "UML", "Markdown", "Git"],
+    technologies: [
+      "Java",
+      "UML",
+      "Markdown",
+      "Git"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -978,7 +1063,11 @@ export const projects: Project[] = [
       "/projects/unityGameBasics/game.png",
       "/projects/unityGameBasics/inventory.png"
     ],
-    technologies: ["Unity 2021", "C#", "Visual Studio 2022"],
+    technologies: [
+      "Unity",
+      "C#",
+      "Visual Studio"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -1031,7 +1120,15 @@ export const projects: Project[] = [
       "/projects/climateVirtualization/energiesGraph.png",
       "/projects/climateVirtualization/specificationDocument.png",
     ],
-    technologies: ["Python", "Pandas", "GeoPandas", "NumPy", "Matplotlib", "SQLite", "Word"],
+    technologies: [
+      "Python",
+      "Pandas",
+      "GeoPandas",
+      "NumPy",
+      "Matplotlib",
+      "SQLite",
+      "Microsoft Word"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -1080,7 +1177,11 @@ export const projects: Project[] = [
       "/projects/auction/choice.png",
       "/projects/auction/disconnect.png",
     ],
-    technologies: ["Java", "UML", "NetBeans", "Git"],
+    technologies: [
+      "Java",
+      "UML",
+      "Git"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -1127,7 +1228,12 @@ export const projects: Project[] = [
       "/projects/graphAlgo/aStar1.png",
       "/projects/graphAlgo/aStar2.png",
     ],
-    technologies: ["Java", "Théorie des graphes (Graph theory)", "JBotSim", "Maven", "NetBeans 13"],
+    technologies: [
+      "Java",
+      "Graph Theory",
+      "JBotSim",
+      "Maven",
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -1174,7 +1280,12 @@ export const projects: Project[] = [
       "/projects/babyfoot/game.png",
       "/projects/babyfoot/exercises.png",
     ],
-    technologies: ["Processing", "Java", "Word", "Git"],
+    technologies: [
+      "Processing",
+      "Java",
+      "Microsoft Word",
+      "Git"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -1217,7 +1328,12 @@ export const projects: Project[] = [
       "/projects/databasecreation/mcd.png",
       "/projects/databasecreation/template.png",
     ],
-    technologies: ["Microsoft SQL Server", "WinDesign", "SQL", "Data Modeling"],
+    technologies: [
+      "Microsoft SQL Server",
+      "WinDesign",
+      "SQL",
+      "Data Modeling"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -1265,7 +1381,12 @@ export const projects: Project[] = [
       "/projects/clientwebsite/form.png",
 
     ],
-    technologies: ["Visual Studio Code", "HTML", "CSS", "Git"],
+    technologies: [
+      "HTML",
+      "CSS",
+      "Git",
+      "Full-stack"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -1311,7 +1432,11 @@ export const projects: Project[] = [
       "/projects/lowatemPhase2/resultOneGame.png",
       "/projects/lowatemPhase2/ranking.png"
     ],
-    technologies: ["Java", "NetBeans", "AI Simulation", "Strategy Algorithms"],
+    technologies: [
+      "Java",
+      "AI Simulation",
+      "Strategy Algorithms"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -1354,7 +1479,13 @@ export const projects: Project[] = [
       "/projects/lowatemPhase1/game.png",
       "/projects/lowatemPhase1/step6.png",
     ],
-    technologies: ["Java", "NetBeans", "JUnit", "2D Arrays", "Enums", "OOP"],
+    technologies: [
+      "Java",
+      "JUnit",
+      "2D Arrays",
+      "Enums",
+      "Object-Oriented Programming (OOP)"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -1405,7 +1536,14 @@ export const projects: Project[] = [
       "/projects/installationOs/vm.png",
       "/projects/installationOs/vscode.png",
     ],
-    technologies: ["Linux", "Bash", "VMWare", "XFCE", "Visual Studio Code", "Rust Nightly"],
+    technologies: [
+      "Linux",
+      "Bash",
+      "VMware",
+      "XFCE",
+      "Visual Studio Code",
+      "Rust (Nightly)"
+    ],
     githubUrl: "",
     featured: false,
     features: {
@@ -1488,66 +1626,78 @@ export const projects: Project[] = [
 ]
 
 export const technologies = [
-  // Front-end
-  "Angular",
-  "React",
-  "Next.js",
-  "TypeScript",
+  // Programming Languages
   "JavaScript",
-  "HTML",
-  "CSS",
-  "Tailwind CSS",
-
-  // Back-end
-  "Java",
-  "Spring Boot",
-  "Node.js",
-  "Symfony",
+  "TypeScript",
   "Python",
+  "Java",
   "C#",
   "C",
+  "SQL",
 
   // Databases
   "MySQL",
-  "PostgreSQL",
-  "Oracle",
   "MongoDB",
   "Neo4j",
   "SQLite",
-  "Firebase",
-  "Redis",
-  "Prisma",
-  "Doctrine",
+  "MySQL",
+  "Mongoose",
+  "Microsoft SQL Server",
 
-  // DevOps / Infrastructure
+  // Technologies / Tools / Frameworks / IDEs / DevOps / Infrastructure
+  "React",
+  "Next.js",
+  "Symfony",
+  "Django",
+  "Express.js",
+  ".NET Core",
   "Docker",
-  "Kubernetes",
-  "Vercel",
-  "AWS",
-  "CI/CD",
-  "GitHub Actions",
-  "Supervision / Monitoring",
-  "Logs",
-  "Network",
+  "Load Balancer",
+  "Nginx",
+  "Git",
+  "WinDesign",
+  "Unity",
+  "Processing",
+  "PowerShell",
+  "Bash",
+  "Monitoring",
+  "Zabbix",
+  "Networking",
   "Active Directory",
+  "LDAP",
+  "Organizational Units (OUs)",
+  "VPN",
+  "Firewall",
+  "pfSense",
+  "DMZ",
+  "Group Policy Objects (GPOs)",
+  "Maven",
+  "Matplotlib",
+  "Pandas",
+  "Axios",
+  "Scripting",
 
-  // Security & Standards
-  "OWASP",
-  "HTTPS",
-  "CORS",
-  "JWT",
-  "OAuth",
-  "Authentication",
-  "Compliance",
-
-  // Other concepts / methodologies
-  "Agile Scrum",
-  "Progressive Web App",
+  // Concepts / Methodologies / Paradigms
+  "Design Patterns", //TODO gérer la recherche rapide
+  "Graph Theory",
+  "Mathematical Modeling",
+  "Mathematical Computations", //TODO gérer la recherche rapide
+  "Data Structures",
+  "Linear Programming",
+  "Polynomial Complexity",
+  "REST API",
   "Unit Testing",
   "TDD",
+  "Monolithic Architecture",
+  "JWT Authentication",
+  "API Gateway",
+  "CI/CD",
   "UML",
-  "Maven",
-  "Algorithms",
-  "Data Structures"
+  "Performance Benchmarking",
+  "Memory Management",
+  "Full-Stack",
+  "Back-end",
+  "Front-end",
 ];
+
 
