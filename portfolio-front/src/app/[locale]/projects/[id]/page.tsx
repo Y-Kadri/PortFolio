@@ -54,6 +54,34 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
     return () => document.removeEventListener("keydown", handleKeyDown)
   }, [lightboxOpen])
 
+  if (!messages) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+      </div>
+    )
+  }
+
+  if (!project) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header messages={messages} locale={locale} />
+        <main className="container mx-auto max-w-4xl px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold mb-4">{messages.projects?.notFound || "Projet non trouvé"}</h1>
+            <Link href={`/${locale}#projects`}>
+              <Button>
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                {messages.projects?.backToProjects || "Retour aux projets"}
+              </Button>
+            </Link>
+          </div>
+        </main>
+        <Footer messages={messages} locale={locale} />
+      </div>
+    )
+  }
+
   const nextMedia = () => {
     if (currentMediaIndex < mediaItems.length - 1) {
       setCurrentMediaIndex((prev) => prev + 1)
@@ -107,6 +135,9 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                 alt="Full size view"
                 className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
               />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                <ZoomIn className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
             </motion.div>
           </motion.div>
         )}
@@ -195,7 +226,6 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                               mediaItems[currentMediaIndex - 1]?.src ||
                               "/placeholder.svg?height=160&width=256&query=Preview image" ||
                               "/placeholder.svg" ||
-                              "/placeholder.svg" ||
                               "/placeholder.svg"
                             }
                             alt="Previous"
@@ -219,7 +249,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                     className="relative w-full max-w-2xl"
                   >
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-muted/20 border-4 border-white/10 group">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-muted/20 border-4 border-white/10">
                       {currentMedia?.type === "video" ? (
                         <div className="relative aspect-video">
                           <video
@@ -232,11 +262,11 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                         </div>
                       ) : (
                         <div
-                          className="relative aspect-video cursor-pointer"
-                          onClick={() => openLightbox(currentMedia?.src || "/high-quality-image.jpg")}
+                          className="relative aspect-video cursor-pointer group"
+                          onClick={() => openLightbox(currentMedia?.src)}
                         >
                           <img
-                            src={currentMedia?.src || "/placeholder.svg?height=800&width=1200&query=High quality image"}
+                            src={currentMedia?.src || "/placeholder.svg?height=400&width=600"}
                             alt={`${project.title[locale]} - Image ${currentMediaIndex + 1}`}
                             className="w-full h-full object-cover"
                           />
@@ -289,8 +319,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                           <img
                             src={
                               mediaItems[currentMediaIndex + 1]?.src ||
-                              "/placeholder.svg?height=160&width=256&query=Preview image" ||
-                              "/placeholder.svg" ||
+                              "/placeholder.svg?height=80&width=128" ||
                               "/placeholder.svg" ||
                               "/placeholder.svg"
                             }
