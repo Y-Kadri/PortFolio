@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "NEXT_PUBLIC_VERSION=$(git describe --tags --abbrev=0) NEXT_PUBLIC_LAST_UPDATE=$(git log -1 --format=%cd --date=short) next build --turbopack",
+    "build": "next build --turbopack",    
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
