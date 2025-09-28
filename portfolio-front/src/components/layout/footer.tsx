@@ -12,7 +12,10 @@ interface FooterProps {
 
 export function Footer({ messages, locale }: FooterProps) {
   const currentYear = new Date().getFullYear()
-
+  const version = process.env.NEXT_PUBLIC_VERSION
+  const lastUpdateEnv = process.env.NEXT_PUBLIC_LAST_UPDATE
+  const lastUpdateDate = lastUpdateEnv ? new Date(lastUpdateEnv) : new Date()
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
@@ -167,10 +170,10 @@ export function Footer({ messages, locale }: FooterProps) {
               </div>
             </div>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <span>{messages.footer.version} 2.0.0 </span>
+              <span>{messages.footer.version} {version} </span>
               <span>•</span>
               <span>
-                {messages.footer.lastUpdate} {new Date().toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US")}
+                {messages.footer.lastUpdate} {lastUpdateDate.toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US")}
               </span>
             </div>
           </div>

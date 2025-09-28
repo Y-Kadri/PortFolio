@@ -12,6 +12,7 @@ import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import Link from "next/link"
 import { getTechColor } from "@/utils/colorsBubble"
+import { useParams } from "next/dist/client/components/navigation"
 
 interface ProjectDetailPageProps {
   params: { id: string; locale?: Locale }
@@ -21,7 +22,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   const [messages, setMessages] = React.useState<any>(null)
   const [currentMediaIndex, setCurrentMediaIndex] = React.useState(0)
   const [isVideoPlaying, setIsVideoPlaying] = React.useState(false)
-  const locale = params?.locale || "fr"
+  const param = useParams()
+  const locale: Locale = (param?.locale as Locale) || "fr"
 
   const project = projects.find((p) => p.id === params.id)
 

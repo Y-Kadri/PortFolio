@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { useParams } from "next/navigation"
 import { Header } from "@/components/layout/header"
 import { getMessages, type Locale } from "@/lib/i18n"
 import { Footer } from "@/components/layout/footer"
@@ -16,7 +17,8 @@ interface HomePageProps {
 
 export default function HomePage({ params }: HomePageProps) {
   const [messages, setMessages] = React.useState<any>(null)
-  const locale = params?.locale || "fr"
+  const param = useParams() 
+  const locale: Locale = (param?.locale as Locale) || "fr"
 
   React.useEffect(() => {
     getMessages(locale).then(setMessages)
