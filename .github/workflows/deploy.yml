@@ -9,45 +9,48 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    env:
-      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-      NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
-      RECAPTCHA_SECRET_KEY: ${{ secrets.RECAPTCHA_SECRET_KEY }}
-
     steps:
+      # Checkout du repo
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
+      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
 
+      # Installer les dépendances
       - name: Install dependencies
         run: npm install
         working-directory: ./portfolio-front
 
-      - name: Build Next.js with environment variables
+      # Créer un fichier .env.local avec les secrets
+      - name: Create .env.local
         run: |
-          # Exporte la clé pour qu'elle soit visible au build côté serveur
-          export RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}
+          echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> .env.local
+          echo "NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}" >> .env.local
+          echo "RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }}" >> .env.local
+        working-directory: ./portfolio-front
 
-          # Variables front
+      # Build Next.js et exporter le site
+      - name: Build and export Next.js
+        run: |
           NEXT_PUBLIC_VERSION=$(git describe --tags --abbrev=0)
           NEXT_PUBLIC_LAST_UPDATE=$(git log -1 --format=%cd --date=short)
           echo "NEXT_PUBLIC_VERSION=$NEXT_PUBLIC_VERSION"
           echo "NEXT_PUBLIC_LAST_UPDATE=$NEXT_PUBLIC_LAST_UPDATE"
 
-          # Build et export
           npm run build
           npm run export
         working-directory: ./portfolio-front 
 
+      # Déploiement sur GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./portfolio-front/out  
+          publish_dir: ./portfolio-front/out
