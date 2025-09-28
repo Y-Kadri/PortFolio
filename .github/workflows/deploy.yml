@@ -25,6 +25,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./portfolio-front
 
       - name: Build Next.js with environment variables
         run: |
@@ -34,10 +35,11 @@ jobs:
           echo "NEXT_PUBLIC_LAST_UPDATE=$NEXT_PUBLIC_LAST_UPDATE"
           npm run build
           npm run export
+        working-directory: ./portfolio-front 
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./out
+          publish_dir: ./portfolio-front/out  
