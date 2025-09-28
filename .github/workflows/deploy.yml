@@ -41,7 +41,6 @@ jobs:
       - name: Build and export Next.js
         run: |
           npm run build
-          npm run export
         working-directory: ./portfolio-front
 
       - name: Deploy to GitHub Pages
