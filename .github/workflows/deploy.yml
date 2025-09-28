@@ -10,44 +10,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout du repo
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      # Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      # Installer les dépendances
       - name: Install dependencies
         run: npm install
         working-directory: ./portfolio-front
 
-      # Créer un fichier .env.local avec les secrets
-      - name: Create .env.local
+      - name: Build Next.js with environment variables
         run: |
-          echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> .env.local
-          echo "NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}" >> .env.local
-          echo "RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }}" >> .env.local
-        working-directory: ./portfolio-front
+          # Export secrets pour le build côté serveur
+          export RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}
+          export NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
+          export RECAPTCHA_SECRET_KEY=${{ secrets.RECAPTCHA_SECRET_KEY }}
 
-      # Build Next.js et exporter le site
-      - name: Build and export Next.js
-        run: |
-          NEXT_PUBLIC_VERSION=$(git describe --tags --abbrev=0)
-          NEXT_PUBLIC_LAST_UPDATE=$(git log -1 --format=%cd --date=short)
+          # Variables front pour version et date du dernier commit
+          export NEXT_PUBLIC_VERSION=$(git describe --tags --abbrev=0)
+          export NEXT_PUBLIC_LAST_UPDATE=$(git log -1 --format=%cd --date=short)
           echo "NEXT_PUBLIC_VERSION=$NEXT_PUBLIC_VERSION"
           echo "NEXT_PUBLIC_LAST_UPDATE=$NEXT_PUBLIC_LAST_UPDATE"
 
+          # Build et export
           npm run build
           npm run export
-        working-directory: ./portfolio-front 
+        working-directory: ./portfolio-front
 
-      # Déploiement sur GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
