@@ -3,7 +3,7 @@ name: Deploy Portfolio
 on:
   push:
     branches:
-      - master
+      - fix/deploy-portfolio-v2
 
 jobs:
   build-and-deploy:
@@ -41,7 +41,6 @@ jobs:
       - name: Build and export Next.js
         run: |
           npm run build
-          npm run export
         working-directory: ./portfolio-front
 
       - name: Deploy to GitHub Pages
