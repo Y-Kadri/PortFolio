@@ -41,7 +41,6 @@ jobs:
       - name: Build and export Next.js
         run: |
           npm run build
-          npm run export
         working-directory: ./portfolio-front
 
       - name: Deploy to GitHub Pages
@@ -49,4 +48,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./portfolio-front/out
+          publish_dir: ./portfolio-front/.next/output/static
+
+
