@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Yanis Kadri",
+    "role": "Ingénieur Développeur Full Stack",
+    "tagline": "Une vision Full Stack pour des applications robustes et évolutives",
+    "cta": "Voir mes projets"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "downloadCV": "Télécharger mon CV",
+    "subtitle": "Qui suis-je ?",
+    "bio": "Salut, moi c'est Yanis KADRI, et benvenue dans mon portfolio !\n\nJe suis ingénieur concepteur développeur d'applications Full-Stack, diplômé d'un BUT Informatique et actuellement en école d'ingénieur au CESI.Depuis presque 3 ans, je suis en alternance chez SQLI Bordeaux, où je conçois et développe des applications web modernes.\n\nCe qui m'a fait aimer l'Informatique ? La curiosité. Je me suis toujours demandé comment fonctionnaient les applications, les sites et les jeux vidéo. J'y ai découvert que tout cela fonctionne essentiellement grâce à des lignes de code. Depuis, j'explore sans cesse de nouvelles technologies et je prends autant de plaisir à travailler sur des projets web, des applications ou des jeux vidéo. \n\nDans mes projets, je fais toujours en sorte de produire un code de qualité, d'offrir une expérience utilisateur fluide et intuitive, et de garantir la maintenabilité pour faciliter les évolutions futures. \n\nEn dehors de l'Informatique, j'aime pratiquer des sports collectifs mettant en avant la coopération et la tactique tels que le volley et le basket, mais aussi faire des sports individuels comme le badminton et le tennis de table.\n\n Aujourd'hui, je recherche un stage de 3 mois à l'étranger pour continuer à apprendre et à partager mes compétences.\n\nN'hésitez pas à parcourir mes projets ci-dessous, du plus récent au plus ancien, et à consulter mon CV (en français ou en version internationale) pour en savoir plus sur mon parcours et mes expérences.",
+    "skills": {
+      "development": {
+        "title": "Développement",
+        "description": "Technologies et frameworks pour créer des applications web modernes et performantes",
+        "technologies": [
+          "Java",
+          "Spring Boot",
+          "Angular",
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Tailwind CSS",
+          "..."
+        ]
+      },
+      "quality": {
+        "title": "Qualité & Maintenabilité",
+        "description": "Outils et pratiques pour garantir la qualité du code et faciliter la maintenance",
+        "technologies": [
+          "Eslint",
+          "Prettier",
+          "SonarQube",
+          "Jest",
+          "CI/CD",
+          "GitHub Actions",
+          "..."
+        ]
+      },
+      "database": {
+        "title": "Bases de données",
+        "description": "Conception et optimisation de bases de données relationnelles et NoSQL",
+        "technologies": [
+          "MySQL",
+          "PostgreSQL",
+          "Oracle",
+          "MongoDB",
+          "Neo4j",
+          "..."
+        ]
+      },
+      "devops": {
+        "title": "DevOps / Infrastructure",
+        "description": "Déploiement, monitoring et gestion d'infrastructure cloud",
+        "technologies": [
+          "Docker",
+          "Git",
+          "Monitoring",
+          "Logs",
+          "Pare-feu",
+          "Réseaux",
+          "Active Directory",
+          "..."
+        ]
+      },
+      "security": {
+        "title": "Sécurité & Standards",
+        "description": "Sécurisation des applications et respect des bonnes pratiques",
+        "technologies": [
+          "HTTPS",
+          "CORS",
+          "JWT",
+          "OAuth",
+          "Authentification",
+          "Conformité",
+          "Cryptage",
+          "VPN",
+          "API Gateway",
+          "..."
+        ]
+      },
+      "projectManagement": {
+        "title": "Gestion de projet & Méthodologies",
+        "description": "Outils et pratiques pour organiser, planifier et suivre les projets efficacement",
+        "technologies": [
+          "Scrum",
+          "Méthode en V",
+          "Agile",
+          "Jira",
+          "Trello",
+          "Diagrammes de Gantt",
+          "..."
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Voulez-vous discuter ?",
+    "description": "Vous avez une question en tête ou souhaitez discuter d’un projet ? N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais et avec plaisir.",
+    "form": {
+      "email": {
+        "label": "Votre email",
+        "placeholder": "votre.email@exemple.com",
+        "required": "L'email est requis",
+        "invalid": "Veuillez entrer un email valide"
+      },
+      "message": {
+        "label": "Votre message",
+        "placeholder": "Décrivez votre projet ou posez votre question...",
+        "required": "Le message est requis",
+        "maxLength": "Le message ne peut pas dépasser 800 caractères"
+      },
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer.",
+      "captcha": {
+        "required": "Veuillez compléter le captcha",
+        "error": "Erreur de vérification captcha"
+      }
+    },
+    "info": {
+      "email": "john.doe@example.com",
+      "response": "Réponse sous 24h",
+      "availability": "Disponible pour de nouveaux projets"
+    }
+  },
+  "footer": {
+    "thanks": "Merci d'avoir visité",
+    "navigation": "Navigation rapide",
+    "contact": "Contact",
+    "copyright": "Tous droits réservés.",
+    "madeWith": "Fait avec",
+    "version": "Version",
+    "lastUpdate": "Dernière mise à jour",
+    "tagline": "Ingénieur Développeur Full Stack."
+  },
+  "scrollTop": "Retour en haut",
+  "cvDownload": {
+    "french": "CV Français",
+    "frenchDesc": "Version française complète",
+    "international": "CV International",
+    "internationalDesc": "Version anglaise pour l'international"
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Découvrez mes réalisations",
+    "filterAll": "Tous",
+    "searchPlaceholder": "Rechercher un projet, technologie, concept, ...",
+    "viewLive": "Voir en ligne",
+    "viewCode": "Code source",
+    "learnMore": "En savoir plus",
+    "notFound": "Projet non trouvé",
+    "backToProjects": "Retour aux projets",
+    "technologiesTitle": "Technologies et concepts",
+    "featuresTitle": "Fonctionnalités clés",
+    "roleTitle": "Mon rôle",
+    "learningsTitle": "Ce que j'ai appris ou amélioré",
+    "interestedTitle": "Intéressé par ce projet ?",
+    "backToPortfolio": "Retour au portfolio"
+  }
+}

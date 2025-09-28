@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Yanis Kadri",
+    "role": "Full Stack Software Engineer",
+    "tagline": "A Full Stack vision for robust and scalable applications",
+    "cta": "View my projects"
+  },
+  "about": {
+    "title": "About me",
+    "downloadCV": "Download my CV",
+    "subtitle": "Who am I?",
+    "bio": "Hi, I'm Yanis Kadri, and welcome to my portfolio!\n\nI am a Full Stack application design engineer and developer, with a degree in Computer Science and currently studying engineering at CESI. For almost three years, I have been working as a work-study student at SQLI Bordeaux, where I design and develop modern web applications.\n\nWhat made me love computer science? Curiosity. I always wondered how applications, websites, and video games worked. I discovered that they all work essentially thanks to lines of code. Since then, I have been constantly exploring new technologies and I enjoy working on web projects, applications, and video games.\n\nIn my projects, I always strive to produce high-quality code, offer a smooth and intuitive user experience, and ensure maintainability to facilitate future developments.\n\nOutside of IT, I enjoy team sports that emphasize cooperation and tactics, such as volleyball and basketball, as well as individual sports like badminton and table tennis.\n\nI am currently looking for a 3-month internship abroad to continue learning and sharing my skills.\n\nFeel free to browse my projects below, from the most recent to the oldest, and check out my resume (in French or international version) to learn more about my background and experience.",
+    "skills": {
+      "development": {
+        "title": "Development",
+        "description": "Technologies and frameworks to create modern and performant web applications",
+        "technologies": [
+          "Java",
+          "Spring Boot",
+          "Angular",
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Tailwind CSS",
+          "..."
+        ]
+      },
+      "quality": {
+        "title": "Quality & Maintainability",
+        "description": "Tools and practices to ensure code quality and facilitate maintenance",
+        "technologies": [
+          "Eslint",
+          "Prettier",
+          "SonarQube",
+          "Jest",
+          "CI/CD",
+          "GitHub Actions",
+          "..."
+        ]
+      },
+      "database": {
+        "title": "Databases",
+        "description": "Design and optimization of relational and NoSQL databases",
+        "technologies": [
+          "MySQL",
+          "PostgreSQL",
+          "Oracle",
+          "MongoDB",
+          "Neo4j",
+          "..."
+        ]
+      },
+      "devops": {
+        "title": "DevOps / Infrastructure",
+        "description": "Deployment, monitoring and cloud infrastructure management",
+        "technologies": [
+          "Docker",
+          "Git",
+          "Monitoring",
+          "Logs",
+          "Pare-feu",
+          "Réseaux",
+          "Active Directory",
+          "..."
+        ]
+      },
+      "security": {
+        "title": "Security & Standards",
+        "description": "Application security and compliance with best practices",
+        "technologies": [
+          "HTTPS",
+          "CORS",
+          "JWT",
+          "OAuth",
+          "Authentication",
+          "Compliance",
+          "Encryption",
+          "VPN",
+          "API Gateway",
+          "..."
+        ]
+      },
+      "projectManagement": {
+        "title": "Project Management & Methodologies",
+        "description": "Tools and practices to plan, organize, and track projects efficiently",
+        "technologies": [
+          "Scrum",
+          "V-Model",
+          "Agile",
+          "Jira",
+          "Trello",
+          "Gantt Charts",
+          "..."
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "subtitle": "Let's discuss your project",
+    "description": "Have a project in mind? A question? Don't hesitate to contact me, I'll get back to you as soon as possible.",
+    "form": {
+      "email": {
+        "label": "Your email",
+        "placeholder": "your.email@example.com",
+        "required": "Email is required",
+        "invalid": "Please enter a valid email"
+      },
+      "message": {
+        "label": "Your message",
+        "placeholder": "Describe your project or ask your question...",
+        "required": "Message is required",
+        "maxLength": "Message cannot exceed 800 characters"
+      },
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again.",
+      "captcha": {
+        "required": "Please complete the captcha",
+        "error": "Captcha verification error"
+      }
+    },
+    "info": {
+      "email": "john.doe@example.com",
+      "response": "Response within 24h",
+      "availability": "Available for new projects"
+    }
+  },
+  "footer": {
+    "thanks": "Thanks for visiting",
+    "navigation": "Quick Links",
+    "contact": "Contact",
+    "copyright": "All rights reserved.",
+    "madeWith": "Made with",
+    "version": "Version",
+    "lastUpdate": "Last update",
+    "tagline": "Full Stack Software Engineer"
+  },
+  "scrollTop": "Back to top",
+  "cvDownload": {
+    "french": "French CV",
+    "frenchDesc": "Complete French version",
+    "international": "International CV",
+    "internationalDesc": "English version for international opportunities"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Discover my work",
+    "filterAll": "All",
+    "searchPlaceholder": "Search a project, technology, concept, ...",
+    "viewLive": "View Live",
+    "viewCode": "Source Code",
+    "learnMore": "Learn More",
+    "notFound": "Project not found",
+    "backToProjects": "Back to projects",
+    "technologiesTitle": "Technologies and Concepts",
+    "featuresTitle": "Key Features",
+    "roleTitle": "My Role",
+    "learningsTitle": "What I learned or improved",
+    "interestedTitle": "Interested in this project?",
+    "backToPortfolio": "Back to portfolio"
+  }
+}
