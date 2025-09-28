@@ -20,37 +20,122 @@
       "development": {
         "title": "Développement",
         "description": "Technologies et frameworks pour créer des applications web modernes et performantes",
-        "technologies": ["Java","Spring Boot","Angular","React","Next.js","TypeScript","Node.js","JavaScript","HTML","CSS","Tailwind CSS","..."]
+        "technologies": [
+          "Java",
+          "Spring Boot",
+          "Angular",
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Tailwind CSS",
+          "..."
+        ]
       },
       "quality": {
         "title": "Qualité & Maintenabilité",
         "description": "Outils et pratiques pour garantir la qualité du code et faciliter la maintenance",
-        "technologies": ["Eslint", "Prettier","SonarQube","Jest","CI/CD","GitHub Actions","..."]
+        "technologies": [
+          "Eslint",
+          "Prettier",
+          "SonarQube",
+          "Jest",
+          "CI/CD",
+          "GitHub Actions",
+          "..."
+        ]
       },
       "database": {
         "title": "Bases de données",
         "description": "Conception et optimisation de bases de données relationnelles et NoSQL",
-        "technologies": ["MySQL","PostgreSQL","Oracle","MongoDB","Neo4j","..."]
+        "technologies": [
+          "MySQL",
+          "PostgreSQL",
+          "Oracle",
+          "MongoDB",
+          "Neo4j",
+          "..."
+        ]
       },
       "devops": {
         "title": "DevOps / Infrastructure",
         "description": "Déploiement, monitoring et gestion d'infrastructure cloud",
-        "technologies": ["Docker","Git","Monitoring","Logs","Pare-feu","Réseaux","Active Directory","..."]
+        "technologies": [
+          "Docker",
+          "Git",
+          "Monitoring",
+          "Logs",
+          "Pare-feu",
+          "Réseaux",
+          "Active Directory",
+          "..."
+        ]
       },
       "security": {
         "title": "Sécurité & Standards",
         "description": "Sécurisation des applications et respect des bonnes pratiques",
-        "technologies": ["HTTPS","CORS","JWT","OAuth","Authentification","Conformité","Cryptage", "VPN", "API Gateway", "..."]
+        "technologies": [
+          "HTTPS",
+          "CORS",
+          "JWT",
+          "OAuth",
+          "Authentification",
+          "Conformité",
+          "Cryptage",
+          "VPN",
+          "API Gateway",
+          "..."
+        ]
       },
       "projectManagement": {
         "title": "Gestion de projet & Méthodologies",
         "description": "Outils et pratiques pour organiser, planifier et suivre les projets efficacement",
-        "technologies": ["Scrum","Méthode en V","Agile","Jira","Trello","Diagrammes de Gantt","..."]
+        "technologies": [
+          "Scrum",
+          "Méthode en V",
+          "Agile",
+          "Jira",
+          "Trello",
+          "Diagrammes de Gantt",
+          "..."
+        ]
       }
     }
   },
   "contact": {
-    "title": "Contact"
+    "title": "Contactez-moi",
+    "subtitle": "Voulez-vous discuter ?",
+    "description": "Vous avez une question en tête ou souhaitez discuter d’un projet ? N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais et avec plaisir.",
+    "form": {
+      "email": {
+        "label": "Votre email",
+        "placeholder": "votre.email@exemple.com",
+        "required": "L'email est requis",
+        "invalid": "Veuillez entrer un email valide"
+      },
+      "message": {
+        "label": "Votre message",
+        "placeholder": "Décrivez votre projet ou posez votre question...",
+        "required": "Le message est requis",
+        "maxLength": "Le message ne peut pas dépasser 800 caractères"
+      },
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer.",
+      "captcha": {
+        "required": "Veuillez compléter le captcha",
+        "error": "Erreur de vérification captcha"
+      }
+    },
+    "info": {
+      "email": "john.doe@example.com",
+      "response": "Réponse sous 24h",
+      "availability": "Disponible pour de nouveaux projets"
+    }
   },
   "footer": {
     "thanks": "Merci d'avoir visité",

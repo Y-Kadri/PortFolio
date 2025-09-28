@@ -9,6 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+  experimental: {
+    geo: true,
+  },
+};
 
-export default nextConfig
+export default nextConfig;

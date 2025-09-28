@@ -8,6 +8,7 @@ import { HeroSection } from "@/components/sections/hero"
 import { ScrollToTop } from "@/components/ui/scroll-to-top"
 import { AboutSection } from "@/components/sections/about"
 import { ProjectsSection } from "@/components/sections/projects"
+import { ContactSection } from "@/components/sections/contact"
 
 interface HomePageProps {
   params: { locale: Locale }
@@ -37,6 +38,7 @@ export default function HomePage({ params }: HomePageProps) {
         <AboutSection messages={messages} locale={locale} />
         <ProjectsSection messages={messages} locale={locale} />
       </main>
+      <ContactSection messages={messages} locale={locale} />
       <Footer messages={messages} locale={locale} />
       <ScrollToTop messages={messages} />
     </div>

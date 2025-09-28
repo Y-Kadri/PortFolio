@@ -93,12 +93,49 @@
       "projectManagement": {
         "title": "Project Management & Methodologies",
         "description": "Tools and practices to plan, organize, and track projects efficiently",
-        "technologies": ["Scrum","V-Model","Agile","Jira","Trello","Gantt Charts","..."]
+        "technologies": [
+          "Scrum",
+          "V-Model",
+          "Agile",
+          "Jira",
+          "Trello",
+          "Gantt Charts",
+          "..."
+        ]
       }
     }
   },
   "contact": {
-    "title": "Contact"
+    "title": "Contact me",
+    "subtitle": "Let's discuss your project",
+    "description": "Have a project in mind? A question? Don't hesitate to contact me, I'll get back to you as soon as possible.",
+    "form": {
+      "email": {
+        "label": "Your email",
+        "placeholder": "your.email@example.com",
+        "required": "Email is required",
+        "invalid": "Please enter a valid email"
+      },
+      "message": {
+        "label": "Your message",
+        "placeholder": "Describe your project or ask your question...",
+        "required": "Message is required",
+        "maxLength": "Message cannot exceed 800 characters"
+      },
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again.",
+      "captcha": {
+        "required": "Please complete the captcha",
+        "error": "Captcha verification error"
+      }
+    },
+    "info": {
+      "email": "john.doe@example.com",
+      "response": "Response within 24h",
+      "availability": "Available for new projects"
+    }
   },
   "footer": {
     "thanks": "Thanks for visiting",

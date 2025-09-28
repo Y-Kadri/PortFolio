@@ -28,6 +28,7 @@ export function Header({ messages, locale }: HeaderProps) {
     { href: `/${locale}#hero`, label: messages.nav.home },
     { href: `/${locale}#about`, label: messages.nav.about },
     { href: `/${locale}#projects`, label: messages.nav.projects },
+    { href: `/${locale}#contact`, label: messages.nav.contact },
   ]
 
   const switchLanguage = (newLocale: string) => {

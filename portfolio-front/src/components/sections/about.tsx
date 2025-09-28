@@ -52,19 +52,19 @@ export function AboutSection({ messages, locale }: AboutProps) {
   const socialLinks = [
     {
       name: "Email",
-      href: "mailto:yanis.kadri@example.com",
+      href: "mailto:yanis.0601@hotmail.com",
       icon: Mail,
       color: "hover:text-red-500",
     },
     {
       name: "GitHub",
-      href: "https://github.com/yaniskadri",
+      href: "https://github.com/Y-Kadri",
       icon: Github,
       color: "hover:text-gray-900 dark:hover:text-gray-100",
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/yaniskadri",
+      href: "https://www.linkedin.com/in/yanis-kadri/",
       icon: Linkedin,
       color: "hover:text-blue-600",
     },
