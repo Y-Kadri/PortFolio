@@ -31,12 +31,12 @@ jobs:
           echo "NEXT_PUBLIC_RECAPTCHA_SITE_KEY=${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}" >> ./portfolio-front/.env.production
 
       - name: Add public variables for build
-        run: |
-          NEXT_PUBLIC_VERSION=$(git describe --tags --abbrev=0)
-          NEXT_PUBLIC_LAST_UPDATE=$(git log -1 --format=%cd --date=short)
-          echo "NEXT_PUBLIC_VERSION=$NEXT_PUBLIC_VERSION" >> ./portfolio-front/.env.production
-          echo "NEXT_PUBLIC_LAST_UPDATE=$NEXT_PUBLIC_LAST_UPDATE" >> ./portfolio-front/.env.production
+        run: npm run build
         working-directory: ./portfolio-front
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}
+          RECAPTCHA_SECRET_KEY: ${{ secrets.RECAPTCHA_SECRET_KEY }}
 
       - name: Build and export Next.js
         run: |
