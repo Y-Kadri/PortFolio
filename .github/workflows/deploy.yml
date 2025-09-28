@@ -31,10 +31,16 @@ jobs:
 
       - name: Build Next.js with environment variables
         run: |
+          # Exporte la clé pour qu'elle soit visible au build côté serveur
+          export RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}
+
+          # Variables front
           NEXT_PUBLIC_VERSION=$(git describe --tags --abbrev=0)
           NEXT_PUBLIC_LAST_UPDATE=$(git log -1 --format=%cd --date=short)
           echo "NEXT_PUBLIC_VERSION=$NEXT_PUBLIC_VERSION"
           echo "NEXT_PUBLIC_LAST_UPDATE=$NEXT_PUBLIC_LAST_UPDATE"
+
+          # Build et export
           npm run build
           npm run export
         working-directory: ./portfolio-front 
