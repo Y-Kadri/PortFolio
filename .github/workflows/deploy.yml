@@ -3,7 +3,7 @@ name: Deploy Portfolio
 on:
   push:
     branches:
-      - master
+      - fix/deploy-portfolio-v2
 
 jobs:
   build-and-deploy:
