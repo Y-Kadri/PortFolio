@@ -1749,6 +1749,8 @@ export const technologies = [
   "MySQL",
   "Mongoose",
   "Microsoft SQL Server",
+  "Big Data",
+  "Hive",
 
   // Technologies / Tools / Frameworks / IDEs / DevOps / Infrastructure
   "React",
@@ -1782,6 +1784,7 @@ export const technologies = [
   "Pandas",
   "Axios",
   "Scripting",
+  "Talend Jobs",
 
   // Concepts / Methodologies / Paradigms
   "Design Patterns", //TODO gérer la recherche rapide
@@ -1799,6 +1802,10 @@ export const technologies = [
   "API Gateway",
   "CI/CD",
   "UML",
+  "Partitioning",
+  "Buckets",
+  "Data Visualization",
+  "KPI",
   "Performance Benchmarking",
   "Memory Management",
   "Full-Stack",
