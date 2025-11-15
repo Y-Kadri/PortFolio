@@ -362,7 +362,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
         {/* Key Features Section */}
         <section className="py-20 bg-muted/30">
           <div className="container mx-auto max-w-6xl px-4">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-1 gap-12">
               {/* Technologies utilisées - Left Column */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
