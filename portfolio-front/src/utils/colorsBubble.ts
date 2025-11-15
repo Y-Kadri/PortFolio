@@ -43,6 +43,11 @@ export const getTechColor = (tech: string) => {
     "Cloudera",
     "Power BI",
     "Hue",
+    "Next.js",
+    "React.js",
+    "Node.js",
+    "Git",
+    "pfSense",
   ]
 
   // Concepts importants
@@ -68,6 +73,24 @@ export const getTechColor = (tech: string) => {
     "KPI",
     "Partitioning",
     "Buckets",
+    "Load Balancer",
+    "API Gateway",
+    "Nginx",
+    "Monolithic Architecture",
+    "Locks",
+    "Sockets (Client-Server)",
+    "Processes & Threads",
+    "Semaphores",
+    "Domain Controllers",
+    "DMZ",
+    "Monitoring",
+    "Group Policy Objects (GPOs)",
+    "RAID",
+    "Organizational Units (OUs)",
+    "Polynomial Reductions",
+    "Polynomial Complexity",
+    "Heuristics",
+    "Metaheuristics"
   ]
 
   if (knownLanguages.includes(tech)) return getLanguageColor()
