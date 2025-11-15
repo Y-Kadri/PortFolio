@@ -57,6 +57,9 @@
           "Oracle",
           "MongoDB",
           "Neo4j",
+          "Big Data",
+          "Hive",
+          "Kafka",
           "..."
         ]
       },
@@ -87,6 +90,7 @@
           "Encryption",
           "VPN",
           "API Gateway",
+          "GDPR",
           "..."
         ]
       },

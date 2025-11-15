@@ -59,7 +59,7 @@ export const projects: Project[] = [
       "/projects/cloudhealthcareunit/dashboard3.png",
       "/projects/cloudhealthcareunit/architecture.png",
       "/projects/cloudhealthcareunit/starModel.png",
-      "/projects/cloudhealthcareunit/jobFait.png",
+      "/projects/cloudhealthcareunit/jobFact.png",
       "/projects/cloudhealthcareunit/jobProfessional.png"
     ],
     technologies: [

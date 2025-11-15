@@ -57,7 +57,10 @@
           "Oracle",
           "MongoDB",
           "Neo4j",
-          "...TODO Bigdata"
+          "Big Data",
+          "Hive",
+          "Kafka",
+          "..."
         ]
       },
       "devops": {
@@ -87,6 +90,7 @@
           "Cryptage",
           "VPN",
           "API Gateway",
+          "RGPD",
           "..."
         ]
       },
