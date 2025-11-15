@@ -21,6 +21,7 @@ export const getTechColor = (tech: string) => {
     "SQL",
     "MySQL",
     "SQLite",
+    "Hive",
   ]
 
   // Technologies / outils / frameworks les plus connus
@@ -39,6 +40,9 @@ export const getTechColor = (tech: string) => {
     "VPN",
     "Firewall",
     "Maven",
+    "Cloudera",
+    "Power BI",
+    "Hue",
   ]
 
   // Concepts importants
@@ -54,6 +58,16 @@ export const getTechColor = (tech: string) => {
     "JWT Authentication",
     "Graph Theory",
     "Design Patterns",
+    "Talend Jobs",
+    "MCD",
+    "Big Data",
+    "Star Schema",
+    "HDFS",
+    "Data Lake",
+    "Data Visualization",
+    "KPI",
+    "Partitioning",
+    "Buckets",
   ]
 
   if (knownLanguages.includes(tech)) return getLanguageColor()
