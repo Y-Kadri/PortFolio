@@ -36,6 +36,110 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "cloud-healthcare-unit",
+    title: {
+      fr: "Cloud Healthcare Unit — Big Data pour les établissements de santé en France",
+      en: "Cloud Healthcare Unit — Big Data for Healthcare Facilities in France"
+    },
+    description: {
+      fr: "Projet Big Data répondant aux besoins des établissements hospitaliers français, intégrant plusieurs sources et technologies, optimisé pour des analyses rapides et générant des tableaux de bord facilitant la prise de décision.",
+      en: "Big Data project addressing the needs of healthcare facilities in France, integrating multiple sources and technologies, optimized for fast analysis and generating dashboards to support decision-making."
+    },
+    longDescription: {
+      fr: "Le projet Cloud Healthcare Unit vise à mettre en place un système Big Data pour les établissements de santé en France, capable de centraliser et d'exploiter des données provenant de multiples sources, incluant des millions d'enregistrements historiques. L'objectif est de répondre aux différents besoins d'analyse des utilisateurs hospitaliers, tels que le suivi des consultations, des hospitalisations ou de la satisfaction des patients, afin de les aider dans la prise de décision. Le projet inclut l'intégration et le traitement des données, la consolidation des informations, et la création de tableaux de bord interactifs et dynamiques. Pour garantir un accès rapide aux données et une analyse efficace, des méthodes adaptées ont été appliquées et plusieurs technologies ont été sélectionnées. Une présentation auprès des clients, intégrant du storytelling, a été prévue pour mettre en valeur les résultats.",
+      en: "The Cloud Healthcare Unit project aims to implement a Big Data system for healthcare facilities in France, capable of centralizing and leveraging data from multiple sources, including millions of historical records. The goal is to meet the diverse analytical needs of hospital users, such as monitoring consultations, hospitalizations, or patient satisfaction, to assist them in decision-making. The project includes data integration and processing, consolidation of information, and the creation of interactive and dynamic dashboards. Appropriate methods were applied and multiple technologies were selected to ensure fast data access and efficient analysis. A client presentation, incorporating storytelling, was planned to showcase the results."
+    },
+    image: "/projects/cloudhealthcareunit/dashboard1.png",
+    images: [
+      "/projects/cloudhealthcareunit/dashboard1.png",
+      "/projects/cloudhealthcareunit/dashboard1-year-filter.png",
+      "/projects/cloudhealthcareunit/dashboard1-year-etablishment.png",
+      "/projects/cloudhealthcareunit/dashboard2.png",
+      "/projects/cloudhealthcareunit/dashboard2-region.png",
+      "/projects/cloudhealthcareunit/dashboard3.png",
+      "/projects/cloudhealthcareunit/architecture.png",
+      "/projects/cloudhealthcareunit/starModel.png",
+      "/projects/cloudhealthcareunit/jobFact.png",
+      "/projects/cloudhealthcareunit/jobProfessional.png"
+    ],
+    technologies: [
+      "Big Data",
+      "Cloudera",
+      "ETL (Extract, Transform, Load)",
+      "Talend Jobs",
+      "HDFS",
+      "Data Lake",
+      "Hive",
+      "Partitioning",
+      "Buckets",
+      "Power BI",
+      "Data Visualization",
+      "DAX requests",
+      "Conceptual Modeling",
+      "Data Modeling",
+      "Star Schema",
+      "MCD",
+      "KPI",
+      "Measures",
+      "Hue",
+      "Scripting",
+      "Table population",
+      "Technical demonstration",
+      "Storytelling"
+    ],
+    githubUrl: "",
+    gitlabUrl: "",
+    featured: false,
+    features: {
+      fr: [
+        "Besoin utilisateur 1 : Taux de consultation des patients dans un établissement X sur une période donnée",
+        "Besoin utilisateur 2 : Taux de consultation des patients par rapport à un diagnostic X sur une période donnée",
+        "Besoin utilisateur 3 : Taux global d'hospitalisation des patients sur une période donnée",
+        "Besoin utilisateur 4 : Taux d'hospitalisation par diagnostic sur une période donnée",
+        "Besoin utilisateur 5 : Taux d'hospitalisation par sexe et par âge",
+        "Besoin utilisateur 6 : Taux de consultation par professionnel",
+        "Besoin utilisateur 7 : Nombre de décès par région et par année",
+        "Besoin utilisateur 8 : Taux de satisfaction par région et par année",
+        "Définition de l'architecture : données brutes jusqu'à la visualisation",
+        "Conception du modèle : analyse des données sources (CSV, Excel, BDD MySQL), sélection des données pertinentes et utilisation du modèle en étoile",
+        "Implémentation ETL : création de jobs Talend pour chaque dimension, incluant fusion, nettoyage, transformations, enrichissement et agrégations",
+        "Mise en place du Data Lake avec stockage HDFS",
+        "Requêtes Hive : tables, partitionnement, buckets et peuplement",
+        "Mesure de performance : graphiques de temps d'exécution des requêtes avant et après optimisation",
+        "Livrables : modèle conceptuel et jobs pour alimenter le schéma décisionnel, modèle physique et optimisation",
+        "Création de dashboards Power BI connectés aux tables Hive, avec utilisation de requêtes DAX pour l'analyse des KPIs",
+        "Soutenance : présentation des résultats et storytelling, incluant démonstration technique, pour valoriser les analyses"
+      ],
+      en: [
+        "User need 1: Patient consultation rate in a given facility over a specific period",
+        "User need 2: Patient consultation rate by diagnosis over a given period",
+        "User need 3: Overall patient hospitalization rate over a given period",
+        "User need 4: Hospitalization rate by diagnosis over a given period",
+        "User need 5: Hospitalization rate by gender and age",
+        "User need 6: Consultation rate per professional",
+        "User need 7: Number of deaths by region and year",
+        "User need 8: Satisfaction rate by region and year",
+        "Architecture definition: from raw data to visualization",
+        "Model design: analysis of source data (CSV, Excel, MySQL), selection of relevant data, and use of star schema",
+        "ETL implementation: Talend jobs for each dimension, including merging, cleaning, transformations, enrichment, and aggregations",
+        "Data Lake setup with HDFS storage",
+        "Hive queries: tables, partitioning, buckets, and population",
+        "Performance measurement: queries execution time graphs before and after optimization",
+        "Deliverables: conceptual model and jobs to populate the decision schema, physical model and optimization",
+        "Creation of Power BI dashboards connected to Hive tables, using DAX queries for KPI analysis",
+        "Presentation: results and storytelling, including technical demonstration, to showcase analyses"
+      ]
+    },
+    role: {
+      fr: "Travail en équipe pour concevoir et modéliser l’entrepôt de données, échanger des idées, comprendre les enjeux et convaincre des choix. Création des jobs Talend pour chaque dimension. Participation aux choix et mise en œuvre du partitionnement et des buckets pour un accès rapide aux données. Collaboration sur la définition et l’organisation des dashboards. Préparation de la démonstration et du storytelling. Coordination avec l’équipe pour synchroniser les tâches et garantir l’efficacité du projet.",
+      en: "Worked in a team to design and model the data warehouse, exchange ideas, understand requirements, and support decision-making. Developed Talend jobs for each dimension. Participated in the selection and implementation of partitioning and buckets for fast data access. Collaborated on the definition and organization of dashboards. Prepared the demonstration and storytelling. Coordinated with the team to synchronize tasks and ensure project efficiency."
+    },
+    learnings: {
+      fr: "Approfondissement de la conception de Data Warehouse et de modèles décisionnels (étoile, flocon, galaxie), et des architectures Data Lake, ETL/ELT et HDFS. Utilisation de Talend pour créer des jobs avec fichiers délimités, connexions BD, stockage HDFS et transformations (fusion, nettoyage, enrichissement, agrégation). Intégration de données hétérogènes et optimisation pour de grands volumes. Développement et optimisation de requêtes Hive. Mise en place de dashboards Power BI avec calculs DAX pour l’analyse des KPIs. Sécurisation et anonymisation des données sensibles. Renforcement des compétences collaboratives et de gestion de projet en environnement Big Data.",
+      en: "Deepened understanding of Data Warehouse design and analytical models (star, snowflake, galaxy), and Data Lake, ETL/ELT, and HDFS architectures. Used Talend to create jobs with delimited files, database connections, HDFS storage, and transformations (merging, cleaning, enrichment, aggregation). Integrated heterogeneous data and optimized performance for large datasets. Developed and optimized Hive queries. Implemented Power BI dashboards with DAX calculations for KPI analysis. Ensured security and anonymization of sensitive data. Enhanced collaborative and project management skills in a Big Data environment."
+    }
+  },
+  {
     id: "breezy-social-network",
     title: {
       fr: "Breezy : Réseau social léger et réactif",
@@ -1645,6 +1749,8 @@ export const technologies = [
   "MySQL",
   "Mongoose",
   "Microsoft SQL Server",
+  "Big Data",
+  "Hive",
 
   // Technologies / Tools / Frameworks / IDEs / DevOps / Infrastructure
   "React",
@@ -1678,6 +1784,7 @@ export const technologies = [
   "Pandas",
   "Axios",
   "Scripting",
+  "Talend Jobs",
 
   // Concepts / Methodologies / Paradigms
   "Design Patterns", //TODO gérer la recherche rapide
@@ -1695,6 +1802,10 @@ export const technologies = [
   "API Gateway",
   "CI/CD",
   "UML",
+  "Partitioning",
+  "Buckets",
+  "Data Visualization",
+  "KPI",
   "Performance Benchmarking",
   "Memory Management",
   "Full-Stack",
