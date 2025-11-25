@@ -11,7 +11,7 @@ interface CVDownloadDropdownProps {
 export function CVDownloadDropdown({ messages }: CVDownloadDropdownProps) {
   const handleDownload = (cvType: "fr" | "en") => {
     const link = document.createElement("a")
-    link.href = cvType === "fr" ? "/cv-fr.pdf" : "/cv-en.pdf"
+    link.href = cvType === "fr" ? "/CV/CV-Yanis-Kadri-FR.pdf" : "/CV/CV-Yanis-Kadri-EN.pdf"
     link.download = cvType === "fr" ? "CV-Yanis-Kadri-FR.pdf" : "CV-Yanis-Kadri-EN.pdf"
     document.body.appendChild(link)
     link.click()
